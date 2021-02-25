@@ -1,0 +1,126 @@
+{% extends "base.html" %}
+
+{% block title %}目标编辑{% endblock %}
+
+
+{% block navbar %}
+<section class="content-header">
+    <h1>目标管理-添加/修改目标</h1>
+    <ol class="breadcrumb">
+        <li><i class="fa fa-dashboard"></i> 当前位置</li>
+        <li class="active">目标管理</li>
+        <li class="active">添加/修改目标</li>
+    </ol>
+</section>
+{% endblock %}
+
+
+{% block content %}
+<div class="box box-primary">
+    <form method="post">
+        {{form.hidden_tag()}}
+        <div class="box-header with-border">
+            {% include 'message.html' %}
+        </div>
+
+        <div class="box-body">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label>{{form.target_name.label}}</label>
+                    {{form.target_name(class_="form-control",placeholder="请输入目标名称")}}
+                </div>
+            </div>
+        </div>
+        <div class="box-body">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label>{{form.target_description.label}}</label>
+                    {{form.target_description(class_="form-control",placeholder="请输入目标描述")}}
+                </div>
+            </div>
+        </div>
+        <div class="box-body">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label>{{form.domain_name.label}}</label>
+                    {{form.domain_name(style="resize:none;", rows="7",class_="form-control",placeholder="请输入目标主域名")}}
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label>{{form.black_name.label}}</label>
+                    {{form.black_name(style="resize:none;", rows="7",class_="form-control",placeholder="请选输入黑名单，例如:\n\rdomain:www.taobao.com\n\rip:127.0.0.1\n\rtitle:淘宝店铺")}}
+                </div>
+            </div>
+        </div>
+        <div class="box-body">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label>{{form.subdomain_name.label}}</label>
+                    {{form.subdomain_name(style="resize:none;", rows="7",class_="form-control",placeholder="请输入精准域名")}}
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label>{{form.subdomain_ip.label}}</label>
+                    {{form.subdomain_ip(style="resize:none;", rows="7",class_="form-control",placeholder="请选输入ip,例如:\n\r192.168.1.1\n\r192.168.1.1-23\n\r192.168.2-110.1\n\r192.168.1.0/24")}}
+                    
+                </div>
+            </div>
+        </div>
+        <div class="box-body">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label>{{form.target_method.label}}</label>
+                    {{form.target_method(class_="form-control select2",placeholder="请选择扫描模块")}}
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label>{{form.target_corn_id.label}}</label>
+                    {{form.target_corn_id(class_="form-control select2",placeholder="请选择扫描周期")}}
+                </div>
+            </div>
+        </div>
+        <div class="box-body">
+            <div class="col-md-3">
+                <label>{{form.target_level.label}}</label>
+                    {{form.target_level(class_="slider form-control",placeholder="优先级")}}
+            </div>
+            <div class="col-md-3"></div>
+            <div class="col-md-3">
+                <label>{{form.target_corn.label}}</label><br>
+                {{form.target_corn()}}
+            </div>
+            
+        </div>
+        <div class="box-footer">
+            <div class="col-md-12">
+                {{form.submit(class_="btn btn-primary pull-right")}}
+            </div>
+        </div>
+    </form>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+    function initPage() {
+        slide_value = $(".slider").val() == "" ? 50 : parseInt($(".slider").val());
+        $(".slider").slider({
+            id: "blue",
+            max: 100,
+            value: slide_value
+        });
+
+        switch_value = $('#target_corn')[0].checked
+        $('#target_corn').bootstrapSwitch("size","small",{
+            state: switch_value,
+            onText: '监控',
+            offText: '未监控',
+        });
+
+        $(".select2").select2();
+    }
+</script>
+{% endblock %}

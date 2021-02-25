@@ -1,0 +1,26 @@
+[2021-02-01 15:09:04,710: INFO/MainProcess] Connected to redis://127.0.0.1:6379/0
+[2021-02-01 15:09:04,734: INFO/MainProcess] mingle: searching for neighbors
+[2021-02-01 15:09:05,782: INFO/MainProcess] mingle: all alone
+[2021-02-01 15:09:05,848: INFO/MainProcess] celery@naabu ready.
+[2021-02-01 15:09:10,079: INFO/MainProcess] Events of group {task} enabled by remote.
+
+worker: Warm shutdown (MainProcess)
+ 
+ -------------- celery@naabu v4.4.7 (cliffs)
+--- ***** ----- 
+-- ******* ---- macOS-10.15.4-x86_64-i386-64bit 2021-02-01 15:09:04
+- *** --- * --- 
+- ** ---------- [config]
+- ** ---------- .> app:         srchunters.naabu:0x106aed640
+- ** ---------- .> transport:   redis://127.0.0.1:6379/0
+- ** ---------- .> results:     redis://127.0.0.1:6379/2
+- *** --- * --- .> concurrency: 1 (prefork)
+-- ******* ---- .> task events: OFF (enable -E to monitor tasks in this worker)
+--- ***** ----- 
+ -------------- [queues]
+                .> naabu            exchange=naabu(direct) key=naabu
+                
+
+[tasks]
+  . naabu.run
+

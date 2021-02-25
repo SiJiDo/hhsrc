@@ -1,0 +1,200 @@
+{% extends "base.html" %}
+
+{% block title %}通知方式配置{% endblock %}
+
+
+{% block navbar %}
+<section class="content-header">
+    <h1>子域名扫描</h1>
+    <ol class="breadcrumb">
+        <li><i class="fa fa-dashboard"></i> 当前位置</li>
+        <li class="active">扫描结果</li>
+        <li class="active">子域名扫描</li>
+    </ol>
+</section>
+{% endblock %}
+
+
+{% block content %}
+<div class="box box-primary">
+    <div class="box-header with-border">
+        {% include 'message.html' %}
+    </div>
+    <div class="box-body">
+        <div class="col-md-1"></div>
+        <div class="col-md-4">
+            <p><b>项目: </b>{{form.target_info.target_name}}</p>
+            <p><b>域名: </b>{{form.total_count}}</p>
+            <p><b>状态: </b>{% if form.target_info.target_status == 2 %}扫描完成{% elif form.target_info.target_status == 1 %}扫描中{% else %}未扫描{% endif %}</p>
+            <p><b>时间: </b>{{form.target_info.target_time}}</p>
+        </div>
+        <div class="col-md-4">
+            <p><b>子域总数: </b>{{form.subdomain_total_count}}</p>
+            <p><b>端口总数: </b>{{form.port_total_count}}</p>
+            <p><b>站点总数: </b>{{form.url_total_count}}</p>
+            <p><b>描述:</b>{{form.target_info.target_info}}</p>
+        </div>
+        <div class="col-md-1">
+            <button class="btn btn-primary pull-right" onclick=location.href="?action=restart&id={{form.target_info.id}}&page={{form.page}}&blacklist_page={{form.blacklist_page}}">重新扫描</button>
+        </div>
+        <div class="col-md-2">
+            <button class="btn btn-primary pull-right" onclick=location.href="/targetedit?id={{form.id}}">编辑</button>
+            <button class="btn btn-primary pull-right" onclick=location.href="?action=output&id={{form.target_info.id}}">导出</button>
+        </div>
+    </div>
+    <div>
+    <div class="box-body">
+        <div>
+        <div class="col-md-6">
+        {% if form%}
+        <table class="table table-bordered">
+            <h3>域名管理</h3>
+            <tr>
+                <th>域名</th>
+                <th>子域数</th>
+                <th>端口数</th>
+                <th>站点数</th>
+                <th>更新时间</th>
+                <th>删除</th>
+            </tr>
+            {% for row in form.content %}
+            <tr>
+                <td>{{row.domain_name}}</td>
+                <td>{{row.subdomain_count}}</td>
+                <td>{{row.port_count}}</td>
+                <td>{{row.url_count}}</td>
+                <td>{{row.domain_time}}</td>
+                <td><a class='fa fa-lg fa-warning text-red' href='?action=del&id={{form.target_info.id}}&domain_id={{row.id}}&page={{form.page}}&blacklist_page={{form.blacklist_page}}'></a></td>
+            </tr>
+            {% endfor %}
+        </table>
+        {% endif %}
+
+        <div>
+            {% if form%}
+            <ul class="pagination pagination-sm no-margin pull-right">
+                <li><a href="#">&laquo;</a></li>
+
+                {% if form.page <= 3 %}
+                    {% if form.total_page >= 5 %}
+                        {% for i in range(1, 6) %}
+                            {% if i == form.page %}
+                                <li><a href="?page={{i}}&blacklist_page={{form.blacklist_page}}&id={{form.target_info.id}}"><b>{{i}}</b></a></li>
+                            {% else %}
+                                <li><a href="?page={{i}}&blacklist_page={{form.blacklist_page}}&id={{form.target_info.id}}">{{i}}</a></li>
+                            {% endif %}
+                        {% endfor %}
+                    {% else %}
+                        {% for i in range(1, form.total_page + 1) %}
+                            {% if i == form.page %}
+                                <li><a href="?page={{i}}&blacklist_page={{form.blacklist_page}}&id={{form.target_info.id}}"><b>{{i}}</b></a></li>
+                            {% else %}
+                                <li><a href="?page={{i}}&blacklist_page={{form.blacklist_page}}&id={{form.target_info.id}}">{{i}}</a></li>
+                            {% endif %}
+                        {% endfor %}
+                    {% endif %}
+
+                {% elif form.page <= form.total_page and form.page >= form.total_page - 2 %}
+                    {% for i in range(form.total_page - 3, form.total_page + 1) %}
+                        {% if i == form.page %}
+                            <li><a href="?page={{i}}&blacklist_page={{form.blacklist_page}}&id={{form.target_info.id}}"><b>{{i}}</b></a></li>
+                        {% else %}
+                            <li><a href="?page={{i}}&blacklist_page={{form.blacklist_page}}&id={{form.target_info.id}}">{{i}}</a></li>
+                    {% endif %}
+                {% endfor %}
+
+                {% else %}
+                    {% for i in range(form.page - 2, form.page + 2) %}
+                        {% if i == form.page %}
+                            <li><a href="?page={{i}}&blacklist_page={{form.blacklist_page}}&id={{form.target_info.id}}"><b>{{i}}</b></a></li>
+                        {% else %}
+                            <li><a href="?page={{i}}&blacklist_page={{form.blacklist_page}}&id={{form.target_info.id}}">{{i}}</a></li>
+                        {% endif %}
+                    {% endfor %}
+                {% endif %}
+
+                <li><a href="#">&raquo;</a></li>
+            </ul>
+        {% endif %}
+        </div>
+
+        </div>
+
+        <div class="col-md-6">
+            {% if form%}
+            <table class="table table-bordered">
+                <h3>黑名单管理</h3>
+                <tr>
+                    <th>黑名单</th>
+                    <th>更新时间</th>
+                    <th>删除</th>
+                </tr>
+                {% for row in form.blacklist_content %}
+                <tr>
+                    <td>{{row.black_name}}</td>
+                    <td>{{row.black_time}}</td>
+                    <td><a class='fa fa-lg fa-warning text-red' href='?action=del&id={{form.target_info.id}}&blacklist_id={{row.id}}&page={{form.page}}&blacklist_page={{form.blacklist_page}}'></a></td>
+                </tr>
+                {% endfor %}
+            </table>
+            {% endif %}
+
+            <div>
+                {% if form%}
+                <ul class="pagination pagination-sm no-margin pull-right">
+                    <li><a href="#">&laquo;</a></li>
+    
+                    {% if form.blacklist_page <= 3 %}
+                        {% if form.blacklist_total_page >= 5 %}
+                            {% for i in range(1, 6) %}
+                                {% if i == form.blacklist_page %}
+                                    <li><a href="?blacklist_page={{i}}&page={{form.page}}&id={{form.target_info.id}}"><b>{{i}}</b></a></li>
+                                {% else %}
+                                    <li><a href="?blacklist_page={{i}}&page={{form.page}}&id={{form.target_info.id}}">{{i}}</a></li>
+                                {% endif %}
+                            {% endfor %}
+                        {% else %}
+                            {% for i in range(1, form.blacklist_total_page + 1) %}
+                                {% if i == form.blacklist_page %}
+                                    <li><a href="?blacklist_page={{i}}&page={{form.page}}&id={{form.target_info.id}}"><b>{{i}}</b></a></li>
+                                {% else %}
+                                    <li><a href="?blacklist_page={{i}}&page={{form.page}}&id={{form.target_info.id}}">{{i}}</a></li>
+                                {% endif %}
+                            {% endfor %}
+                        {% endif %}
+    
+                    {% elif form.blacklist_page <= form.blacklist_total_page and form.blacklist_page >= form.blacklist_total_page - 2 %}
+                        {% for i in range(form.blacklist_total_page - 3, form.blacklist_total_page + 1) %}
+                            {% if i == form.blacklist_page %}
+                                <li><a href="?blacklist_page={{i}}&page={{form.page}}&id={{form.target_info.id}}"><b>{{i}}</b></a></li>
+                            {% else %}
+                                <li><a href="?blacklist_page={{i}}&page={{form.page}}&id={{form.target_info.id}}">{{i}}</a></li>
+                        {% endif %}
+                    {% endfor %}
+    
+                    {% else %}
+                        {% for i in range(form.blacklist_page - 2, form.blacklist_page + 2) %}
+                            {% if i == form.blacklist_page %}
+                                <li><a href="?blacklist_page={{i}}&page={{form.page}}&id={{form.target_info.id}}"><b>{{i}}</b></a></li>
+                            {% else %}
+                                <li><a href="?blacklist_page={{i}}&page={{form.page}}&id={{form.target_info.id}}">{{i}}</a></li>
+                            {% endif %}
+                        {% endfor %}
+                    {% endif %}
+    
+                    <li><a href="#">&raquo;</a></li>
+                </ul>
+            {% endif %}
+            </div>    
+        </div>
+        </div>
+    </div> 
+    
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+
+</script>
+{% endblock %}

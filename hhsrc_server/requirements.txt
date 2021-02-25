@@ -1,0 +1,16 @@
+pymysql
+flask
+flask-script
+flask-wtf
+flask-login
+redis
+celery==4.4.7
+IPy
+flower
+vine==1.3.0
+Flask-APScheduler
+sqlalchemy
+flask-sqlalchemy
+pymysql
+pandas
+xlwt

@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+
+{% block title %}通知方式配置{% endblock %}
+
+
+{% block navbar %}
+<section class="content-header">
+    <h1>客户端设置</h1>
+    <ol class="breadcrumb">
+        <li><i class="fa fa-dashboard"></i> 当前位置</li>
+        <li class="active">扫描结果</li>
+        <li class="active">客户端设置</li>
+    </ol>
+</section>
+{% endblock %}
+
+
+{% block content %}
+<div class="box box-primary">
+    <div class="box-header with-border">
+        {% include 'message.html' %}
+    </div>
+    <div class="box-body">
+        <form action="" method="GET">
+        <div class="form-group form-inline">
+            <input type="hidden" name="action" value="set" />
+            <label>最多扫描任务数: </label>
+            <input type="text" class="form-control" style="width: 100px" value="{{form.config_count}}" name="count" />
+            <br><br>
+            <label>server酱key值: </label>
+            <input type="text" class="form-control" style="width: 500px" value="{{form.config_server}}" name="server" />
+            <br><br>
+            <input type="submit" class="btn btn-primary" value="修改" />
+        </div>
+        </form>
+    </div>
+    <div class="box-body">
+        <p><h3>celery监控</h3></p>
+        <iframe src="http://{{form.public_host}}:5555" width="1170px" height="700px"></iframe>
+    </div>
+
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+
+</script>
+{% endblock %}

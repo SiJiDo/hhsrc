@@ -1,0 +1,193 @@
+{% extends "base.html" %}
+
+{% block title %}通知方式配置{% endblock %}
+
+
+{% block navbar %}
+<section class="content-header">
+    <h1>站点扫描</h1>
+    <ol class="breadcrumb">
+        <li><i class="fa fa-dashboard"></i> 当前位置</li>
+        <li class="active">扫描结果</li>
+        <li class="active">站点扫描</li>
+    </ol>
+</section>
+{% endblock %}
+
+
+{% block content %}
+<div class="box box-primary">
+    <div class="box-header with-border">
+        {% include 'message.html' %}
+    </div>
+    <div class="box-body">
+        <div class="col-md-1"></div>
+        <div class="col-md-7">
+            <p><b>域名: </b><a href=javascript:window.open("{{form.http_info.http_schema}}://{{form.http_info.http_name}}")>{{form.http_info.http_schema}}://{{form.http_info.http_name}}</a></p>
+            <p><b>ip : </b>{{form.ip}}</p>
+            <p><b>响应: </b>{{form.http_info.http_status}}</p>
+            <p><b>标题: </b>{{form.http_info.http_title}}</p>
+            <p><b>长度: </b>{{form.http_info.http_length}}</p>
+            <p><b>隶属: </b>{{form.http_info.target_name}}</p>
+            <p><b>时间: </b>{{form.http_info.http_time}}</p>
+        </div>
+        <div class="col-md-4">
+            <p><b>截图</b></p>
+            {% if form.http_info.http_screen != 'None'%}<img src="data:image/png;base64,{{form.http_info.http_screen}}" />
+            {% else %}None
+            {% endif %}
+        </div>
+    </div>
+    <div class="box-body">
+        <div>
+        <div class="col-md-6">
+        {% if form%}
+        <table class="table table-bordered">
+            <h3>目录扫描</h3>
+            <tr>
+                <th>路径</th>
+                <th>标题</th>
+                <th>响应码</th>
+                <th>响应长度</th>
+                <th>更新时间</th>
+            </tr>
+            {% for row in form.dirb_content %}
+            <tr>
+                <td><a href=javascript:window.open("{{form.http_info.http_schema}}://{{form.http_info.http_name+row.dir_path}}")>{{row.dir_path}}</a></td>
+                <td>{{row.dir_title}}</a></td>
+                <td>{{row.dir_status}}</td>
+                <td>{{row.dir_length}}</td>
+                <td>{{row.dir_time}}</td>    
+            </tr>
+            {% endfor %}
+        </table>
+        {% endif %}
+
+        <div>
+            {% if form%}
+            <ul class="pagination pagination-sm no-margin pull-right">
+                <li><a href="#">&laquo;</a></li>
+
+                {% if form.page <= 3 %}
+                    {% if form.total_page >= 5 %}
+                        {% for i in range(1, 6) %}
+                            {% if i == form.page %}
+                                <li><a href="?page={{i}}&vuln_page={{form.vuln_page}}&id={{form.id}}"><b>{{i}}</b></a></li>
+                            {% else %}
+                                <li><a href="?page={{i}}&vuln_page={{form.vuln_page}}&id={{form.id}}">{{i}}</a></li>
+                            {% endif %}
+                        {% endfor %}
+                    {% else %}
+                        {% for i in range(1, form.total_page + 1) %}
+                            {% if i == form.page %}
+                                <li><a href="?page={{i}}&vuln_page={{form.vuln_page}}&id={{form.id}}"><b>{{i}}</b></a></li>
+                            {% else %}
+                                <li><a href="?page={{i}}&vuln_page={{form.vuln_page}}&id={{form.id}}">{{i}}</a></li>
+                            {% endif %}
+                        {% endfor %}
+                    {% endif %}
+
+                {% elif form.page <= form.total_page and form.page >= form.total_page - 2 %}
+                    {% for i in range(form.total_page - 3, form.total_page + 1) %}
+                        {% if i == form.page %}
+                            <li><a href="?page={{i}}&vuln_page={{form.vuln_page}}&id={{form.id}}"><b>{{i}}</b></a></li>
+                        {% else %}
+                            <li><a href="?page={{i}}&vuln_page={{form.vuln_page}}&id={{form.id}}">{{i}}</a></li>
+                    {% endif %}
+                {% endfor %}
+
+                {% else %}
+                    {% for i in range(form.page - 2, form.page + 2) %}
+                        {% if i == form.page %}
+                            <li><a href="?page={{i}}&vuln_page={{form.vuln_page}}&id={{form.id}}"><b>{{i}}</b></a></li>
+                        {% else %}
+                            <li><a href="?page={{i}}&vuln_page={{form.vuln_page}}&id={{form.id}}">{{i}}</a></li>
+                        {% endif %}
+                    {% endfor %}
+                {% endif %}
+
+                <li><a href="#">&raquo;</a></li>
+            </ul>
+        {% endif %}
+        </div>
+
+        </div>
+
+        <div class="col-md-6">
+            {% if form%}
+            <table class="table table-bordered">
+                <h3>漏洞扫描</h3>
+                <tr>
+                    <th>漏洞级别</th>
+                    <th>漏洞信息</th>
+                    <th>漏洞路径</th>
+                </tr>
+                {% for row in form.vuln_content %}
+                <tr>
+                    <td>{{row.vuln_level}}</td>
+                    <td>{{row.vuln_info}}</td>
+                    <td>{{row.vuln_path}}</td>
+                </tr>
+                {% endfor %}
+            </table>
+            {% endif %}
+
+            <div>
+                {% if form%}
+                <ul class="pagination pagination-sm no-margin pull-right">
+                    <li><a href="#">&laquo;</a></li>
+    
+                    {% if form.vuln_page <= 3 %}
+                        {% if form.vuln_total_page >= 5 %}
+                            {% for i in range(1, 6) %}
+                                {% if i == form.vuln_page %}
+                                    <li><a href="?vuln_page={{i}}&page={{form.page}}&id={{form.id}}"><b>{{i}}</b></a></li>
+                                {% else %}
+                                    <li><a href="?vuln_page={{i}}&page={{form.page}}&id={{form.id}}">{{i}}</a></li>
+                                {% endif %}
+                            {% endfor %}
+                        {% else %}
+                            {% for i in range(1, form.vuln_total_page + 1) %}
+                                {% if i == form.vuln_page %}
+                                    <li><a href="?vuln_page={{i}}&page={{form.page}}&id={{form.id}}"><b>{{i}}</b></a></li>
+                                {% else %}
+                                    <li><a href="?vuln_page={{i}}&page={{form.page}}&id={{form.id}}">{{i}}</a></li>
+                                {% endif %}
+                            {% endfor %}
+                        {% endif %}
+    
+                    {% elif form.vuln_page <= form.vuln_total_page and form.vuln_page >= form.vuln_total_page - 2 %}
+                        {% for i in range(form.vuln_total_page - 3, form.vuln_total_page + 1) %}
+                            {% if i == form.vuln_page %}
+                                <li><a href="?vuln_page={{i}}&page={{form.page}}&id={{form.id}}"><b>{{i}}</b></a></li>
+                            {% else %}
+                                <li><a href="?vuln_page={{i}}&page={{form.page}}&id={{form.id}}">{{i}}</a></li>
+                        {% endif %}
+                    {% endfor %}
+    
+                    {% else %}
+                        {% for i in range(form.vuln_page - 2, form.vuln_page + 2) %}
+                            {% if i == form.vuln_page %}
+                                <li><a href="?vuln_page={{i}}&page={{form.page}}&id={{form.id}}"><b>{{i}}</b></a></li>
+                            {% else %}
+                                <li><a href="?vuln_page={{i}}&page={{form.page}}&id={{form.id}}">{{i}}</a></li>
+                            {% endif %}
+                        {% endfor %}
+                    {% endif %}
+    
+                    <li><a href="#">&raquo;</a></li>
+                </ul>
+            {% endif %}
+            </div>    
+        </div>
+        </div>
+    </div> 
+    
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+
+</script>
+{% endblock %}

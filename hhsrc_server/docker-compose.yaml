@@ -1,0 +1,14 @@
+version: "2"
+services:
+  server:
+    build: .
+    tty: true
+    environment:
+      DEBUG: 'False'
+    restart: always
+    ports:
+      - "5000:5000"
+      - "5555:5555"
+      - "5672:5672"
+      - "15672:15672"
+      - "6379:6379"
