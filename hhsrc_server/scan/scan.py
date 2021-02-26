@@ -10,6 +10,7 @@ from multiprocessing import Process
 from app import DB
 from sqlalchemy import create_engine
 import pymysql
+import os
 
 cfg = configparser.ConfigParser()
 cfg.read('config.ini')
@@ -48,30 +49,31 @@ def run(target_id = '0'):
         sql = "SELECT * FROM hhsrc_scanmethod where id = %s"
         cursor.execute(sql,(target_query[3]))
         scanmethod_query = cursor.fetchone()
-        print(scanmethod_query)
-        print(target_query)
-        #扫描模式配置扫描子域
-        print("subdomain开过" + str(scanmethod_query[2]))
-        if(scanmethod_query[2]):
-            scan_subdomain.run(target_query[0])
-        #扫描端口信息
-        print("port开关:" + str(scanmethod_query[3]))
-        if(scanmethod_query[3]):
-            scan_port.run(target_query[0], scanmethod_query)
-        # #扫描http信息
-        print("http开关:" + str(scanmethod_query[5]))
-        if(scanmethod_query[5]):
-            scan_url.run(target_query[0])
-        # #扫描敏感目录
-        print("dirb开关:" + str(scanmethod_query[6]))
-        if(scanmethod_query[6]):
-            scan_dirb.run(target_query[0], scanmethod_query)
-        # #扫描漏洞
-        print("vuln开关:" + str(scanmethod_query[8]))
-        if(scanmethod_query[8]):
-            scan_vuln.run(target_query[0])
-        # 扫描结束
-        print(str(target_query[1]) + "扫描结束")
+        try:
+            #扫描模式配置扫描子域
+            print("subdomain开关:" + str(scanmethod_query[2]))
+            if(scanmethod_query[2]):
+                scan_subdomain.run(target_query[0])
+            #扫描端口信息
+            print("port开关:" + str(scanmethod_query[3]))
+            if(scanmethod_query[3]):
+                scan_port.run(target_query[0], scanmethod_query)
+            # #扫描http信息
+            print("http开关:" + str(scanmethod_query[5]))
+            if(scanmethod_query[5]):
+                scan_url.run(target_query[0])
+            # #扫描敏感目录
+            print("dirb开关:" + str(scanmethod_query[6]))
+            if(scanmethod_query[6]):
+                scan_dirb.run(target_query[0], scanmethod_query)
+            # #扫描漏洞
+            print("vuln开关:" + str(scanmethod_query[8]))
+            if(scanmethod_query[8]):
+                scan_vuln.run(target_query[0])
+            # 扫描结束
+            print(str(target_query[1]) + "扫描结束")
+        except Exception as e:
+            os.system("redis-cli -a {} -n 2 ltrim transcode 0 196".format(cfg.get("DATABASE", "REDIS_PASSWORD")))
 
         sql='UPDATE hhsrc_target SET target_status = %s where id=%s'
         cursor.execute(sql,(2,target_query[0]))
