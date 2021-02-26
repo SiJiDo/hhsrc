@@ -39,9 +39,9 @@ def setcorn():
         for c in target_query:
             #绑定计划任务
             if(corn[3] == '*'):
-                scheduler.add_job(rest_status, 'cron', args=[c[0],], month=corn[2], day=corn[4], day_of_week=corn[3] ,hour=corn[5], minute=corn[6])
+                scheduler.add_job(rest_status, 'cron', args=[c[0],cursor, conn,], month=corn[2], day=corn[4], day_of_week=corn[3] ,hour=corn[5], minute=corn[6])
             else:
-                scheduler.add_job(rest_status, 'cron', args=[c[0],], month=corn[2], day=corn[4], day_of_week=int(corn[3])-1 ,hour=corn[5], minute=corn[6])
+                scheduler.add_job(rest_status, 'cron', args=[c[0],cursor, conn,], month=corn[2], day=corn[4], day_of_week=int(corn[3])-1 ,hour=corn[5], minute=corn[6])
         for job in scheduler.get_jobs():
             sql='insert into hhsrc_cornjob(cornjob_name, cornjob_time) values(%s,%s)'
             result = cursor.execute(sql,(str(job), time.strftime('%Y-%m-%d  %H:%M:%S', time.localtime(time.time()))))
@@ -84,22 +84,24 @@ def setcorn():
     x,y,z    any    Fire on any matching expression; can combine any number of any of the above expressions
     '''
 
-def rest_status(target_id):
+def rest_status(target_id, cursor, conn):
     print(target_id)
     print("开始计划任务")
-    target_model = Target()
-    r = target_model.update(target_status = 0).where(Target.id == target_id).execute()
-    domain_model = domain()
-    r = domain_model.update(domain_subdomain_status = False).where(domain.domain_target == target_id).execute()
-    subdomain_model = subdomain()
-    r = subdomain_model.update(subdomain_port_status = False).where(subdomain.subdomain_target == target_id).execute()
-    r = subdomain_model.update(subdomain_http_status = False).where(subdomain.subdomain_target == target_id).execute()
-    port_model = port()
-    r = port_model.update(port_http_status = False).where(port.port_target == target_id).execute()
-    http_model = http()
-    r =  http_model.update(http_dirb_status = False).where(http.http_target == target_id).execute()
-    r = http_model.update(http_api_status = False).where(http.http_target == target_id).execute()
-    r = http_model.update(http_webinfo_status = False).where(http.http_target == target_id).execute()
+    sql = "UPDATE hhsrc_target SET target_status=0 WHERE id=%s"
+    cursor.execute(sql,(target_id))
+    conn.commit()
+    sql = "UPDATE hhsrc_domain SET domain_subdomain_status=False WHERE domain_target=%s"
+    cursor.execute(sql,(target_id))
+    conn.commit()
+    sql = "UPDATE hhsrc_subdomain SET subdomain_port_status=False,subdomain_http_status=False WHERE subdomain_target=%s"
+    cursor.execute(sql,(target_id))
+    conn.commit()
+    sql = "UPDATE hhsrc_port SET port_http_status=False WHERE port_target=%s"
+    cursor.execute(sql,(target_id))
+    conn.commit()
+    sql = "UPDATE hhsrc_http SET http_dirb_status=False,http_vuln_status=False WHERE http_target=%s"
+    cursor.execute(sql,(target_id))
+    conn.commit()
     scan.run(target_id)
 
 if __name__ == '__main__':
