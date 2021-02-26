@@ -9,6 +9,7 @@ source /root/.bashrc
 
 echo 'requirepass hhsrc' >> /etc/redis/redis.conf
 sed -i 's/bind 127.0.0.1 ::1/# bind 127.0.0.1 ::1/g' /etc/redis/redis.conf
+sed -i 's/\[mysqld\]/\[mysqld\]\nwait_timeout=31536000\ninteractive_timeout=31536000/g' /etc/mysql/mariadb.conf.d/50-server.cnf
 /etc/init.d/redis-server start
 
 service rabbitmq-server start

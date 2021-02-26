@@ -73,12 +73,13 @@ def run(target_id = '0'):
         # 扫描结束
         print(str(target_query[1]) + "扫描结束")
 
-        sql='update hhsrc_target set target_status = %s where id=%s'
+        sql='UPDATE hhsrc_target SET target_status = %s where id=%s'
         cursor.execute(sql,(2,target_query[0]))
         conn.commit()
 
         sql = "SELECT * FROM hhsrc_target where target_status = 0"
         wait_scan_query = cursor.execute(sql)
+
     cursor.close()
     conn.close()
     return
