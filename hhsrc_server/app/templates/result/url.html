@@ -41,6 +41,8 @@
                 <th>响应码</th>
                 <th>响应长度</th>
                 <th>截图</th>
+                <th>目录扫描数</th>
+                <th>漏洞扫描数</th>
                 <th>更新时间</th>
             </tr>
             {% for row in form.content %}
@@ -51,6 +53,8 @@
                 <td>{{row.http_status}}</td>
                 <td>{{row.http_length}}</td>
                 <td>{% if row.http_screen != 'None'%}<img src="data:image/png;base64,{{row.http_screen}}" />{% else %}None{% endif %}</td>
+                <td>{{row.dirb_count}}</td>
+                <td>{{row.vuln_count}}</td>
                 <td>{{row.http_time}}</td>
             </tr>
             {% endfor %}

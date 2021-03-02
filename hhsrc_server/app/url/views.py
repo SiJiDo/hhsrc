@@ -93,6 +93,9 @@ def url_list(DynamicModel, view):
     #转换成dict
     for q in query.items:
         content.append(utils.queryToDict(q))
+    for i in content:
+        i['dirb_count'] = dirb.query.filter(dirb.dir_http == str(i['id'])).count()
+        i['vuln_count'] = vuln.query.filter(vuln.vuln_http == str(i['id'])).count()
 
     dict = {'content': content, 'total_count': total_count,
             'total_page': math.ceil(total_count / length), 'page': page, 'length': length, 'id': id,'search': search}
