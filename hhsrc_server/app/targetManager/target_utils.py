@@ -294,7 +294,7 @@ def output_excel(target_id):
         row = row + 1
     row = 1
     for url_info in http.query.filter(http.http_target == target_id).all():
-        sheet_url.write(row,0,url_info.http_schema + ":\\" + url_info.http_name)
+        sheet_url.write(row,0,url_info.http_schema + "://" + url_info.http_name)
         sheet_url.write(row,1,url_info.http_title)
         sheet_url.write(row,2,url_info.http_status)
         sheet_url.write(row,3,url_info.http_length)

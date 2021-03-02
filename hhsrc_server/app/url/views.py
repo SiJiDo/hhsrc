@@ -130,6 +130,7 @@ def url_info(DynamicModel, view):
         ip = subdomain.query.filter(subdomain.subdomain_name == http_info.http_name.split(":")[0]).first().subdomain_ip
         print(ip)
     except:
+        ip = ""
         http_info = []
 
     # 查询敏感目录列表

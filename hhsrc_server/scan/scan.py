@@ -37,7 +37,15 @@ def run(target_id = '0'):
     #开始扫描
     sql = "SELECT * FROM hhsrc_target where target_status = 0"
     wait_scan_query = cursor.execute(sql)
+    #关闭连接
+    cursor.close()
+    conn.close()
+
     while(wait_scan_query > 0):
+        #重新连接
+        conn = pymysql.connect(host=DB_HOST, port=3306, user=DB_USER, password=DB_PASSWD, db=DB_DATABASE, charset='utf8')
+        cursor = conn.cursor()
+
         sql = "SELECT * FROM hhsrc_target where target_status = 0 order by target_level desc"
         cursor.execute(sql)
         target_query = cursor.fetchone()
@@ -49,6 +57,10 @@ def run(target_id = '0'):
         sql = "SELECT * FROM hhsrc_scanmethod where id = %s"
         cursor.execute(sql,(target_query[3]))
         scanmethod_query = cursor.fetchone()
+        #在此处再次关闭连接
+        cursor.close()
+        conn.close()
+
         try:
             #扫描模式配置扫描子域
             print("subdomain开关:" + str(scanmethod_query[2]))
@@ -74,6 +86,11 @@ def run(target_id = '0'):
             print(str(target_query[1]) + "扫描结束")
         except Exception as e:
             os.system("redis-cli -a {} -n 2 ltrim transcode 0 196".format(cfg.get("DATABASE", "REDIS_PASSWORD")))
+            # os.system("rabbitmqctl stop_app &&  rabbitmqctl reset && rabbitmqctl rabbitmqctl start_app && rabbitmqctl add_user hhsrc {} && rabbitmqctl add_vhost hhsrc && rabbitmqctl set_user_tags hhsrc administrator && rabbitmqctl set_permissions -p hhsrc hhsrc \".*\" \".*\" \".*\"".format(cfg.get("DATABASE","RABBITMQ_PASSWORD")))
+
+        #再次连接
+        conn = pymysql.connect(host=DB_HOST, port=3306, user=DB_USER, password=DB_PASSWD, db=DB_DATABASE, charset='utf8')
+        cursor = conn.cursor()
 
         sql='UPDATE hhsrc_target SET target_status = %s where id=%s'
         cursor.execute(sql,(2,target_query[0]))
@@ -82,8 +99,8 @@ def run(target_id = '0'):
         sql = "SELECT * FROM hhsrc_target where target_status = 0"
         wait_scan_query = cursor.execute(sql)
 
-    cursor.close()
-    conn.close()
+        cursor.close()
+        conn.close()
     return
 
 # 添加精准资产时的动作
