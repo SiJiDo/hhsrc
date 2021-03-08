@@ -47,14 +47,23 @@ def setcorn():
             result = cursor.execute(sql,(str(job), time.strftime('%Y-%m-%d  %H:%M:%S', time.localtime(time.time()))))
             conn.commit()
 
+    cursor.close()
+    conn.close()
+
     scheduler.start()
     print("--------------计划任务---------------")
     while(scheduler.get_jobs()):
+        conn = pymysql.connect(host=DB_HOST, port=3306, user=DB_USER, password=DB_PASSWD, db=DB_DATABASE, charset='utf8')
+        cursor = conn.cursor()
+
         sql = "SELECT * from hhsrc_cornjob";
         result = cursor.execute(sql)
+        
         if(result == 0):
             break
         time.sleep(60)
+        cursor.close()
+        conn.close()
     print("-------------计划任务结束--------------")
     cursor.close()
     conn.close()

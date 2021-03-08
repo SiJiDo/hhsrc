@@ -183,12 +183,25 @@ def save_result_port(port_query, target_id, http_result, cursor, conn):
 
 #截图
 def save_result_screenshot(http_result, cursor, conn):  
-    for result in http_result:
-        print("开始存储截图:" + result['http'])
-        try:
-            sql='UPDATE hhsrc_http SET http_screen=%s WHERE http_name=%s'
-            result = cursor.execute(sql,(result['screen_base64'],result['http'].split("://")[1])) 
-            conn.commit()
-        except Exception as e:
-            print(e)
+    i = 0
+    while(i <= len(http_result)):
+        if(len(http_result > 100)):
+            for result in http_result[i: i + 100]:
+                print("开始存储截图:" + result['http'])
+                try:
+                    sql='UPDATE hhsrc_http SET http_screen=%s WHERE http_name=%s'
+                    result = cursor.execute(sql,(result['screen_base64'],result['http'].split("://")[1])) 
+                    conn.commit()
+                except Exception as e:
+                    print(e) 
+                i = i + 100
+        else:
+            for result in http_result[i:len(http_result)]:
+                print("开始存储截图:" + result['http'])
+                try:
+                    sql='UPDATE hhsrc_http SET http_screen=%s WHERE http_name=%s'
+                    result = cursor.execute(sql,(result['screen_base64'],result['http'].split("://")[1])) 
+                    conn.commit()
+                except Exception as e:
+                    print(e)
     return

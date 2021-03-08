@@ -102,6 +102,7 @@ def run(target_id):
         sql='update hhsrc_domain set domain_subdomain_status = %s where domain_target=%s'
         result = cursor.execute(sql,(True,target_id)) 
         conn.commit()
+
     cursor.close()
     conn.close()
     return

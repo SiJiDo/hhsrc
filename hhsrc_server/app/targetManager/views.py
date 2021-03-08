@@ -61,6 +61,7 @@ def target_edit(DynamicModel, form, view):
                 p=Process(target=scan.run,args=(id,))
                 p.start()
                 #启动计划任务监控子进程
+                print("开始计划任务监控")
                 p = Process(target=corn.setcorn)
                 p.start()
             else:
@@ -97,6 +98,7 @@ def target_edit(DynamicModel, form, view):
             p=Process(target=scan.run,args=(id,))
             p.start()
             #启动计划任务监控子进程
+            print("开始计划任务监控")
             p = Process(target=corn.setcorn)
             p.start()
         else:
@@ -206,35 +208,35 @@ def target_info(DynamicModel, view):
             target_model = Target.query.filter(Target.id == id).first()
             target_model.target_status = 0
             try:
-                domain_model = domain.query.filter(domain.domain_target == id).first()
-                domain_model.domain_subdomain_status = False
+                domain_model = domain.query.filter(domain.domain_target == id).all()
+                for model in domain_model:
+                    model.domain_subdomain_status = False
             except:
                 pass
             try:
-                subdomain_model = subdomain.query.filter(subdomain.subdomain_target == id).first()
-                subdomain_model.subdomain_port_status = False
-                subdomain_model.subdomain_http_status = False
+                subdomain_model = subdomain.query.filter(subdomain.subdomain_target == id).all()
+                for model in subdomain_model:
+                    model.subdomain_port_status = False
+                    model.subdomain_http_status = False
             except:
                 pass
             try:
-                port_model = port.query.filter(port.port_target == id).first()
-                port_model.port_http_status = False
+                port_model = port.query.filter(port.port_target == id).all()
+                for model in port_model:
+                    model.port_http_status = False
             except:
                 pass
             try:
-                http_model = http.query.filter(http.http_target == id).first()
-                http_model.http_dirb_status = False
-                http_model.http_vuln_status = False
+                http_model = http.query.filter(http.http_target == id).all()
+                for model in http_model:
+                    model.http_dirb_status = False
+                    model.http_vuln_status = False
             except:
                 pass
             DB.session.commit()
             flash('开始重新扫描')
             p = Process(target=scan.run,args=(id,))
             p.start()
-            #启动计划任务监控子进程
-            p = Process(target=corn.setcorn)
-            p.start()
-            pass
         except Exception as e:
             DB.session.rollback()
             print(e)
