@@ -4,7 +4,7 @@ from flask import Flask
 from app.models import domain,blacklist,subdomain
 from scan.libs import scan_domaininfo
 from scan import utils
-from app import DB
+from app import DB,mutex
 import time 
 import configparser
 import pymysql
@@ -80,12 +80,13 @@ def run(target_id):
             if(utils.black_list_query_pro(target_id, i['domain'], ','.join(i['ips']),cursor,conn)):
                 continue
             #ip个数大于5就pass
-            if(subdomain.query.filter(subdomain.subdomain_ip == ','.join(i['ips'])).count() > 5):
+            sql = "SELECT * FROM hhsrc_subdomain where subdomain_ip = %s"
+            ip_count = cursor.execute(sql,(','.join(i['ips'])))
+            if(ip_count > 5):
                 continue
             #入库
             print("开始入库:" + i['domain'])
             i['domain'].replace("'","\'")
-  
             sql = "REPLACE INTO hhsrc_subdomain (subdomain_name,subdomain_ip,subdomain_info,subdomain_port_status, subdomain_http_status, subdomain_time, subdomain_target) VALUES('{}', '{}', '{}', {}, {}, '{}', '{}')".format(
                 i['domain'],
                 ','.join(i['ips'][:3]),

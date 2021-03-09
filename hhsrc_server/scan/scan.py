@@ -85,6 +85,7 @@ def run(target_id = '0'):
             # 扫描结束
             print(str(target_query[1]) + "扫描结束")
         except Exception as e:
+            print(e)
             os.system("redis-cli -a {} -n 2 ltrim transcode 0 196".format(cfg.get("DATABASE", "REDIS_PASSWORD")))
             # os.system("rabbitmqctl stop_app &&  rabbitmqctl reset && rabbitmqctl rabbitmqctl start_app && rabbitmqctl add_user hhsrc {} && rabbitmqctl add_vhost hhsrc && rabbitmqctl set_user_tags hhsrc administrator && rabbitmqctl set_permissions -p hhsrc hhsrc \".*\" \".*\" \".*\"".format(cfg.get("DATABASE","RABBITMQ_PASSWORD")))
 

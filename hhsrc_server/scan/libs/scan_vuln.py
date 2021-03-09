@@ -1,7 +1,7 @@
 from celery.result import AsyncResult
 from celery import Celery
 from flask import Flask
-from app.models import http, vuln
+from app.models import http
 from scan import utils
 from app import DB
 import time 
