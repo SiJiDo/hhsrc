@@ -185,7 +185,7 @@ def save_result_port(port_query, target_id, http_result, cursor, conn):
 def save_result_screenshot(http_result, cursor, conn):  
     i = 0
     while(i <= len(http_result)):
-        if(len(http_result > 100)):
+        if(len(http_result) > 100):
             for result in http_result[i: i + 100]:
                 print("开始存储截图:" + result['http'])
                 try:
@@ -204,4 +204,5 @@ def save_result_screenshot(http_result, cursor, conn):
                     conn.commit()
                 except Exception as e:
                     print(e)
+                i = len(http_result) + 1
     return

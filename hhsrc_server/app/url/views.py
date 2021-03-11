@@ -134,7 +134,6 @@ def url_info(DynamicModel, view):
         print(ip)
     except:
         ip = ""
-        http_info = []
 
     # 查询敏感目录列表
     query_dirb = DB.session.query(
