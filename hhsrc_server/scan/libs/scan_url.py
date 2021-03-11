@@ -186,7 +186,12 @@ def save_result_screenshot(http_result, cursor, conn):
     i = 0
     while(i <= len(http_result)):
         if(len(http_result) > 100):
-            for result in http_result[i: i + 100]:
+            end = 0
+            if(i + 100 > len(http_result)):
+                end = len(http_result)
+            else:
+                end = i + 100
+            for result in http_result[i: end]:
                 print("开始存储截图:" + result['http'])
                 try:
                     sql='UPDATE hhsrc_http SET http_screen=%s WHERE http_name=%s'
