@@ -11,9 +11,7 @@ cfg.read('config.ini')
 def domaininfo(domain_target):
     #不知道为什么在scan中调用会出错，这里直接把celery加进来防止出错
     app = Flask(__name__)
-    app.config['CELERY_BROKER_URL'] = cfg.get("CELERY_CONFIG", "CELERY_BROKER_URL")
-    app.config['CELERY_RESULT_BACKEND'] = cfg.get("CELERY_CONFIG", "CELERY_RESULT_BACKEND")
-    task = Celery(app.name, broker=app.config['CELERY_BROKER_URL'], backend=app.config['CELERY_RESULT_BACKEND'])
+    task = Celery(app.name, broker=cfg.get("CELERY_CONFIG", "CELERY_BROKER_URL"), backend=cfg.get("CELERY_CONFIG", "CELERY_RESULT_BACKEND"))
     task.conf.update(app.config)
 
     #发送celery,进行3次容错判断

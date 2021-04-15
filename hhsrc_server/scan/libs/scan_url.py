@@ -20,11 +20,7 @@ def run(target_id):
     conn = pymysql.connect(host=DB_HOST, port=3306, user=DB_USER, password=DB_PASSWD, db=DB_DATABASE, charset='utf8')
     cursor = conn.cursor()
 
-    app = Flask(__name__)
-    app.config['CELERY_BROKER_URL'] = cfg.get("CELERY_CONFIG", "CELERY_BROKER_URL")
-    app.config['CELERY_RESULT_BACKEND'] = cfg.get("CELERY_CONFIG", "CELERY_RESULT_BACKEND")
-
-    task = Celery(app.name, broker=app.config['CELERY_BROKER_URL'], backend=app.config['CELERY_RESULT_BACKEND'])
+    task = Celery(app.name, broker=cfg.get("CELERY_CONFIG", "CELERY_BROKER_URL"), backend=cfg.get("CELERY_CONFIG", "CELERY_RESULT_BACKEND"))
     task.conf.update(app.config)
 
     #查询该目标的未扫描的域名
@@ -96,29 +92,39 @@ def run(target_id):
             if not scan_queue:
                 break
 
-    #截图
+    #截图，注意数据太多会失败，这里应进行分次请求
     sql = "SELECT * FROM hhsrc_http WHERE http_target=%s AND http_screen=%s AND http_status!=%s AND http_status!=%s"
     cursor.execute(sql,(target_id,'None','302','301'))
-    http_query = cursor.fetchall()
+    http_query_all = cursor.fetchall()
 
-    http_list = []
-    for http_info in http_query:
-        http_list.append(http_info[1] + "://" + http_info[2])
-        
-    screenshot_scan = task.send_task('screenshot.run', args=(http_list,), queue='screenshot')
-    scan_queue = []
-    scan_queue.append(AsyncResult(screenshot_scan.id))
+    i = 0
+    end = 0
+    while(i < len(http_query_all)):
+        if(i + 100 < len(http_query_all)):
+            end = i + 100
+        else:
+            end = len(http_query_all)
+        http_query = http_query_all[i:end]
+        i = end
 
-    while True:
-        for h in scan_queue:
-            if h.successful():
-                try:
-                    save_result_screenshot(h.result['result'], cursor, conn)
-                except Exception as e:
-                    print(e)
-                scan_queue.remove(h)
-        if not scan_queue:
-            break
+        http_list = []
+        for http_info in http_query:
+            http_list.append(http_info[1] + "://" + http_info[2])
+            
+        screenshot_scan = task.send_task('screenshot.run', args=(http_list,), queue='screenshot')
+        scan_queue = []
+        scan_queue.append(AsyncResult(screenshot_scan.id))
+
+        while True:
+            for h in scan_queue:
+                if h.successful():
+                    try:
+                        save_result_screenshot(h.result['result'], cursor, conn)
+                    except Exception as e:
+                        print(e)
+                    scan_queue.remove(h)
+            if not scan_queue:
+                break
 
     cursor.close()
     conn.close()
@@ -183,31 +189,12 @@ def save_result_port(port_query, target_id, http_result, cursor, conn):
 
 #截图
 def save_result_screenshot(http_result, cursor, conn):  
-    i = 0
-    while(i <= len(http_result)):
-        if(len(http_result) > 100):
-            end = 0
-            if(i + 100 > len(http_result)):
-                end = len(http_result)
-            else:
-                end = i + 100
-            for result in http_result[i: end]:
-                print("开始存储截图:" + result['http'])
-                try:
-                    sql='UPDATE hhsrc_http SET http_screen=%s WHERE http_name=%s'
-                    result = cursor.execute(sql,(result['screen_base64'],result['http'].split("://")[1])) 
-                    conn.commit()
-                except Exception as e:
-                    print(e) 
-                i = i + 100
-        else:
-            for result in http_result[i:len(http_result)]:
-                print("开始存储截图:" + result['http'])
-                try:
-                    sql='UPDATE hhsrc_http SET http_screen=%s WHERE http_name=%s'
-                    result = cursor.execute(sql,(result['screen_base64'],result['http'].split("://")[1])) 
-                    conn.commit()
-                except Exception as e:
-                    print(e)
-                i = len(http_result) + 1
+    for result in http_result:
+        print("开始存储截图:" + result['http'])
+        try:
+            sql='UPDATE hhsrc_http SET http_screen=%s WHERE http_name=%s'
+            result = cursor.execute(sql,(result['screen_base64'],result['http'].split("://")[1])) 
+            conn.commit()
+        except Exception as e:
+            print(e)
     return

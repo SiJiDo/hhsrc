@@ -21,13 +21,14 @@ def setcorn():
     #初始化扫描任务
     scheduler = BackgroundScheduler()
 
-    print("删除之前的计划任务，重新生成新的计划任务列表")
+    print("删除之前的计划任务")
     #删除计划任务列表，保证之前的子进程退出
     sql = "DELETE FROM hhsrc_cornjob"
     cursor.execute(sql)
     conn.commit()
-    time.sleep(300)
+    time.sleep(60)
 
+    print("重新生成新的计划任务列表")
     sql = "SELECT * FROM hhsrc_scancorn"
     cursor.execute(sql)
     scancorn_query = cursor.fetchall()
@@ -37,11 +38,12 @@ def setcorn():
         cursor.execute(sql)
         target_query = cursor.fetchall()
         for c in target_query:
+            print(c)
             #绑定计划任务
             if(corn[3] == '*'):
-                scheduler.add_job(rest_status, 'cron', args=[c[0],cursor, conn,], month=corn[2], day=corn[4], day_of_week=corn[3] ,hour=corn[5], minute=corn[6])
+                scheduler.add_job(rest_status, 'cron', args=[c[0],], month=corn[2], day=corn[4], day_of_week=corn[3] ,hour=corn[5], minute=corn[6])
             else:
-                scheduler.add_job(rest_status, 'cron', args=[c[0],cursor, conn,], month=corn[2], day=corn[4], day_of_week=int(corn[3])-1 ,hour=corn[5], minute=corn[6])
+                scheduler.add_job(rest_status, 'cron', args=[c[0],], month=corn[2], day=corn[4], day_of_week=int(corn[3])-1 ,hour=corn[5], minute=corn[6])
         for job in scheduler.get_jobs():
             sql='insert into hhsrc_cornjob(cornjob_name, cornjob_time) values(%s,%s)'
             result = cursor.execute(sql,(str(job), time.strftime('%Y-%m-%d  %H:%M:%S', time.localtime(time.time()))))
@@ -61,7 +63,7 @@ def setcorn():
         
         if(result == 0):
             break
-        time.sleep(60)
+        time.sleep(5)
         cursor.close()
         conn.close()
     print("-------------计划任务结束--------------")
@@ -93,7 +95,13 @@ def setcorn():
     x,y,z    any    Fire on any matching expression; can combine any number of any of the above expressions
     '''
 
-def rest_status(target_id, cursor, conn):
+def rest_status(target_id):
+    DB_HOST = cfg.get("DATABASE", "DB_HOST")
+    DB_USER = cfg.get("DATABASE", "DB_USER")
+    DB_PASSWD = cfg.get("DATABASE", "DB_PASSWD")
+    DB_DATABASE = cfg.get("DATABASE", "DB_DATABASE")
+    conn = pymysql.connect(host=DB_HOST, port=3306, user=DB_USER, password=DB_PASSWD, db=DB_DATABASE, charset='utf8')
+    cursor = conn.cursor()
     print(target_id)
     print("开始计划任务")
     sql = "UPDATE hhsrc_target SET target_status=0 WHERE id=%s"
@@ -112,6 +120,8 @@ def rest_status(target_id, cursor, conn):
     cursor.execute(sql,(target_id))
     conn.commit()
     scan.run(target_id)
+    cursor.close()
+    conn.close()
 
 if __name__ == '__main__':
     setcorn()

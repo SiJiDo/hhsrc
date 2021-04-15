@@ -106,7 +106,6 @@ def run(target_list):
     for j in threads:
         j.join()
     return {'tool': 'screenshot', 'result': result}
-        
 
 
 if __name__ == '__main__':
