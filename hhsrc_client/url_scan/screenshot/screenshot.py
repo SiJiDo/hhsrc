@@ -105,6 +105,7 @@ def run(target_list):
 
     for j in threads:
         j.join()
+    os.system("ps -ef |grep phantomjs |awk '{print $2}'|xargs kill -9")
     return {'tool': 'screenshot', 'result': result}
 
 

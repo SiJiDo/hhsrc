@@ -50,11 +50,16 @@ def run(target):
                 for line in url:
                     #print(line)
                     dic = {}
-                    dic["url"] = json.loads(line)['url']
-                    dic["content-length"] = json.loads(line)['content-length']
-                    dic["status-code"] = json.loads(line)['status-code']
-                    dic["title"] = json.loads(line)['title']
-                    dic["cdn"] = json.loads(line)['cdn']
+                    try:
+                        dic["url"] = json.loads(line)['url']
+                        dic["content-length"] = json.loads(line)['content-length']
+                        dic["status-code"] = json.loads(line)['status-code']
+                        dic["title"] = json.loads(line)['title']
+                    except:
+                        dic["url"] = json.loads(line)['url']
+                        dic["content-length"] = json.loads(line)['content-length']
+                        dic["status-code"] = json.loads(line)['status-code']
+                        dic["title"] = ""
                     result.append(dic)
     except Exception as e:
         print(e)

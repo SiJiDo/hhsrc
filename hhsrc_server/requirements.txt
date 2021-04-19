@@ -14,8 +14,3 @@ flask-sqlalchemy
 pymysql
 pandas
 xlwt
-uwsgi
-Rust
-setuptools_rust
-paramiko
-gevent-websocket

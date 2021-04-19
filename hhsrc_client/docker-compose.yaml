@@ -5,7 +5,7 @@ services:
     tty: true
     environment:
       DEBUG: 'False'
-      BROKER: 'amqp://hhsrc:hhsrc@127.0.0.1:5672/hhsrc'
-      BACKEND: 'redis://:hhsrc@127.0.0.1:6379/2'
+      BROKER: 'amqp://hhsrc:hhsrc@172.19.0.1:5672/hhsrc'
+      BACKEND: 'redis://:hhsrc@172.19.0.1:6379/2'
       TZ: Asia/Shanghai
     restart: always

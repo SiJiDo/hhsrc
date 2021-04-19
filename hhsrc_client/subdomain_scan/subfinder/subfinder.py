@@ -42,4 +42,4 @@ def run(domain):
         return {'tool': 'subfinder', 'result': result}
 
 if __name__ == '__main__':
-    run('vivo.com')
+    print(run('sccxzz.com.cn'))

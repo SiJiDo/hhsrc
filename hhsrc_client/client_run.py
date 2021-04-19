@@ -11,6 +11,14 @@ def run():
     if(cfg.get("WORKER_CONFIG", "subdomain_subfinder") == 'True'):
         os.chdir("{}/subdomain_scan/subfinder".format(FILEPATH))
         os.system("nohup celery -A subfinder worker -l info -Q subfinder -n subfinder_{} -c 1 &".format(time()))
+    #启动amass的celery
+    if(cfg.get("WORKER_CONFIG", "subdomain_amass") == 'True'):
+        os.chdir("{}/subdomain_scan/amass".format(FILEPATH))
+        os.system("nohup celery -A amass worker -l info -Q amass -n amass_{} -c 1 &".format(time()))
+    #启动shuffledns的celery
+    if(cfg.get("WORKER_CONFIG", "subdomain_shuffledns") == 'True'):
+        os.chdir("{}/subdomain_scan/shuffledns".format(FILEPATH))
+        os.system("nohup celery -A shuffledns worker -l info -Q shuffledns -n shuffledns_{} -c 1 &".format(time()))
     #启动domaininfo的celery
     if(cfg.get("WORKER_CONFIG", "subdomain_domaininfo") == 'True'):
         os.chdir("{}/subdomain_scan/domaininfo".format(FILEPATH))

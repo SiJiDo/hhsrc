@@ -4,7 +4,7 @@ from flask import Flask
 from app.models import domain,blacklist,subdomain
 from scan.libs import scan_domaininfo
 from scan import utils
-from app import DB,mutex
+from app import DB
 import time 
 import configparser
 import pymysql
@@ -21,7 +21,11 @@ def run(target_id):
     conn = pymysql.connect(host=DB_HOST, port=3306, user=DB_USER, password=DB_PASSWD, db=DB_DATABASE, charset='utf8')
     cursor = conn.cursor()
 
-    task = Celery(app.name, broker=cfg.get("CELERY_CONFIG", "CELERY_BROKER_URL"), backend=cfg.get("CELERY_CONFIG", "CELERY_RESULT_BACKEND"))
+    app = Flask(__name__)
+    app.config['CELERY_BROKER_URL'] = cfg.get("CELERY_CONFIG", "CELERY_BROKER_URL")
+    app.config['CELERY_RESULT_BACKEND'] = cfg.get("CELERY_CONFIG", "CELERY_RESULT_BACKEND")
+
+    task = Celery(app.name, broker=app.config['CELERY_BROKER_URL'], backend=app.config['CELERY_RESULT_BACKEND'])
     task.conf.update(app.config)
 
     #查询该目标的主域
@@ -58,8 +62,35 @@ def run(target_id):
                     break
             all_result = al_result
 
-        #massdns扫描
-        pass
+        #amass扫描
+        amass_scan = task.send_task('amass.run', args=(domain_info[1],), queue='amass')
+        scan_queue = []
+        scan_queue.append(AsyncResult(amass_scan.id))
+        while True:
+            for sub in scan_queue:
+                if sub.successful():
+                    try:
+                        all_result += sub.result['result']
+                    except Exception as e:
+                        print(e)
+                    scan_queue.remove(sub)
+            if not scan_queue:
+                break
+
+        #shuffledns扫描
+        shuffledns_scan = task.send_task('shuffledns.run', args=(domain_info[1],), queue='shuffledns')
+        scan_queue = []
+        scan_queue.append(AsyncResult(shuffledns_scan.id))
+        while True:
+            for sub in scan_queue:
+                if sub.successful():
+                    try:
+                        all_result += sub.result['result']
+                    except Exception as e:
+                        print(e)
+                    scan_queue.remove(sub)
+            if not scan_queue:
+                break
 
         #先去重子域名结果
         all_result = list(set(all_result))

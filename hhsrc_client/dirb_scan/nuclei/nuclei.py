@@ -41,9 +41,9 @@ def run(target):
     if sb['status'] == 0:  
         # 执行命令 ./nuclei -target target -t "nuclei-templates" -o 1.txt
         if DEBUG == 'True':
-            command = ['./nuclei_mac', '-target', target, '-no-color', '-silent','-timeout','2', '-t', 'nuclei-templates']
+            command = ['./nuclei_mac', '-target', target, '-no-color', '-silent','-timeout','2', '-t', 'nuclei-templates', '-header', 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:87.0) Gecko/20100101 Firefox/87.0']
         else:
-            command = ['./nuclei', '-target', target, '-no-color', '-silent','-timeout','2', '-t', 'nuclei-templates']
+            command = ['./nuclei', '-target', target, '-no-color', '-silent','-timeout','2', '-t', 'nuclei-templates', '-header', 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:87.0) Gecko/20100101 Firefox/87.0']
         sb = SubProcessSrc(command, cwd=work_dir, stdout=subprocess.PIPE).run()
         if sb['status'] == 0:
             for r in sb['result']:
