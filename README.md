@@ -239,12 +239,23 @@ LangSrcCurise https://github.com/LangziFun/LangSrcCurise
 #### 工具列表
 
 subfinder [https://github.com/projectdiscovery/subfinder](https://github.com/projectdiscovery/subfinder)
+
+amass [https://github.com/OWASP/Amass](https://github.com/OWASP/Amass)
+
+shuffledns [https://github.com/projectdiscovery/shuffledns](https://github.com/projectdiscovery/shuffledns)
+
 domaininfo(来自于ARL) 
+
 naabu [https://github.com/projectdiscovery/naabu](https://github.com/projectdiscovery/naabu)
+
 nmap [https://github.com/nmap/nmap](https://github.com/nmap/nmap)
+
 httpx [https://github.com/projectdiscovery/httpx](https://github.com/projectdiscovery/httpx)
+
 leakfile(来自于ARL)
+
 gau [https://github.com/lc/gau](https://github.com/lc/gau) (待定，实际效果并不是太理想)
+
 nuclei https://github.com/projectdiscovery/nuclei
 
 #### 前端样式使用以下项目
