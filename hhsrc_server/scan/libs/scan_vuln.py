@@ -67,7 +67,7 @@ def save_result(target, target_id, vuln_result, cursor, conn):
         print("vuln入库:" + result['vuln_info'])
         try:
             sql = "REPLACE INTO hhsrc_vuln (vuln_mainkey, vuln_name,vuln_info,vuln_level,vuln_path, vuln_http, vuln_target, vuln_time) VALUES('{}', '{}', '{}', '{}', '{}', '{}', '{}', '{}');".format(
-                result['vuln_path'] + result['vuln_info'],
+                (result['vuln_path'] + result['vuln_info'])[:100],
                 result['target'],
                 result['vuln_info'],
                 result['vuln_level'],

@@ -138,7 +138,7 @@ class vuln(DB.Model):
     __table_args__ = {'extend_existing': True}
     __tablename__ = 'hhsrc_vuln'
     id = DB.Column(DB.Integer, autoincrement=True, primary_key=True)
-    vuln_mainkey = DB.Column(DB.String(128), unique=True) #主键
+    vuln_mainkey = DB.Column(LONGTEXT, unique=True) #主键
     vuln_name = DB.Column(DB.String(128)) #漏洞名
     vuln_info = DB.Column(DB.String(128)) #漏洞信息
     vuln_level = DB.Column(DB.String(128)) #漏洞级别
