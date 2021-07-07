@@ -1,0 +1,224 @@
+/Library/Python/3.8/site-packages/celery/backends/amqp.py:65: CPendingDeprecationWarning: 
+    The AMQP result backend is scheduled for deprecation in     version 4.0 and removal in version v5.0.     Please use RPC backend or a persistent backend.
+
+  deprecated.warn(
+[2021-07-07 13:14:40,448: INFO/MainProcess] Connected to amqp://hhsrc:**@127.0.0.1:5672/hhsrc_broker
+[2021-07-07 13:14:40,498: INFO/MainProcess] mingle: searching for neighbors
+[2021-07-07 13:14:41,617: INFO/MainProcess] mingle: all alone
+[2021-07-07 13:14:41,728: INFO/MainProcess] celery@nuclei_1625634878.363405 ready.
+[2021-07-07 13:14:46,013: INFO/MainProcess] Events of group {task} enabled by remote.
+/Library/Python/3.8/site-packages/celery/backends/amqp.py:65: CPendingDeprecationWarning: 
+    The AMQP result backend is scheduled for deprecation in     version 4.0 and removal in version v5.0.     Please use RPC backend or a persistent backend.
+
+  deprecated.warn(
+[2021-07-07 13:45:39,926: INFO/MainProcess] Connected to amqp://hhsrc:**@127.0.0.1:5672/hhsrc_broker
+[2021-07-07 13:45:39,948: INFO/MainProcess] mingle: searching for neighbors
+[2021-07-07 13:45:41,014: INFO/MainProcess] mingle: all alone
+[2021-07-07 13:45:41,064: INFO/MainProcess] celery@nuclei_1625636738.234863 ready.
+[2021-07-07 13:45:46,179: INFO/MainProcess] Events of group {task} enabled by remote.
+[2021-07-07 13:59:13,771: INFO/MainProcess] Received task: nuclei.run[72589244-348a-4093-b535-17c7cc9bd1d0]  
+/Library/Python/3.8/site-packages/celery/backends/amqp.py:65: CPendingDeprecationWarning: 
+    The AMQP result backend is scheduled for deprecation in     version 4.0 and removal in version v5.0.     Please use RPC backend or a persistent backend.
+
+  deprecated.warn(
+[2021-07-07 13:59:13,778: WARNING/ForkPoolWorker-2] -------------------调用nuclei组件:https://bbs.vivo.com--------------------
+Already up to date.
+[FTL] Error, no templates were found.
+[2021-07-07 13:59:17,825: INFO/ForkPoolWorker-2] Task nuclei.run[72589244-348a-4093-b535-17c7cc9bd1d0] succeeded in 4.047966100000053s: {'tool': 'nuclei', 'result': []}
+[2021-07-07 13:59:17,842: INFO/MainProcess] Received task: nuclei.run[1f6e3300-b709-437d-8ece-7389611404c8]  
+[2021-07-07 13:59:17,843: WARNING/ForkPoolWorker-2] -------------------调用nuclei组件:https://survey.vivo.com:8443--------------------
+Already up to date.
+[FTL] Error, no templates were found.
+[2021-07-07 13:59:21,860: INFO/ForkPoolWorker-2] Task nuclei.run[1f6e3300-b709-437d-8ece-7389611404c8] succeeded in 4.017630272000019s: {'tool': 'nuclei', 'result': []}
+[2021-07-07 13:59:21,883: INFO/MainProcess] Received task: nuclei.run[7f7f894d-889d-445f-946c-bbd2521ea974]  
+[2021-07-07 13:59:21,886: WARNING/ForkPoolWorker-2] -------------------调用nuclei组件:https://as.vivo.com--------------------
+Already up to date.
+[FTL] Error, no templates were found.
+[2021-07-07 13:59:34,912: INFO/ForkPoolWorker-2] Task nuclei.run[7f7f894d-889d-445f-946c-bbd2521ea974] succeeded in 13.02563168200004s: {'tool': 'nuclei', 'result': []}
+[2021-07-07 13:59:34,924: INFO/MainProcess] Received task: nuclei.run[a5bbaef5-91df-484d-8e46-ec872254d2fa]  
+[2021-07-07 13:59:34,926: WARNING/ForkPoolWorker-2] -------------------调用nuclei组件:https://b.vivo.com--------------------
+Already up to date.
+[FTL] Error, no templates were found.
+[2021-07-07 13:59:38,941: INFO/ForkPoolWorker-2] Task nuclei.run[a5bbaef5-91df-484d-8e46-ec872254d2fa] succeeded in 4.015663726000071s: {'tool': 'nuclei', 'result': []}
+[2021-07-07 13:59:38,953: INFO/MainProcess] Received task: nuclei.run[139f6df8-b7ad-4801-b445-0e3f3c65a0e9]  
+[2021-07-07 13:59:38,954: WARNING/ForkPoolWorker-2] -------------------调用nuclei组件:https://issue.dev.vivo.com--------------------
+fatal: unable to access 'https://github.com/SiJiDo/hhsrc.git/': Failed to connect to github.com port 443: Operation timed out
+[FTL] Error, no templates were found.
+[2021-07-07 14:01:30,011: INFO/ForkPoolWorker-2] Task nuclei.run[139f6df8-b7ad-4801-b445-0e3f3c65a0e9] succeeded in 111.05372667300003s: {'tool': 'nuclei', 'result': []}
+[2021-07-07 14:01:30,031: INFO/MainProcess] Received task: nuclei.run[02c10310-ceb2-493a-ad62-81882fe2d5c7]  
+[2021-07-07 14:01:30,033: WARNING/ForkPoolWorker-2] -------------------调用nuclei组件:https://es.vivo.com--------------------
+[2021-07-07 14:03:30,136: INFO/MainProcess] Terminating 02c10310-ceb2-493a-ad62-81882fe2d5c7 (Signals.SIGTERM)
+[2021-07-07 14:03:30,147: INFO/MainProcess] Received task: nuclei.run[a7c9dad4-36be-4d89-8c18-7c2d7f48d94a]  
+/Library/Python/3.8/site-packages/celery/backends/amqp.py:65: CPendingDeprecationWarning: 
+    The AMQP result backend is scheduled for deprecation in     version 4.0 and removal in version v5.0.     Please use RPC backend or a persistent backend.
+
+  deprecated.warn(
+[2021-07-07 14:03:30,233: WARNING/ForkPoolWorker-1] -------------------调用nuclei组件:https://pdm.vivo.com--------------------
+fatal: unable to access 'https://github.com/SiJiDo/hhsrc.git/': LibreSSL SSL_connect: SSL_ERROR_SYSCALL in connection to github.com:443 
+[2021-07-07 14:03:31,090: INFO/ForkPoolWorker-2] Task nuclei.run[02c10310-ceb2-493a-ad62-81882fe2d5c7] succeeded in 121.05392645199993s: {'tool': 'nuclei', 'result': []}
+Already up to date.
+[FTL] Error, no templates were found.
+[2021-07-07 14:05:10,319: INFO/ForkPoolWorker-1] Task nuclei.run[a7c9dad4-36be-4d89-8c18-7c2d7f48d94a] succeeded in 100.08461337400013s: {'tool': 'nuclei', 'result': []}
+[2021-07-07 14:05:10,332: INFO/MainProcess] Received task: nuclei.run[a42ca53b-2bb3-41d1-b353-64c735074d03]  
+[2021-07-07 14:05:10,334: WARNING/ForkPoolWorker-2] -------------------调用nuclei组件:https://carrier.vivo.com--------------------
+[2021-07-07 14:07:10,350: INFO/MainProcess] Terminating a42ca53b-2bb3-41d1-b353-64c735074d03 (Signals.SIGTERM)
+[2021-07-07 14:07:10,360: INFO/MainProcess] Received task: nuclei.run[9ca2eb99-f9fb-4c23-ae19-17209eec8a07]  
+[2021-07-07 14:07:10,383: INFO/ForkPoolWorker-2] Task nuclei.run[a42ca53b-2bb3-41d1-b353-64c735074d03] succeeded in 120.04586295600006s: {'tool': 'nuclei', 'result': []}
+[2021-07-07 14:07:10,385: WARNING/ForkPoolWorker-2] -------------------调用nuclei组件:https://afgateway.vivo.com--------------------
+fatal: unable to access 'https://github.com/SiJiDo/hhsrc.git/': LibreSSL SSL_connect: SSL_ERROR_SYSCALL in connection to github.com:443 
+[2021-07-07 14:09:10,363: INFO/MainProcess] Terminating 9ca2eb99-f9fb-4c23-ae19-17209eec8a07 (Signals.SIGTERM)
+[2021-07-07 14:09:10,373: INFO/MainProcess] Received task: nuclei.run[79acd9e4-1a25-4a55-afe9-e681f4c119e6]  
+[2021-07-07 14:09:10,441: INFO/ForkPoolWorker-2] Task nuclei.run[9ca2eb99-f9fb-4c23-ae19-17209eec8a07] succeeded in 120.05181496299997s: {'tool': 'nuclei', 'result': []}
+[2021-07-07 14:09:10,443: WARNING/ForkPoolWorker-2] -------------------调用nuclei组件:https://cloud.vivo.com--------------------
+fatal: unable to access 'https://github.com/SiJiDo/hhsrc.git/': LibreSSL SSL_connect: SSL_ERROR_SYSCALL in connection to github.com:443 
+[2021-07-07 14:11:10,379: INFO/MainProcess] Terminating 79acd9e4-1a25-4a55-afe9-e681f4c119e6 (Signals.SIGTERM)
+[2021-07-07 14:11:10,388: INFO/MainProcess] Received task: nuclei.run[86a8d359-cbb1-436f-bd51-6b5c730478da]  
+[2021-07-07 14:11:10,419: WARNING/ForkPoolWorker-1] -------------------调用nuclei组件:https://opensource.vivo.com--------------------
+[2021-07-07 14:11:10,487: INFO/ForkPoolWorker-2] Task nuclei.run[79acd9e4-1a25-4a55-afe9-e681f4c119e6] succeeded in 120.04057207799997s: {'tool': 'nuclei', 'result': []}
+fatal: unable to access 'https://github.com/SiJiDo/hhsrc.git/': LibreSSL SSL_connect: SSL_ERROR_SYSCALL in connection to github.com:443 
+Already up to date.
+[FTL] Error, no templates were found.
+[2021-07-07 14:11:14,438: INFO/ForkPoolWorker-1] Task nuclei.run[86a8d359-cbb1-436f-bd51-6b5c730478da] succeeded in 4.01896932600016s: {'tool': 'nuclei', 'result': []}
+[2021-07-07 14:11:14,456: INFO/MainProcess] Received task: nuclei.run[13044f52-4cc0-45f9-b219-f71720cde1fb]  
+[2021-07-07 14:11:14,457: WARNING/ForkPoolWorker-2] -------------------调用nuclei组件:https://passport.vivo.com--------------------
+Already up to date.
+[FTL] Error, no templates were found.
+[2021-07-07 14:12:52,507: INFO/ForkPoolWorker-2] Task nuclei.run[13044f52-4cc0-45f9-b219-f71720cde1fb] succeeded in 98.04709492200004s: {'tool': 'nuclei', 'result': []}
+[2021-07-07 14:12:52,521: INFO/MainProcess] Received task: nuclei.run[baedf8d6-5e9e-45af-b83e-fa057ae18041]  
+[2021-07-07 14:12:52,523: WARNING/ForkPoolWorker-2] -------------------调用nuclei组件:https://iot.vivo.com--------------------
+[2021-07-07 14:14:52,537: INFO/MainProcess] Terminating baedf8d6-5e9e-45af-b83e-fa057ae18041 (Signals.SIGTERM)
+[2021-07-07 14:14:52,546: INFO/MainProcess] Received task: nuclei.run[cc1a7bcf-75d8-41ca-b0e8-37273d7c7cbf]  
+[2021-07-07 14:14:52,570: INFO/ForkPoolWorker-2] Task nuclei.run[baedf8d6-5e9e-45af-b83e-fa057ae18041] succeeded in 120.04341058299997s: {'tool': 'nuclei', 'result': []}
+[2021-07-07 14:14:52,572: WARNING/ForkPoolWorker-2] -------------------调用nuclei组件:https://browserproxy.vivo.com--------------------
+fatal: unable to access 'https://github.com/SiJiDo/hhsrc.git/': LibreSSL SSL_connect: SSL_ERROR_SYSCALL in connection to github.com:443 
+Already up to date.
+[FTL] Error, no templates were found.
+[2021-07-07 14:14:57,590: INFO/ForkPoolWorker-2] Task nuclei.run[cc1a7bcf-75d8-41ca-b0e8-37273d7c7cbf] succeeded in 5.0173449750000145s: {'tool': 'nuclei', 'result': []}
+[2021-07-07 14:14:57,604: INFO/MainProcess] Received task: nuclei.run[ec74dc40-6e72-4349-ae24-d5947ca99ee3]  
+[2021-07-07 14:14:57,606: WARNING/ForkPoolWorker-2] -------------------调用nuclei组件:https://findphone.vivo.com--------------------
+Already up to date.
+[FTL] Error, no templates were found.
+[2021-07-07 14:15:01,626: INFO/ForkPoolWorker-2] Task nuclei.run[ec74dc40-6e72-4349-ae24-d5947ca99ee3] succeeded in 4.020602928000017s: {'tool': 'nuclei', 'result': []}
+[2021-07-07 14:15:01,639: INFO/MainProcess] Received task: nuclei.run[bd998a40-b986-4614-acca-75ccc1e0ccd3]  
+[2021-07-07 14:15:01,640: WARNING/ForkPoolWorker-2] -------------------调用nuclei组件:https://mshop.vivo.com--------------------
+Already up to date.
+[FTL] Error, no templates were found.
+[2021-07-07 14:15:06,658: INFO/ForkPoolWorker-2] Task nuclei.run[bd998a40-b986-4614-acca-75ccc1e0ccd3] succeeded in 5.016949187999899s: {'tool': 'nuclei', 'result': []}
+[2021-07-07 14:15:06,674: INFO/MainProcess] Received task: nuclei.run[a25e7024-4a87-4678-a00f-71676ee526b2]  
+[2021-07-07 14:15:06,675: WARNING/ForkPoolWorker-2] -------------------调用nuclei组件:https://mail.vivo.com--------------------
+Already up to date.
+[FTL] Error, no templates were found.
+[2021-07-07 14:15:10,691: INFO/ForkPoolWorker-2] Task nuclei.run[a25e7024-4a87-4678-a00f-71676ee526b2] succeeded in 4.015692052000077s: {'tool': 'nuclei', 'result': []}
+[2021-07-07 14:15:10,703: INFO/MainProcess] Received task: nuclei.run[ae0bcedb-2b7d-49fb-8a61-03f1426eb950]  
+[2021-07-07 14:15:10,705: WARNING/ForkPoolWorker-2] -------------------调用nuclei组件:https://mailtest.vivo.com--------------------
+Already up to date.
+[FTL] Error, no templates were found.
+[2021-07-07 14:15:14,719: INFO/ForkPoolWorker-2] Task nuclei.run[ae0bcedb-2b7d-49fb-8a61-03f1426eb950] succeeded in 4.0141975520000415s: {'tool': 'nuclei', 'result': []}
+[2021-07-07 14:15:14,731: INFO/MainProcess] Received task: nuclei.run[81e5c67f-f4db-4404-8aad-af3dc8837eea]  
+[2021-07-07 14:15:14,732: WARNING/ForkPoolWorker-2] -------------------调用nuclei组件:http://zs.vivo.com:8089--------------------
+Already up to date.
+[FTL] Error, no templates were found.
+[2021-07-07 14:15:20,747: INFO/ForkPoolWorker-2] Task nuclei.run[81e5c67f-f4db-4404-8aad-af3dc8837eea] succeeded in 6.014709862000018s: {'tool': 'nuclei', 'result': []}
+[2021-07-07 14:15:20,758: INFO/MainProcess] Received task: nuclei.run[2bcb7a3b-d522-448a-9358-03784debaf30]  
+[2021-07-07 14:15:20,759: WARNING/ForkPoolWorker-2] -------------------调用nuclei组件:http://survey.vivo.com:9080--------------------
+Already up to date.
+[FTL] Error, no templates were found.
+[2021-07-07 14:15:24,779: INFO/ForkPoolWorker-2] Task nuclei.run[2bcb7a3b-d522-448a-9358-03784debaf30] succeeded in 4.019161697999834s: {'tool': 'nuclei', 'result': []}
+[2021-07-07 14:15:24,796: INFO/MainProcess] Received task: nuclei.run[aa722d47-259e-4338-bfa2-2f4132bf6dcf]  
+[2021-07-07 14:15:24,798: WARNING/ForkPoolWorker-2] -------------------调用nuclei组件:http://survey.vivo.com:8089--------------------
+Already up to date.
+[FTL] Error, no templates were found.
+[2021-07-07 14:15:37,819: INFO/ForkPoolWorker-2] Task nuclei.run[aa722d47-259e-4338-bfa2-2f4132bf6dcf] succeeded in 13.020207280000022s: {'tool': 'nuclei', 'result': []}
+[2021-07-07 14:41:28,930: INFO/MainProcess] Received task: nuclei.run[51dc47fe-80b2-477d-b58b-dff67e05aab5]  
+[2021-07-07 14:41:28,937: WARNING/ForkPoolWorker-2] -------------------调用nuclei组件:https://bbs.vivo.com--------------------
+Already up to date.
+[2021-07-07 14:42:36,975: INFO/ForkPoolWorker-2] Task nuclei.run[51dc47fe-80b2-477d-b58b-dff67e05aab5] succeeded in 68.03748461500027s: {'tool': 'nuclei', 'result': []}
+[2021-07-07 14:42:36,984: INFO/MainProcess] Received task: nuclei.run[e5a782e6-eea0-4f9a-a80b-8f48288e95c2]  
+[2021-07-07 14:42:36,986: WARNING/ForkPoolWorker-2] -------------------调用nuclei组件:https://survey.vivo.com:8443--------------------
+Already up to date.
+[2021-07-07 14:44:37,053: INFO/MainProcess] Terminating e5a782e6-eea0-4f9a-a80b-8f48288e95c2 (Signals.SIGTERM)
+[2021-07-07 14:44:37,063: INFO/MainProcess] Received task: nuclei.run[75d349d2-ea3c-44c8-899e-c74904c17ce2]  
+[2021-07-07 14:44:37,825: WARNING/ForkPoolWorker-1] -------------------调用nuclei组件:https://as.vivo.com--------------------
+[2021-07-07 14:44:38,039: INFO/ForkPoolWorker-2] Task nuclei.run[e5a782e6-eea0-4f9a-a80b-8f48288e95c2] succeeded in 121.05027827899994s: {'tool': 'nuclei', 'result': []}
+Already up to date.
+[2021-07-07 14:45:40,859: INFO/ForkPoolWorker-1] Task nuclei.run[75d349d2-ea3c-44c8-899e-c74904c17ce2] succeeded in 63.03385148999996s: {'tool': 'nuclei', 'result': []}
+[2021-07-07 14:45:40,878: INFO/MainProcess] Received task: nuclei.run[a4db5e77-befb-4bc6-b22f-56a91dfdd6af]  
+[2021-07-07 14:45:40,879: WARNING/ForkPoolWorker-2] -------------------调用nuclei组件:https://b.vivo.com--------------------
+Already up to date.
+[2021-07-07 14:46:55,914: INFO/ForkPoolWorker-2] Task nuclei.run[a4db5e77-befb-4bc6-b22f-56a91dfdd6af] succeeded in 75.03290892099994s: {'tool': 'nuclei', 'result': []}
+[2021-07-07 14:46:55,930: INFO/MainProcess] Received task: nuclei.run[64de6b2d-20d3-49e4-9685-2837d73e92e1]  
+[2021-07-07 14:46:55,932: WARNING/ForkPoolWorker-2] -------------------调用nuclei组件:https://issue.dev.vivo.com--------------------
+[2021-07-07 14:48:55,943: INFO/MainProcess] Terminating 64de6b2d-20d3-49e4-9685-2837d73e92e1 (Signals.SIGTERM)
+[2021-07-07 14:48:55,955: INFO/MainProcess] Received task: nuclei.run[2c02dce7-16ce-4668-9762-6b92c0d46a25]  
+[2021-07-07 14:48:55,996: INFO/ForkPoolWorker-2] Task nuclei.run[64de6b2d-20d3-49e4-9685-2837d73e92e1] succeeded in 120.06027816899996s: {'tool': 'nuclei', 'result': []}
+[2021-07-07 14:48:55,998: WARNING/ForkPoolWorker-2] -------------------调用nuclei组件:https://es.vivo.com--------------------
+fatal: unable to access 'https://github.com/projectdiscovery/nuclei-templates.git/': LibreSSL SSL_connect: SSL_ERROR_SYSCALL in connection to github.com:443 
+/Library/Python/3.8/site-packages/celery/backends/amqp.py:65: CPendingDeprecationWarning: 
+    The AMQP result backend is scheduled for deprecation in     version 4.0 and removal in version v5.0.     Please use RPC backend or a persistent backend.
+
+  deprecated.warn(
+[2021-07-07 14:49:56,578: INFO/MainProcess] Connected to amqp://hhsrc:**@127.0.0.1:5672/hhsrc_broker
+[2021-07-07 14:49:56,626: INFO/MainProcess] mingle: searching for neighbors
+[2021-07-07 14:49:57,851: INFO/MainProcess] mingle: all alone
+[2021-07-07 14:49:57,981: INFO/MainProcess] celery@nuclei_1625640593.588245 ready.
+[2021-07-07 14:50:02,421: INFO/MainProcess] Events of group {task} enabled by remote.
+[2021-07-07 14:50:56,002: INFO/MainProcess] Received task: nuclei.run[9214ff5d-d481-4b62-892e-7c73928bacfd]  
+/Library/Python/3.8/site-packages/celery/backends/amqp.py:65: CPendingDeprecationWarning: 
+    The AMQP result backend is scheduled for deprecation in     version 4.0 and removal in version v5.0.     Please use RPC backend or a persistent backend.
+
+  deprecated.warn(
+[2021-07-07 14:50:56,042: WARNING/ForkPoolWorker-2] -------------------调用nuclei组件:https://pdm.vivo.com--------------------
+Already up to date.
+fatal: unable to access 'https://github.com/projectdiscovery/nuclei-templates.git/': LibreSSL SSL_read: SSL_ERROR_SYSCALL, errno 54
+[2021-07-07 14:52:55,970: INFO/MainProcess] Terminating 9214ff5d-d481-4b62-892e-7c73928bacfd (Signals.SIGTERM)
+[2021-07-07 14:52:55,980: INFO/MainProcess] Received task: nuclei.run[e52eba42-4ff6-49bc-868b-a295cc3a3ebb]  
+[2021-07-07 14:52:56,125: INFO/ForkPoolWorker-2] Task nuclei.run[9214ff5d-d481-4b62-892e-7c73928bacfd] succeeded in 120.07934669599999s: {'tool': 'nuclei', 'result': []}
+[2021-07-07 14:52:56,127: WARNING/ForkPoolWorker-2] -------------------调用nuclei组件:https://carrier.vivo.com--------------------
+Already up to date.
+[2021-07-07 14:53:18,152: INFO/ForkPoolWorker-2] Task nuclei.run[e52eba42-4ff6-49bc-868b-a295cc3a3ebb] succeeded in 22.024624655999986s: {'tool': 'nuclei', 'result': [{'target': 'https://carrier.vivo.com', 'vuln_level': 'info', 'vuln_info': '2021-07-07 14:53:01', 'vuln_path': 'https://carrier.vivo.com'}]}
+[2021-07-07 14:53:18,169: INFO/MainProcess] Received task: nuclei.run[840ad228-10ee-425e-84d7-96d3f3dea746]  
+[2021-07-07 14:53:18,170: WARNING/ForkPoolWorker-2] -------------------调用nuclei组件:https://afgateway.vivo.com--------------------
+Already up to date.
+[2021-07-07 14:53:49,194: INFO/ForkPoolWorker-2] Task nuclei.run[840ad228-10ee-425e-84d7-96d3f3dea746] succeeded in 31.022525943999995s: {'tool': 'nuclei', 'result': [{'target': 'https://afgateway.vivo.com', 'vuln_level': 'info', 'vuln_info': '2021-07-07 14:53:31', 'vuln_path': 'https://afgateway.vivo.com'}]}
+[2021-07-07 14:53:49,209: INFO/MainProcess] Received task: nuclei.run[c819dc0f-a30e-438e-b95e-6aad05533b40]  
+[2021-07-07 14:53:49,210: WARNING/ForkPoolWorker-2] -------------------调用nuclei组件:https://cloud.vivo.com--------------------
+Already up to date.
+[2021-07-07 14:54:17,235: INFO/ForkPoolWorker-2] Task nuclei.run[c819dc0f-a30e-438e-b95e-6aad05533b40] succeeded in 28.024234527000033s: {'tool': 'nuclei', 'result': []}
+[2021-07-07 14:54:17,255: INFO/MainProcess] Received task: nuclei.run[6c0b4a3f-7756-4740-952b-e13b9b467c2c]  
+[2021-07-07 14:54:17,256: WARNING/ForkPoolWorker-2] -------------------调用nuclei组件:https://opensource.vivo.com--------------------
+Already up to date.
+[2021-07-07 14:54:49,281: INFO/ForkPoolWorker-2] Task nuclei.run[6c0b4a3f-7756-4740-952b-e13b9b467c2c] succeeded in 32.023842613s: {'tool': 'nuclei', 'result': []}
+[2021-07-07 14:54:49,296: INFO/MainProcess] Received task: nuclei.run[3eb1af91-2adf-4b92-99d6-382eea509a45]  
+[2021-07-07 14:54:49,297: WARNING/ForkPoolWorker-2] -------------------调用nuclei组件:https://passport.vivo.com--------------------
+Already up to date.
+[2021-07-07 14:56:49,312: INFO/MainProcess] Terminating 3eb1af91-2adf-4b92-99d6-382eea509a45 (Signals.SIGTERM)
+[2021-07-07 14:56:49,321: INFO/MainProcess] Received task: nuclei.run[b85fb3f4-391a-48e5-8696-dcc962aba2f3]  
+[2021-07-07 14:56:49,354: INFO/ForkPoolWorker-2] Task nuclei.run[3eb1af91-2adf-4b92-99d6-382eea509a45] succeeded in 120.05396636299997s: {'tool': 'nuclei', 'result': []}
+[2021-07-07 14:56:49,357: WARNING/ForkPoolWorker-2] -------------------调用nuclei组件:https://iot.vivo.com--------------------
+Already up to date.
+[2021-07-07 14:57:21,381: INFO/ForkPoolWorker-2] Task nuclei.run[b85fb3f4-391a-48e5-8696-dcc962aba2f3] succeeded in 32.02364656999998s: {'tool': 'nuclei', 'result': []}
+[2021-07-07 14:57:21,392: INFO/MainProcess] Received task: nuclei.run[906c8867-d4fd-4dd2-8914-b0a181736991]  
+[2021-07-07 14:57:21,393: WARNING/ForkPoolWorker-2] -------------------调用nuclei组件:https://browserproxy.vivo.com--------------------
+Already up to date.
+[2021-07-07 14:59:21,408: INFO/MainProcess] Terminating 906c8867-d4fd-4dd2-8914-b0a181736991 (Signals.SIGTERM)
+[2021-07-07 14:59:21,418: INFO/MainProcess] Received task: nuclei.run[b27131af-3c42-4cef-ade1-a4f84ea606f9]  
+[2021-07-07 14:59:21,452: INFO/ForkPoolWorker-2] Task nuclei.run[906c8867-d4fd-4dd2-8914-b0a181736991] succeeded in 120.05560306500001s: {'tool': 'nuclei', 'result': []}
+[2021-07-07 14:59:21,455: WARNING/ForkPoolWorker-2] -------------------调用nuclei组件:https://findphone.vivo.com--------------------
+Already up to date.
+[2021-07-07 14:59:44,479: INFO/ForkPoolWorker-2] Task nuclei.run[b27131af-3c42-4cef-ade1-a4f84ea606f9] succeeded in 23.023060208999937s: {'tool': 'nuclei', 'result': []}
+[2021-07-07 14:59:44,493: INFO/MainProcess] Received task: nuclei.run[a53278ae-8899-462d-b66a-cb65339075df]  
+[2021-07-07 14:59:44,494: WARNING/ForkPoolWorker-2] -------------------调用nuclei组件:https://mshop.vivo.com--------------------
+[2021-07-07 15:01:44,510: INFO/MainProcess] Terminating a53278ae-8899-462d-b66a-cb65339075df (Signals.SIGTERM)
+[2021-07-07 15:01:44,521: INFO/MainProcess] Received task: nuclei.run[5ab7bcd7-fe47-4dcb-9c93-d00bfa18c567]  
+[2021-07-07 15:01:44,548: INFO/ForkPoolWorker-2] Task nuclei.run[a53278ae-8899-462d-b66a-cb65339075df] succeeded in 120.05090660300004s: {'tool': 'nuclei', 'result': []}
+[2021-07-07 15:01:44,551: WARNING/ForkPoolWorker-2] -------------------调用nuclei组件:https://mail.vivo.com--------------------
+fatal: unable to access 'https://github.com/projectdiscovery/nuclei-templates.git/': LibreSSL SSL_connect: SSL_ERROR_SYSCALL in connection to github.com:443 
+[2021-07-07 15:03:44,526: INFO/MainProcess] Terminating 5ab7bcd7-fe47-4dcb-9c93-d00bfa18c567 (Signals.SIGTERM)
+[2021-07-07 15:03:44,536: INFO/MainProcess] Received task: nuclei.run[a84e771e-1c39-44a2-918d-12122049a96b]  
+[2021-07-07 15:03:44,604: INFO/ForkPoolWorker-2] Task nuclei.run[5ab7bcd7-fe47-4dcb-9c93-d00bfa18c567] succeeded in 120.04945367200003s: {'tool': 'nuclei', 'result': []}
+[2021-07-07 15:03:44,605: WARNING/ForkPoolWorker-2] -------------------调用nuclei组件:https://mailtest.vivo.com--------------------
+fatal: unable to access 'https://github.com/projectdiscovery/nuclei-templates.git/': LibreSSL SSL_connect: SSL_ERROR_SYSCALL in connection to github.com:443 
+Already up to date.
+[2021-07-07 15:04:20,646: INFO/ForkPoolWorker-2] Task nuclei.run[a84e771e-1c39-44a2-918d-12122049a96b] succeeded in 36.03899058100001s: {'tool': 'nuclei', 'result': []}
+[2021-07-07 15:04:20,656: INFO/MainProcess] Received task: nuclei.run[fcdec1b5-6653-4dd0-9ac5-8af260241bef]  
+[2021-07-07 15:04:20,657: WARNING/ForkPoolWorker-2] -------------------调用nuclei组件:http://zs.vivo.com:8089--------------------

@@ -1,7 +1,5 @@
-import math
-from flask import render_template, redirect, url_for, flash, request
+from flask import render_template, redirect, url_for
 from flask_login import login_required, current_user
-from app import DB
 from app.models import Target, subdomain, port, http
 
 from . import main

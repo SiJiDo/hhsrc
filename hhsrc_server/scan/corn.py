@@ -67,8 +67,6 @@ def setcorn():
         cursor.close()
         conn.close()
     print("-------------计划任务结束--------------")
-    cursor.close()
-    conn.close()
     exit()
     
     '''

@@ -1,31 +1,24 @@
 from celery.result import AsyncResult
 from celery import Celery
-from flask import Flask
-from app.models import domain, port, subdomain, http
-from scan import utils
-from app import DB
 import time 
 import configparser
-import pymysql
+from scan.conn import dbconn
+from scan import utils
 
 cfg = configparser.ConfigParser()
 cfg.read('config.ini')
 
 def run(target_id):
     #初始化数据库连接
-    DB_HOST = cfg.get("DATABASE", "DB_HOST")
-    DB_USER = cfg.get("DATABASE", "DB_USER")
-    DB_PASSWD = cfg.get("DATABASE", "DB_PASSWD")
-    DB_DATABASE = cfg.get("DATABASE", "DB_DATABASE")
-    conn = pymysql.connect(host=DB_HOST, port=3306, user=DB_USER, password=DB_PASSWD, db=DB_DATABASE, charset='utf8')
-    cursor = conn.cursor()
-
-    app = Flask(__name__)
-    app.config['CELERY_BROKER_URL'] = cfg.get("CELERY_CONFIG", "CELERY_BROKER_URL")
-    app.config['CELERY_RESULT_BACKEND'] = cfg.get("CELERY_CONFIG", "CELERY_RESULT_BACKEND")
-
-    task = Celery(app.name, broker=app.config['CELERY_BROKER_URL'], backend=app.config['CELERY_RESULT_BACKEND'])
-    task.conf.update(app.config)
+    conn,cursor = dbconn()
+    task = Celery(broker=cfg.get("CELERY_CONFIG", "CELERY_BROKER_URL"), backend=cfg.get("CELERY_CONFIG", "CELERY_RESULT_BACKEND"))
+    task.conf.update(
+        CELERY_TASK_SERIALIZER = 'json',
+        CELERY_RESULT_SERIALIZER = 'json',
+        CELERY_ACCEPT_CONTENT=['json'],
+        CELERY_TIMEZONE = 'Asia/Shanghai',
+        CELERY_ENABLE_UTC = False,
+    )
 
     #查询该目标的未扫描的域名
     sql = "SELECT * FROM hhsrc_subdomain WHERE subdomain_target=%s AND subdomain_http_status=%s"
@@ -96,40 +89,26 @@ def run(target_id):
             if not scan_queue:
                 break
 
-    #截图，注意数据太多会失败，这里应进行分次请求
-    sql = "SELECT * FROM hhsrc_http WHERE http_target=%s AND http_screen=%s AND http_status!=%s AND http_status!=%s"
-    cursor.execute(sql,(target_id,'None','302','301'))
+    #截图，注意数据太多会失败
+    sql = "SELECT * FROM hhsrc_http WHERE http_target=%s AND http_screen=%s AND http_status!=%s AND http_status!=%s LIMIT 100"
+    screen_count = cursor.execute(sql,(target_id,'None','302','301'))
     http_query_all = cursor.fetchall()
-
-    i = 0
-    end = 0
-    while(i < len(http_query_all)):
-        if(i + 100 < len(http_query_all)):
-            end = i + 100
-        else:
-            end = len(http_query_all)
-        http_query = http_query_all[i:end]
-        i = end
-
+    while(screen_count > 0):
         http_list = []
-        for http_info in http_query:
+        for http_info in http_query_all:
             http_list.append(http_info[1] + "://" + http_info[2])
             
         screenshot_scan = task.send_task('screenshot.run', args=(http_list,), queue='screenshot')
-        scan_queue = []
-        scan_queue.append(AsyncResult(screenshot_scan.id))
-
         while True:
-            for h in scan_queue:
-                if h.successful():
-                    try:
-                        save_result_screenshot(h.result['result'], cursor, conn)
-                    except Exception as e:
-                        print(e)
-                    scan_queue.remove(h)
-            if not scan_queue:
-                break
-
+            if screenshot_scan.successful():
+                try:
+                    save_result_screenshot(screenshot_scan.result['result'], cursor, conn)
+                except Exception as e:
+                    print(e)
+                finally:
+                    break
+        screen_count = cursor.execute(sql,(target_id,'None','302','301'))
+        http_query_all = cursor.fetchall()
     cursor.close()
     conn.close()
     return

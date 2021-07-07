@@ -1,5 +1,5 @@
 import math
-from flask import render_template, redirect, url_for, flash, request, send_from_directory
+from flask import render_template, flash, request, send_from_directory
 from flask_login import login_required, current_user
 from wtforms import SelectField
 from app import utils

@@ -1,32 +1,25 @@
 from celery.result import AsyncResult
 from celery import Celery
-from flask import Flask
-from app.models import domain,blacklist,subdomain
 from scan.libs import scan_domaininfo
 from scan import utils
-from app import DB
 import time 
 import configparser
-import pymysql
+from scan.conn import dbconn
 
 cfg = configparser.ConfigParser()
 cfg.read('config.ini')
 
 def run(target_id):
     #初始化数据库连接
-    DB_HOST = cfg.get("DATABASE", "DB_HOST")
-    DB_USER = cfg.get("DATABASE", "DB_USER")
-    DB_PASSWD = cfg.get("DATABASE", "DB_PASSWD")
-    DB_DATABASE = cfg.get("DATABASE", "DB_DATABASE")
-    conn = pymysql.connect(host=DB_HOST, port=3306, user=DB_USER, password=DB_PASSWD, db=DB_DATABASE, charset='utf8')
-    cursor = conn.cursor()
-
-    app = Flask(__name__)
-    app.config['CELERY_BROKER_URL'] = cfg.get("CELERY_CONFIG", "CELERY_BROKER_URL")
-    app.config['CELERY_RESULT_BACKEND'] = cfg.get("CELERY_CONFIG", "CELERY_RESULT_BACKEND")
-
-    task = Celery(app.name, broker=app.config['CELERY_BROKER_URL'], backend=app.config['CELERY_RESULT_BACKEND'])
-    task.conf.update(app.config)
+    conn,cursor = dbconn()
+    task = Celery(broker=cfg.get("CELERY_CONFIG", "CELERY_BROKER_URL"), backend=cfg.get("CELERY_CONFIG", "CELERY_RESULT_BACKEND"))
+    task.conf.update(
+        CELERY_TASK_SERIALIZER = 'json',
+        CELERY_RESULT_SERIALIZER = 'json',
+        CELERY_ACCEPT_CONTENT=['json'],
+        CELERY_TIMEZONE = 'Asia/Shanghai',
+        CELERY_ENABLE_UTC = False,
+    )
 
     #查询该目标的主域
     sql = "SELECT * FROM hhsrc_domain where domain_target = %s and domain_subdomain_status = False"

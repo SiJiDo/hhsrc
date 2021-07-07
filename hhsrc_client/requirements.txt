@@ -1,5 +1,5 @@
 redis
-celery
+celery==4.4.7
 dnspython
 lxml
 nmap

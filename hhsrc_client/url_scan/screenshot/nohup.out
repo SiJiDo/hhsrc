@@ -1,0 +1,595 @@
+/Library/Python/3.8/site-packages/celery/backends/amqp.py:65: CPendingDeprecationWarning: 
+    The AMQP result backend is scheduled for deprecation in     version 4.0 and removal in version v5.0.     Please use RPC backend or a persistent backend.
+
+  deprecated.warn(
+[2021-07-07 13:14:40,419: INFO/MainProcess] Connected to amqp://hhsrc:**@127.0.0.1:5672/hhsrc_broker
+[2021-07-07 13:14:40,467: INFO/MainProcess] mingle: searching for neighbors
+[2021-07-07 13:14:41,576: INFO/MainProcess] mingle: all alone
+[2021-07-07 13:14:41,702: INFO/MainProcess] celery@screenshot_1625634878.321729 ready.
+[2021-07-07 13:14:46,014: INFO/MainProcess] Events of group {task} enabled by remote.
+[2021-07-07 13:31:29,007: INFO/MainProcess] Received task: screenshot.run[5d2af0cd-cb44-48ff-97a4-45e7dacfe64d]  
+/Library/Python/3.8/site-packages/celery/backends/amqp.py:65: CPendingDeprecationWarning: 
+    The AMQP result backend is scheduled for deprecation in     version 4.0 and removal in version v5.0.     Please use RPC backend or a persistent backend.
+
+  deprecated.warn(
+[2021-07-07 13:31:32,902: WARNING/ForkPoolWorker-1] https://pdm.vivo.com：截图成功！！！
+[2021-07-07 13:31:33,586: WARNING/ForkPoolWorker-1] https://carrier.vivo.com：截图成功！！！
+[2021-07-07 13:31:33,866: WARNING/ForkPoolWorker-1] https://opensource.vivo.com：截图成功！！！
+[2021-07-07 13:31:34,054: WARNING/ForkPoolWorker-1] https://passport.vivo.com：截图成功！！！
+[2021-07-07 13:31:35,170: WARNING/ForkPoolWorker-1] https://as.vivo.com：截图成功！！！
+[2021-07-07 13:31:36,390: WARNING/ForkPoolWorker-1] https://survey.vivo.com:8443：截图成功！！！
+[2021-07-07 13:31:36,520: WARNING/ForkPoolWorker-1] https://afgateway.vivo.com：截图成功！！！
+[2021-07-07 13:31:36,891: WARNING/ForkPoolWorker-1] https://mail.vivo.com：截图成功！！！
+kill: 57007: No such process
+[2021-07-07 13:31:37,157: INFO/ForkPoolWorker-1] Task screenshot.run[5d2af0cd-cb44-48ff-97a4-45e7dacfe64d] succeeded in 8.153074595000021s: {'tool': 'screenshot', 'result': [{'http': 'https://pdm.vivo.com', 'screen_base64': 'iVBORw0KGgoAAAANSUhEUgAAASwAAACWCAYAAABkW7XSAAABLUlEQVR4nO3WMWoCARCG0W8h2iSkEGyF5Bi5jvfySOnsbewtRAghMYUbMPEAi/BeMzNM81fDFMCdGMY6r96qp2pffVSP1Xv1NU00gL8exvpSvVa7al0tqk31PU0sgFu/B+tQzapVtR3n5bj/nCIYwH/DVf/c5Wgdu3xW8+pUnSfIBQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABc+wE+Wg8r8dbKTQAAAABJRU5ErkJggg=='}, {'http': 'https://carrier.vivo.com', 'screen_base64': 'iVBORw0KGgoAAAANSUhEUgAAASwAAACWCAYAAABkW7XSAAATVElEQVR4nO3d2W9cVYLH8e+5S1W5vC8xTpzFTiBhQkiAABMSNUiZ7gGpGfE00kj002ie+68ZjdTz0q8tzcNo1AzqYQChCAKiB5JOQxKyOY7tBO9LrXc7Zx4qNkkwYbWTa34fKcRL+dalkvrm3FO3zjXOOYeISA54D3oHRES+KwVLRHJDwRKR3FCwRCQ3FCwRyQ0FS0RyQ8ESkdxQsEQkNxSsLcpaS5qma58nSUKWZQA457jzfGFrLd92/rBzjjiOcc5hrSVJknVv12g01u5nPUmS3LVfq9u21gKQpuk3bvvb9u/eX7L1BA96B+THW15e5vPPPyeKImq1GtVqlXq9zsDAAK+88gqFQ...', ...]}
+[2021-07-07 13:31:37,179: INFO/MainProcess] Received task: screenshot.run[33a47b44-b8bf-4972-bc24-d447fdb9b135]  
+[2021-07-07 13:31:40,616: WARNING/ForkPoolWorker-1] https://pdm.vivo.com：截图成功！！！
+[2021-07-07 13:31:41,237: WARNING/ForkPoolWorker-1] https://opensource.vivo.com：截图成功！！！
+[2021-07-07 13:31:41,301: WARNING/ForkPoolWorker-1] https://passport.vivo.com：截图成功！！！
+[2021-07-07 13:31:41,383: WARNING/ForkPoolWorker-1] https://carrier.vivo.com：截图成功！！！
+[2021-07-07 13:31:42,434: WARNING/ForkPoolWorker-1] https://as.vivo.com：截图成功！！！
+[2021-07-07 13:31:44,133: WARNING/ForkPoolWorker-1] https://survey.vivo.com:8443：截图成功！！！
+[2021-07-07 13:31:44,301: WARNING/ForkPoolWorker-1] https://afgateway.vivo.com：截图成功！！！
+[2021-07-07 13:31:44,753: WARNING/ForkPoolWorker-1] https://mail.vivo.com：截图成功！！！
+kill: 57057: No such process
+[2021-07-07 13:31:45,004: INFO/ForkPoolWorker-1] Task screenshot.run[33a47b44-b8bf-4972-bc24-d447fdb9b135] succeeded in 7.827815920000035s: {'tool': 'screenshot', 'result': [{'http': 'https://pdm.vivo.com', 'screen_base64': 'iVBORw0KGgoAAAANSUhEUgAAASwAAACWCAYAAABkW7XSAAABLUlEQVR4nO3WMWoCARCG0W8h2iSkEGyF5Bi5jvfySOnsbewtRAghMYUbMPEAi/BeMzNM81fDFMCdGMY6r96qp2pffVSP1Xv1NU00gL8exvpSvVa7al0tqk31PU0sgFu/B+tQzapVtR3n5bj/nCIYwH/DVf/c5Wgdu3xW8+pUnSfIBQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABc+wE+Wg8r8dbKTQAAAABJRU5ErkJggg=='}, {'http': 'https://carrier.vivo.com', 'screen_base64': 'iVBORw0KGgoAAAANSUhEUgAAASwAAACWCAYAAABkW7XSAAATVElEQVR4nO3d2W9cVYLH8e+5S1W5vC8xTpzFTiBhQkiAABMSNUiZ7gGpGfE00kj002ie+68ZjdTz0q8tzcNo1AzqYQChCAKiB5JOQxKyOY7tBO9LrXc7Zx4qNkkwYbWTa34fKcRL+dalkvrm3FO3zjXOOYeISA54D3oHRES+KwVLRHJDwRKR3FCwRCQ3FCwRyQ0FS0RyQ8ESkdxQsEQkNxSsLcpaS5qma58nSUKWZQA457jzfGFrLd92/rBzjjiOcc5hrSVJknVv12g01u5nPUmS3LVfq9u21gKQpuk3bvvb9u/eX7L1BA96B+THW15e5vPPPyeKImq1GtVqlXq9zsDAAK+88gqFQ...', ...]}
+[2021-07-07 13:31:45,061: INFO/MainProcess] Received task: screenshot.run[f2139b5b-c021-4df7-8272-94cbf183f415]  
+[2021-07-07 13:31:48,461: WARNING/ForkPoolWorker-1] https://pdm.vivo.com：截图成功！！！
+[2021-07-07 13:31:49,041: WARNING/ForkPoolWorker-1] https://carrier.vivo.com：截图成功！！！
+[2021-07-07 13:31:49,202: WARNING/ForkPoolWorker-1] https://passport.vivo.com：截图成功！！！
+[2021-07-07 13:31:49,255: WARNING/ForkPoolWorker-1] https://opensource.vivo.com：截图成功！！！
+[2021-07-07 13:31:50,339: WARNING/ForkPoolWorker-1] https://as.vivo.com：截图成功！！！
+[2021-07-07 13:31:50,992: WARNING/ForkPoolWorker-1] https://afgateway.vivo.com：截图成功！！！
+[2021-07-07 13:31:51,693: WARNING/ForkPoolWorker-1] https://survey.vivo.com:8443：截图成功！！！
+[2021-07-07 13:31:52,168: WARNING/ForkPoolWorker-1] https://mail.vivo.com：截图成功！！！
+kill: 57096: No such process
+[2021-07-07 13:31:52,400: INFO/ForkPoolWorker-1] Task screenshot.run[f2139b5b-c021-4df7-8272-94cbf183f415] succeeded in 7.340677539999888s: {'tool': 'screenshot', 'result': [{'http': 'https://pdm.vivo.com', 'screen_base64': 'iVBORw0KGgoAAAANSUhEUgAAASwAAACWCAYAAABkW7XSAAABLUlEQVR4nO3WMWoCARCG0W8h2iSkEGyF5Bi5jvfySOnsbewtRAghMYUbMPEAi/BeMzNM81fDFMCdGMY6r96qp2pffVSP1Xv1NU00gL8exvpSvVa7al0tqk31PU0sgFu/B+tQzapVtR3n5bj/nCIYwH/DVf/c5Wgdu3xW8+pUnSfIBQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABc+wE+Wg8r8dbKTQAAAABJRU5ErkJggg=='}, {'http': 'https://carrier.vivo.com', 'screen_base64': 'iVBORw0KGgoAAAANSUhEUgAAASwAAACWCAYAAABkW7XSAAATVElEQVR4nO3d2W9cVYLH8e+5S1W5vC8xTpzFTiBhQkiAABMSNUiZ7gGpGfE00kj002ie+68ZjdTz0q8tzcNo1AzqYQChCAKiB5JOQxKyOY7tBO9LrXc7Zx4qNkkwYbWTa34fKcRL+dalkvrm3FO3zjXOOYeISA54D3oHRES+KwVLRHJDwRKR3FCwRCQ3FCwRyQ0FS0RyQ8ESkdxQsEQkNxSsLcpaS5qma58nSUKWZQA457jzfGFrLd92/rBzjjiOcc5hrSVJknVv12g01u5nPUmS3LVfq9u21gKQpuk3bvvb9u/eX7L1BA96B+THW15e5vPPPyeKImq1GtVqlXq9zsDAAK+88gqFQ...', ...]}
+[2021-07-07 13:31:52,439: INFO/MainProcess] Received task: screenshot.run[ee185c39-4eae-4829-a485-7da9a9f497cf]  
+[2021-07-07 13:31:55,908: WARNING/ForkPoolWorker-1] https://pdm.vivo.com：截图成功！！！
+[2021-07-07 13:31:56,664: WARNING/ForkPoolWorker-1] https://carrier.vivo.com：截图成功！！！
+[2021-07-07 13:31:56,900: WARNING/ForkPoolWorker-1] https://opensource.vivo.com：截图成功！！！
+[2021-07-07 13:31:56,978: WARNING/ForkPoolWorker-1] https://passport.vivo.com：截图成功！！！
+[2021-07-07 13:31:58,295: WARNING/ForkPoolWorker-1] https://as.vivo.com：截图成功！！！
+[2021-07-07 13:31:59,392: WARNING/ForkPoolWorker-1] https://afgateway.vivo.com：截图成功！！！
+[2021-07-07 13:31:59,431: WARNING/ForkPoolWorker-1] https://survey.vivo.com:8443：截图成功！！！
+[2021-07-07 13:32:14,915: WARNING/ForkPoolWorker-1] https://mail.vivo.com：截图成功！！！
+kill: 57161: No such process
+[2021-07-07 13:32:15,140: INFO/ForkPoolWorker-1] Task screenshot.run[ee185c39-4eae-4829-a485-7da9a9f497cf] succeeded in 22.70183276700004s: {'tool': 'screenshot', 'result': [{'http': 'https://pdm.vivo.com', 'screen_base64': 'iVBORw0KGgoAAAANSUhEUgAAASwAAACWCAYAAABkW7XSAAABLUlEQVR4nO3WMWoCARCG0W8h2iSkEGyF5Bi5jvfySOnsbewtRAghMYUbMPEAi/BeMzNM81fDFMCdGMY6r96qp2pffVSP1Xv1NU00gL8exvpSvVa7al0tqk31PU0sgFu/B+tQzapVtR3n5bj/nCIYwH/DVf/c5Wgdu3xW8+pUnSfIBQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABc+wE+Wg8r8dbKTQAAAABJRU5ErkJggg=='}, {'http': 'https://carrier.vivo.com', 'screen_base64': 'iVBORw0KGgoAAAANSUhEUgAAASwAAACWCAYAAABkW7XSAAATVElEQVR4nO3d2W9cVYLH8e+5S1W5vC8xTpzFTiBhQkiAABMSNUiZ7gGpGfE00kj002ie+68ZjdTz0q8tzcNo1AzqYQChCAKiB5JOQxKyOY7tBO9LrXc7Zx4qNkkwYbWTa34fKcRL+dalkvrm3FO3zjXOOYeISA54D3oHRES+KwVLRHJDwRKR3FCwRCQ3FCwRyQ0FS0RyQ8ESkdxQsEQkNxSsLcpaS5qma58nSUKWZQA457jzfGFrLd92/rBzjjiOcc5hrSVJknVv12g01u5nPUmS3LVfq9u21gKQpuk3bvvb9u/eX7L1BA96B+THW15e5vPPPyeKImq1GtVqlXq9zsDAAK+88gqFQ...', ...]}
+[2021-07-07 13:32:15,189: INFO/MainProcess] Received task: screenshot.run[6a4fd01c-342d-431a-a941-012f61d139f8]  
+[2021-07-07 13:32:18,620: WARNING/ForkPoolWorker-1] https://pdm.vivo.com：截图成功！！！
+[2021-07-07 13:32:19,250: WARNING/ForkPoolWorker-1] https://carrier.vivo.com：截图成功！！！
+[2021-07-07 13:32:19,449: WARNING/ForkPoolWorker-1] https://opensource.vivo.com：截图成功！！！
+[2021-07-07 13:32:19,467: WARNING/ForkPoolWorker-1] https://passport.vivo.com：截图成功！！！
+[2021-07-07 13:32:20,500: WARNING/ForkPoolWorker-1] https://as.vivo.com：截图成功！！！
+[2021-07-07 13:32:22,085: WARNING/ForkPoolWorker-1] https://survey.vivo.com:8443：截图成功！！！
+[2021-07-07 13:32:22,244: WARNING/ForkPoolWorker-1] https://afgateway.vivo.com：截图成功！！！
+[2021-07-07 13:32:22,783: WARNING/ForkPoolWorker-1] https://mail.vivo.com：截图成功！！！
+kill: 57210: No such process
+[2021-07-07 13:32:23,023: INFO/ForkPoolWorker-1] Task screenshot.run[6a4fd01c-342d-431a-a941-012f61d139f8] succeeded in 7.832367943000008s: {'tool': 'screenshot', 'result': [{'http': 'https://pdm.vivo.com', 'screen_base64': 'iVBORw0KGgoAAAANSUhEUgAAASwAAACWCAYAAABkW7XSAAABLUlEQVR4nO3WMWoCARCG0W8h2iSkEGyF5Bi5jvfySOnsbewtRAghMYUbMPEAi/BeMzNM81fDFMCdGMY6r96qp2pffVSP1Xv1NU00gL8exvpSvVa7al0tqk31PU0sgFu/B+tQzapVtR3n5bj/nCIYwH/DVf/c5Wgdu3xW8+pUnSfIBQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABc+wE+Wg8r8dbKTQAAAABJRU5ErkJggg=='}, {'http': 'https://carrier.vivo.com', 'screen_base64': 'iVBORw0KGgoAAAANSUhEUgAAASwAAACWCAYAAABkW7XSAAATVElEQVR4nO3d2W9cVYLH8e+5S1W5vC8xTpzFTiBhQkiAABMSNUiZ7gGpGfE00kj002ie+68ZjdTz0q8tzcNo1AzqYQChCAKiB5JOQxKyOY7tBO9LrXc7Zx4qNkkwYbWTa34fKcRL+dalkvrm3FO3zjXOOYeISA54D3oHRES+KwVLRHJDwRKR3FCwRCQ3FCwRyQ0FS0RyQ8ESkdxQsEQkNxSsLcpaS5qma58nSUKWZQA457jzfGFrLd92/rBzjjiOcc5hrSVJknVv12g01u5nPUmS3LVfq9u21gKQpuk3bvvb9u/eX7L1BA96B+THW15e5vPPPyeKImq1GtVqlXq9zsDAAK+88gqFQ...', ...]}
+[2021-07-07 13:32:23,078: INFO/MainProcess] Received task: screenshot.run[1e72e957-6f9d-47fb-a909-536a1f759276]  
+[2021-07-07 13:32:26,497: WARNING/ForkPoolWorker-1] https://pdm.vivo.com：截图成功！！！
+[2021-07-07 13:32:27,137: WARNING/ForkPoolWorker-1] https://carrier.vivo.com：截图成功！！！
+[2021-07-07 13:32:27,202: WARNING/ForkPoolWorker-1] https://opensource.vivo.com：截图成功！！！
+[2021-07-07 13:32:27,297: WARNING/ForkPoolWorker-1] https://passport.vivo.com：截图成功！！！
+[2021-07-07 13:32:28,434: WARNING/ForkPoolWorker-1] https://as.vivo.com：截图成功！！！
+[2021-07-07 13:32:29,009: WARNING/ForkPoolWorker-1] https://afgateway.vivo.com：截图成功！！！
+[2021-07-07 13:32:29,724: WARNING/ForkPoolWorker-1] https://survey.vivo.com:8443：截图成功！！！
+[2021-07-07 13:32:31,186: WARNING/ForkPoolWorker-1] https://mail.vivo.com：截图成功！！！
+kill: 57251: No such process
+[2021-07-07 13:32:31,377: INFO/ForkPoolWorker-1] Task screenshot.run[1e72e957-6f9d-47fb-a909-536a1f759276] succeeded in 8.298270579000018s: {'tool': 'screenshot', 'result': [{'http': 'https://pdm.vivo.com', 'screen_base64': 'iVBORw0KGgoAAAANSUhEUgAAASwAAACWCAYAAABkW7XSAAABLUlEQVR4nO3WMWoCARCG0W8h2iSkEGyF5Bi5jvfySOnsbewtRAghMYUbMPEAi/BeMzNM81fDFMCdGMY6r96qp2pffVSP1Xv1NU00gL8exvpSvVa7al0tqk31PU0sgFu/B+tQzapVtR3n5bj/nCIYwH/DVf/c5Wgdu3xW8+pUnSfIBQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABc+wE+Wg8r8dbKTQAAAABJRU5ErkJggg=='}, {'http': 'https://carrier.vivo.com', 'screen_base64': 'iVBORw0KGgoAAAANSUhEUgAAASwAAACWCAYAAABkW7XSAAATVElEQVR4nO3d2W9cVYLH8e+5S1W5vC8xTpzFTiBhQkiAABMSNUiZ7gGpGfE00kj002ie+68ZjdTz0q8tzcNo1AzqYQChCAKiB5JOQxKyOY7tBO9LrXc7Zx4qNkkwYbWTa34fKcRL+dalkvrm3FO3zjXOOYeISA54D3oHRES+KwVLRHJDwRKR3FCwRCQ3FCwRyQ0FS0RyQ8ESkdxQsEQkNxSsLcpaS5qma58nSUKWZQA457jzfGFrLd92/rBzjjiOcc5hrSVJknVv12g01u5nPUmS3LVfq9u21gKQpuk3bvvb9u/eX7L1BA96B+THW15e5vPPPyeKImq1GtVqlXq9zsDAAK+88gqFQ...', ...]}
+[2021-07-07 13:32:31,446: INFO/MainProcess] Received task: screenshot.run[da375384-51e4-44c3-be22-0928925fa524]  
+[2021-07-07 13:32:34,913: WARNING/ForkPoolWorker-1] https://pdm.vivo.com：截图成功！！！
+[2021-07-07 13:32:35,641: WARNING/ForkPoolWorker-1] https://carrier.vivo.com：截图成功！！！
+[2021-07-07 13:32:35,896: WARNING/ForkPoolWorker-1] https://opensource.vivo.com：截图成功！！！
+[2021-07-07 13:32:36,069: WARNING/ForkPoolWorker-1] https://passport.vivo.com：截图成功！！！
+[2021-07-07 13:32:37,194: WARNING/ForkPoolWorker-1] https://as.vivo.com：截图成功！！！
+[2021-07-07 13:32:37,485: WARNING/ForkPoolWorker-1] https://afgateway.vivo.com：截图成功！！！
+[2021-07-07 13:32:38,447: WARNING/ForkPoolWorker-1] https://survey.vivo.com:8443：截图成功！！！
+[2021-07-07 13:32:39,751: WARNING/ForkPoolWorker-1] https://mail.vivo.com：截图成功！！！
+kill: 57298: No such process
+[2021-07-07 13:32:39,963: INFO/ForkPoolWorker-1] Task screenshot.run[da375384-51e4-44c3-be22-0928925fa524] succeeded in 8.515618249s: {'tool': 'screenshot', 'result': [{'http': 'https://pdm.vivo.com', 'screen_base64': 'iVBORw0KGgoAAAANSUhEUgAAASwAAACWCAYAAABkW7XSAAABLUlEQVR4nO3WMWoCARCG0W8h2iSkEGyF5Bi5jvfySOnsbewtRAghMYUbMPEAi/BeMzNM81fDFMCdGMY6r96qp2pffVSP1Xv1NU00gL8exvpSvVa7al0tqk31PU0sgFu/B+tQzapVtR3n5bj/nCIYwH/DVf/c5Wgdu3xW8+pUnSfIBQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABc+wE+Wg8r8dbKTQAAAABJRU5ErkJggg=='}, {'http': 'https://carrier.vivo.com', 'screen_base64': 'iVBORw0KGgoAAAANSUhEUgAAASwAAACWCAYAAABkW7XSAAATVElEQVR4nO3d2W9cVYLH8e+5S1W5vC8xTpzFTiBhQkiAABMSNUiZ7gGpGfE00kj002ie+68ZjdTz0q8tzcNo1AzqYQChCAKiB5JOQxKyOY7tBO9LrXc7Zx4qNkkwYbWTa34fKcRL+dalkvrm3FO3zjXOOYeISA54D3oHRES+KwVLRHJDwRKR3FCwRCQ3FCwRyQ0FS0RyQ8ESkdxQsEQkNxSsLcpaS5qma58nSUKWZQA457jzfGFrLd92/rBzjjiOcc5hrSVJknVv12g01u5nPUmS3LVfq9u21gKQpuk3bvvb9u/eX7L1BA96B+THW15e5vPPPyeKImq1GtVqlXq9zsDAAK+88gqFQ...', ...]}
+[2021-07-07 13:32:40,025: INFO/MainProcess] Received task: screenshot.run[14cdca6d-6920-4909-aa62-38c35331725a]  
+[2021-07-07 13:32:43,445: WARNING/ForkPoolWorker-1] https://pdm.vivo.com：截图成功！！！
+[2021-07-07 13:32:44,069: WARNING/ForkPoolWorker-1] https://carrier.vivo.com：截图成功！！！
+[2021-07-07 13:32:44,175: WARNING/ForkPoolWorker-1] https://opensource.vivo.com：截图成功！！！
+[2021-07-07 13:32:44,304: WARNING/ForkPoolWorker-1] https://passport.vivo.com：截图成功！！！
+[2021-07-07 13:32:45,382: WARNING/ForkPoolWorker-1] https://as.vivo.com：截图成功！！！
+[2021-07-07 13:32:47,063: WARNING/ForkPoolWorker-1] https://survey.vivo.com:8443：截图成功！！！
+[2021-07-07 13:32:47,079: WARNING/ForkPoolWorker-1] https://afgateway.vivo.com：截图成功！！！
+[2021-07-07 13:32:47,584: WARNING/ForkPoolWorker-1] https://mail.vivo.com：截图成功！！！
+kill: 57346: No such process
+[2021-07-07 13:32:47,849: INFO/ForkPoolWorker-1] Task screenshot.run[14cdca6d-6920-4909-aa62-38c35331725a] succeeded in 7.822155250000151s: {'tool': 'screenshot', 'result': [{'http': 'https://pdm.vivo.com', 'screen_base64': 'iVBORw0KGgoAAAANSUhEUgAAASwAAACWCAYAAABkW7XSAAABLUlEQVR4nO3WMWoCARCG0W8h2iSkEGyF5Bi5jvfySOnsbewtRAghMYUbMPEAi/BeMzNM81fDFMCdGMY6r96qp2pffVSP1Xv1NU00gL8exvpSvVa7al0tqk31PU0sgFu/B+tQzapVtR3n5bj/nCIYwH/DVf/c5Wgdu3xW8+pUnSfIBQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABc+wE+Wg8r8dbKTQAAAABJRU5ErkJggg=='}, {'http': 'https://carrier.vivo.com', 'screen_base64': 'iVBORw0KGgoAAAANSUhEUgAAASwAAACWCAYAAABkW7XSAAATVElEQVR4nO3d2W9cVYLH8e+5S1W5vC8xTpzFTiBhQkiAABMSNUiZ7gGpGfE00kj002ie+68ZjdTz0q8tzcNo1AzqYQChCAKiB5JOQxKyOY7tBO9LrXc7Zx4qNkkwYbWTa34fKcRL+dalkvrm3FO3zjXOOYeISA54D3oHRES+KwVLRHJDwRKR3FCwRCQ3FCwRyQ0FS0RyQ8ESkdxQsEQkNxSsLcpaS5qma58nSUKWZQA457jzfGFrLd92/rBzjjiOcc5hrSVJknVv12g01u5nPUmS3LVfq9u21gKQpuk3bvvb9u/eX7L1BA96B+THW15e5vPPPyeKImq1GtVqlXq9zsDAAK+88gqFQ...', ...]}
+[2021-07-07 13:32:47,938: INFO/MainProcess] Received task: screenshot.run[01b0bc6e-72dd-4779-8144-993c90bd48e5]  
+[2021-07-07 13:32:51,353: WARNING/ForkPoolWorker-1] https://pdm.vivo.com：截图成功！！！
+[2021-07-07 13:32:51,931: WARNING/ForkPoolWorker-1] https://carrier.vivo.com：截图成功！！！
+[2021-07-07 13:32:52,084: WARNING/ForkPoolWorker-1] https://passport.vivo.com：截图成功！！！
+[2021-07-07 13:32:52,155: WARNING/ForkPoolWorker-1] https://opensource.vivo.com：截图成功！！！
+[2021-07-07 13:32:53,356: WARNING/ForkPoolWorker-1] https://as.vivo.com：截图成功！！！
+[2021-07-07 13:32:53,868: WARNING/ForkPoolWorker-1] https://afgateway.vivo.com：截图成功！！！
+[2021-07-07 13:32:54,604: WARNING/ForkPoolWorker-1] https://survey.vivo.com:8443：截图成功！！！
+[2021-07-07 13:32:55,121: WARNING/ForkPoolWorker-1] https://mail.vivo.com：截图成功！！！
+kill: 57395: No such process
+[2021-07-07 13:32:55,403: INFO/ForkPoolWorker-1] Task screenshot.run[01b0bc6e-72dd-4779-8144-993c90bd48e5] succeeded in 7.463809323000078s: {'tool': 'screenshot', 'result': [{'http': 'https://pdm.vivo.com', 'screen_base64': 'iVBORw0KGgoAAAANSUhEUgAAASwAAACWCAYAAABkW7XSAAABLUlEQVR4nO3WMWoCARCG0W8h2iSkEGyF5Bi5jvfySOnsbewtRAghMYUbMPEAi/BeMzNM81fDFMCdGMY6r96qp2pffVSP1Xv1NU00gL8exvpSvVa7al0tqk31PU0sgFu/B+tQzapVtR3n5bj/nCIYwH/DVf/c5Wgdu3xW8+pUnSfIBQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABc+wE+Wg8r8dbKTQAAAABJRU5ErkJggg=='}, {'http': 'https://carrier.vivo.com', 'screen_base64': 'iVBORw0KGgoAAAANSUhEUgAAASwAAACWCAYAAABkW7XSAAATVElEQVR4nO3d2W9cVYLH8e+5S1W5vC8xTpzFTiBhQkiAABMSNUiZ7gGpGfE00kj002ie+68ZjdTz0q8tzcNo1AzqYQChCAKiB5JOQxKyOY7tBO9LrXc7Zx4qNkkwYbWTa34fKcRL+dalkvrm3FO3zjXOOYeISA54D3oHRES+KwVLRHJDwRKR3FCwRCQ3FCwRyQ0FS0RyQ8ESkdxQsEQkNxSsLcpaS5qma58nSUKWZQA457jzfGFrLd92/rBzjjiOcc5hrSVJknVv12g01u5nPUmS3LVfq9u21gKQpuk3bvvb9u/eX7L1BA96B+THW15e5vPPPyeKImq1GtVqlXq9zsDAAK+88gqFQ...', ...]}
+[2021-07-07 13:32:55,518: INFO/MainProcess] Received task: screenshot.run[a1f44757-a200-4e77-993d-363fbecad172]  
+[2021-07-07 13:32:59,191: WARNING/ForkPoolWorker-1] https://pdm.vivo.com：截图成功！！！
+[2021-07-07 13:32:59,818: WARNING/ForkPoolWorker-1] https://carrier.vivo.com：截图成功！！！
+[2021-07-07 13:33:00,133: WARNING/ForkPoolWorker-1] https://opensource.vivo.com：截图成功！！！
+[2021-07-07 13:33:00,182: WARNING/ForkPoolWorker-1] https://passport.vivo.com：截图成功！！！
+[2021-07-07 13:33:01,701: WARNING/ForkPoolWorker-1] https://as.vivo.com：截图成功！！！
+[2021-07-07 13:33:02,690: WARNING/ForkPoolWorker-1] https://survey.vivo.com:8443：截图成功！！！
+[2021-07-07 13:33:02,704: WARNING/ForkPoolWorker-1] https://afgateway.vivo.com：截图成功！！！
+[2021-07-07 13:33:04,011: WARNING/ForkPoolWorker-1] https://mail.vivo.com：截图成功！！！
+kill: 57452: No such process
+[2021-07-07 13:33:04,245: INFO/ForkPoolWorker-1] Task screenshot.run[a1f44757-a200-4e77-993d-363fbecad172] succeeded in 8.72462408399997s: {'tool': 'screenshot', 'result': [{'http': 'https://pdm.vivo.com', 'screen_base64': 'iVBORw0KGgoAAAANSUhEUgAAASwAAACWCAYAAABkW7XSAAABLUlEQVR4nO3WMWoCARCG0W8h2iSkEGyF5Bi5jvfySOnsbewtRAghMYUbMPEAi/BeMzNM81fDFMCdGMY6r96qp2pffVSP1Xv1NU00gL8exvpSvVa7al0tqk31PU0sgFu/B+tQzapVtR3n5bj/nCIYwH/DVf/c5Wgdu3xW8+pUnSfIBQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABc+wE+Wg8r8dbKTQAAAABJRU5ErkJggg=='}, {'http': 'https://carrier.vivo.com', 'screen_base64': 'iVBORw0KGgoAAAANSUhEUgAAASwAAACWCAYAAABkW7XSAAATVElEQVR4nO3d2W9cVYLH8e+5S1W5vC8xTpzFTiBhQkiAABMSNUiZ7gGpGfE00kj002ie+68ZjdTz0q8tzcNo1AzqYQChCAKiB5JOQxKyOY7tBO9LrXc7Zx4qNkkwYbWTa34fKcRL+dalkvrm3FO3zjXOOYeISA54D3oHRES+KwVLRHJDwRKR3FCwRCQ3FCwRyQ0FS0RyQ8ESkdxQsEQkNxSsLcpaS5qma58nSUKWZQA457jzfGFrLd92/rBzjjiOcc5hrSVJknVv12g01u5nPUmS3LVfq9u21gKQpuk3bvvb9u/eX7L1BA96B+THW15e5vPPPyeKImq1GtVqlXq9zsDAAK+88gqFQ...', ...]}
+[2021-07-07 13:33:04,352: INFO/MainProcess] Received task: screenshot.run[86e5b4e4-c691-4113-8a67-f33cdda924df]  
+[2021-07-07 13:33:07,774: WARNING/ForkPoolWorker-1] https://pdm.vivo.com：截图成功！！！
+[2021-07-07 13:33:08,371: WARNING/ForkPoolWorker-1] https://carrier.vivo.com：截图成功！！！
+[2021-07-07 13:33:08,477: WARNING/ForkPoolWorker-1] https://opensource.vivo.com：截图成功！！！
+[2021-07-07 13:33:08,587: WARNING/ForkPoolWorker-1] https://passport.vivo.com：截图成功！！！
+[2021-07-07 13:33:09,629: WARNING/ForkPoolWorker-1] https://as.vivo.com：截图成功！！！
+[2021-07-07 13:33:10,631: WARNING/ForkPoolWorker-1] https://afgateway.vivo.com：截图成功！！！
+[2021-07-07 13:33:11,184: WARNING/ForkPoolWorker-1] https://survey.vivo.com:8443：截图成功！！！
+[2021-07-07 13:33:11,828: WARNING/ForkPoolWorker-1] https://mail.vivo.com：截图成功！！！
+kill: 57493: No such process
+[2021-07-07 13:33:12,070: INFO/ForkPoolWorker-1] Task screenshot.run[86e5b4e4-c691-4113-8a67-f33cdda924df] succeeded in 7.7164676820000295s: {'tool': 'screenshot', 'result': [{'http': 'https://pdm.vivo.com', 'screen_base64': 'iVBORw0KGgoAAAANSUhEUgAAASwAAACWCAYAAABkW7XSAAABLUlEQVR4nO3WMWoCARCG0W8h2iSkEGyF5Bi5jvfySOnsbewtRAghMYUbMPEAi/BeMzNM81fDFMCdGMY6r96qp2pffVSP1Xv1NU00gL8exvpSvVa7al0tqk31PU0sgFu/B+tQzapVtR3n5bj/nCIYwH/DVf/c5Wgdu3xW8+pUnSfIBQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABc+wE+Wg8r8dbKTQAAAABJRU5ErkJggg=='}, {'http': 'https://carrier.vivo.com', 'screen_base64': 'iVBORw0KGgoAAAANSUhEUgAAASwAAACWCAYAAABkW7XSAAATVElEQVR4nO3d2W9cVYLH8e+5S1W5vC8xTpzFTiBhQkiAABMSNUiZ7gGpGfE00kj002ie+68ZjdTz0q8tzcNo1AzqYQChCAKiB5JOQxKyOY7tBO9LrXc7Zx4qNkkwYbWTa34fKcRL+dalkvrm3FO3zjXOOYeISA54D3oHRES+KwVLRHJDwRKR3FCwRCQ3FCwRyQ0FS0RyQ8ESkdxQsEQkNxSsLcpaS5qma58nSUKWZQA457jzfGFrLd92/rBzjjiOcc5hrSVJknVv12g01u5nPUmS3LVfq9u21gKQpuk3bvvb9u/eX7L1BA96B+THW15e5vPPPyeKImq1GtVqlXq9zsDAAK+88gqFQ...', ...]}
+[2021-07-07 13:33:12,184: INFO/MainProcess] Received task: screenshot.run[853cbbb5-00f5-4d43-95c9-e05f17a59d86]  
+[2021-07-07 13:33:15,613: WARNING/ForkPoolWorker-1] https://pdm.vivo.com：截图成功！！！
+[2021-07-07 13:33:16,206: WARNING/ForkPoolWorker-1] https://carrier.vivo.com：截图成功！！！
+[2021-07-07 13:33:16,362: WARNING/ForkPoolWorker-1] https://as.vivo.com：截图成功！！！
+[2021-07-07 13:33:16,367: WARNING/ForkPoolWorker-1] https://passport.vivo.com：截图成功！！！
+[2021-07-07 13:33:16,394: WARNING/ForkPoolWorker-1] https://opensource.vivo.com：截图成功！！！
+[2021-07-07 13:33:18,126: WARNING/ForkPoolWorker-1] https://afgateway.vivo.com：截图成功！！！
+[2021-07-07 13:33:18,848: WARNING/ForkPoolWorker-1] https://survey.vivo.com:8443：截图成功！！！
+[2021-07-07 13:33:19,188: WARNING/ForkPoolWorker-1] https://mail.vivo.com：截图成功！！！
+kill: 57538: No such process
+[2021-07-07 13:33:19,442: INFO/ForkPoolWorker-1] Task screenshot.run[853cbbb5-00f5-4d43-95c9-e05f17a59d86] succeeded in 7.256777978000173s: {'tool': 'screenshot', 'result': [{'http': 'https://pdm.vivo.com', 'screen_base64': 'iVBORw0KGgoAAAANSUhEUgAAASwAAACWCAYAAABkW7XSAAABLUlEQVR4nO3WMWoCARCG0W8h2iSkEGyF5Bi5jvfySOnsbewtRAghMYUbMPEAi/BeMzNM81fDFMCdGMY6r96qp2pffVSP1Xv1NU00gL8exvpSvVa7al0tqk31PU0sgFu/B+tQzapVtR3n5bj/nCIYwH/DVf/c5Wgdu3xW8+pUnSfIBQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABc+wE+Wg8r8dbKTQAAAABJRU5ErkJggg=='}, {'http': 'https://carrier.vivo.com', 'screen_base64': 'iVBORw0KGgoAAAANSUhEUgAAASwAAACWCAYAAABkW7XSAAATVElEQVR4nO3d2W9cVYLH8e+5S1W5vC8xTpzFTiBhQkiAABMSNUiZ7gGpGfE00kj002ie+68ZjdTz0q8tzcNo1AzqYQChCAKiB5JOQxKyOY7tBO9LrXc7Zx4qNkkwYbWTa34fKcRL+dalkvrm3FO3zjXOOYeISA54D3oHRES+KwVLRHJDwRKR3FCwRCQ3FCwRyQ0FS0RyQ8ESkdxQsEQkNxSsLcpaS5qma58nSUKWZQA457jzfGFrLd92/rBzjjiOcc5hrSVJknVv12g01u5nPUmS3LVfq9u21gKQpuk3bvvb9u/eX7L1BA96B+THW15e5vPPPyeKImq1GtVqlXq9zsDAAK+88gqFQ...', ...]}
+[2021-07-07 13:33:19,627: INFO/MainProcess] Received task: screenshot.run[f92e46c4-6e23-4846-8b9f-fa5ec28ae6d1]  
+[2021-07-07 13:33:23,082: WARNING/ForkPoolWorker-1] https://pdm.vivo.com：截图成功！！！
+[2021-07-07 13:33:23,814: WARNING/ForkPoolWorker-1] https://carrier.vivo.com：截图成功！！！
+[2021-07-07 13:33:24,178: WARNING/ForkPoolWorker-1] https://opensource.vivo.com：截图成功！！！
+[2021-07-07 13:33:24,557: WARNING/ForkPoolWorker-1] https://passport.vivo.com：截图成功！！！
+[2021-07-07 13:33:25,183: WARNING/ForkPoolWorker-1] https://as.vivo.com：截图成功！！！
+[2021-07-07 13:33:25,630: WARNING/ForkPoolWorker-1] https://afgateway.vivo.com：截图成功！！！
+[2021-07-07 13:33:26,676: WARNING/ForkPoolWorker-1] https://survey.vivo.com:8443：截图成功！！！
+[2021-07-07 13:33:26,957: WARNING/ForkPoolWorker-1] https://mail.vivo.com：截图成功！！！
+kill: 57580: No such process
+[2021-07-07 13:33:27,176: INFO/ForkPoolWorker-1] Task screenshot.run[f92e46c4-6e23-4846-8b9f-fa5ec28ae6d1] succeeded in 7.548097010999982s: {'tool': 'screenshot', 'result': [{'http': 'https://pdm.vivo.com', 'screen_base64': 'iVBORw0KGgoAAAANSUhEUgAAASwAAACWCAYAAABkW7XSAAABLUlEQVR4nO3WMWoCARCG0W8h2iSkEGyF5Bi5jvfySOnsbewtRAghMYUbMPEAi/BeMzNM81fDFMCdGMY6r96qp2pffVSP1Xv1NU00gL8exvpSvVa7al0tqk31PU0sgFu/B+tQzapVtR3n5bj/nCIYwH/DVf/c5Wgdu3xW8+pUnSfIBQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABc+wE+Wg8r8dbKTQAAAABJRU5ErkJggg=='}, {'http': 'https://carrier.vivo.com', 'screen_base64': 'iVBORw0KGgoAAAANSUhEUgAAASwAAACWCAYAAABkW7XSAAATVElEQVR4nO3d2W9cVYLH8e+5S1W5vC8xTpzFTiBhQkiAABMSNUiZ7gGpGfE00kj002ie+68ZjdTz0q8tzcNo1AzqYQChCAKiB5JOQxKyOY7tBO9LrXc7Zx4qNkkwYbWTa34fKcRL+dalkvrm3FO3zjXOOYeISA54D3oHRES+KwVLRHJDwRKR3FCwRCQ3FCwRyQ0FS0RyQ8ESkdxQsEQkNxSsLcpaS5qma58nSUKWZQA457jzfGFrLd92/rBzjjiOcc5hrSVJknVv12g01u5nPUmS3LVfq9u21gKQpuk3bvvb9u/eX7L1BA96B+THW15e5vPPPyeKImq1GtVqlXq9zsDAAK+88gqFQ...', ...]}
+[2021-07-07 13:33:27,299: INFO/MainProcess] Received task: screenshot.run[1dcc0571-e982-495e-b249-ec7302efd740]  
+[2021-07-07 13:33:31,709: WARNING/ForkPoolWorker-1] https://pdm.vivo.com：截图成功！！！
+[2021-07-07 13:33:32,265: WARNING/ForkPoolWorker-1] https://carrier.vivo.com：截图成功！！！
+[2021-07-07 13:33:32,443: WARNING/ForkPoolWorker-1] https://passport.vivo.com：截图成功！！！
+[2021-07-07 13:33:32,476: WARNING/ForkPoolWorker-1] https://opensource.vivo.com：截图成功！！！
+[2021-07-07 13:33:33,499: WARNING/ForkPoolWorker-1] https://as.vivo.com：截图成功！！！
+[2021-07-07 13:33:34,473: WARNING/ForkPoolWorker-1] https://afgateway.vivo.com：截图成功！！！
+[2021-07-07 13:33:35,029: WARNING/ForkPoolWorker-1] https://survey.vivo.com:8443：截图成功！！！
+[2021-07-07 13:33:35,642: WARNING/ForkPoolWorker-1] https://mail.vivo.com：截图成功！！！
+kill: 57629: No such process
+[2021-07-07 13:33:35,862: INFO/ForkPoolWorker-1] Task screenshot.run[1dcc0571-e982-495e-b249-ec7302efd740] succeeded in 8.562054276000026s: {'tool': 'screenshot', 'result': [{'http': 'https://pdm.vivo.com', 'screen_base64': 'iVBORw0KGgoAAAANSUhEUgAAASwAAACWCAYAAABkW7XSAAABLUlEQVR4nO3WMWoCARCG0W8h2iSkEGyF5Bi5jvfySOnsbewtRAghMYUbMPEAi/BeMzNM81fDFMCdGMY6r96qp2pffVSP1Xv1NU00gL8exvpSvVa7al0tqk31PU0sgFu/B+tQzapVtR3n5bj/nCIYwH/DVf/c5Wgdu3xW8+pUnSfIBQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABc+wE+Wg8r8dbKTQAAAABJRU5ErkJggg=='}, {'http': 'https://carrier.vivo.com', 'screen_base64': 'iVBORw0KGgoAAAANSUhEUgAAASwAAACWCAYAAABkW7XSAAATVElEQVR4nO3d2W9cVYLH8e+5S1W5vC8xTpzFTiBhQkiAABMSNUiZ7gGpGfE00kj002ie+68ZjdTz0q8tzcNo1AzqYQChCAKiB5JOQxKyOY7tBO9LrXc7Zx4qNkkwYbWTa34fKcRL+dalkvrm3FO3zjXOOYeISA54D3oHRES+KwVLRHJDwRKR3FCwRCQ3FCwRyQ0FS0RyQ8ESkdxQsEQkNxSsLcpaS5qma58nSUKWZQA457jzfGFrLd92/rBzjjiOcc5hrSVJknVv12g01u5nPUmS3LVfq9u21gKQpuk3bvvb9u/eX7L1BA96B+THW15e5vPPPyeKImq1GtVqlXq9zsDAAK+88gqFQ...', ...]}
+[2021-07-07 13:33:35,978: INFO/MainProcess] Received task: screenshot.run[8027fef8-5ea2-4fd7-8447-3588d2a4a111]  
+[2021-07-07 13:33:39,430: WARNING/ForkPoolWorker-1] https://pdm.vivo.com：截图成功！！！
+[2021-07-07 13:33:40,128: WARNING/ForkPoolWorker-1] https://carrier.vivo.com：截图成功！！！
+[2021-07-07 13:33:40,275: WARNING/ForkPoolWorker-1] https://opensource.vivo.com：截图成功！！！
+[2021-07-07 13:33:40,289: WARNING/ForkPoolWorker-1] https://passport.vivo.com：截图成功！！！
+[2021-07-07 13:33:40,976: WARNING/ForkPoolWorker-1] https://as.vivo.com：截图成功！！！
+[2021-07-07 13:33:42,823: WARNING/ForkPoolWorker-1] https://survey.vivo.com:8443：截图成功！！！
+[2021-07-07 13:33:42,929: WARNING/ForkPoolWorker-1] https://afgateway.vivo.com：截图成功！！！
+[2021-07-07 13:33:44,179: WARNING/ForkPoolWorker-1] https://mail.vivo.com：截图成功！！！
+kill: 57670: No such process
+[2021-07-07 13:33:44,393: INFO/ForkPoolWorker-1] Task screenshot.run[8027fef8-5ea2-4fd7-8447-3588d2a4a111] succeeded in 8.41348058199992s: {'tool': 'screenshot', 'result': [{'http': 'https://pdm.vivo.com', 'screen_base64': 'iVBORw0KGgoAAAANSUhEUgAAASwAAACWCAYAAABkW7XSAAABLUlEQVR4nO3WMWoCARCG0W8h2iSkEGyF5Bi5jvfySOnsbewtRAghMYUbMPEAi/BeMzNM81fDFMCdGMY6r96qp2pffVSP1Xv1NU00gL8exvpSvVa7al0tqk31PU0sgFu/B+tQzapVtR3n5bj/nCIYwH/DVf/c5Wgdu3xW8+pUnSfIBQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABc+wE+Wg8r8dbKTQAAAABJRU5ErkJggg=='}, {'http': 'https://carrier.vivo.com', 'screen_base64': 'iVBORw0KGgoAAAANSUhEUgAAASwAAACWCAYAAABkW7XSAAATVElEQVR4nO3d2W9cVYLH8e+5S1W5vC8xTpzFTiBhQkiAABMSNUiZ7gGpGfE00kj002ie+68ZjdTz0q8tzcNo1AzqYQChCAKiB5JOQxKyOY7tBO9LrXc7Zx4qNkkwYbWTa34fKcRL+dalkvrm3FO3zjXOOYeISA54D3oHRES+KwVLRHJDwRKR3FCwRCQ3FCwRyQ0FS0RyQ8ESkdxQsEQkNxSsLcpaS5qma58nSUKWZQA457jzfGFrLd92/rBzjjiOcc5hrSVJknVv12g01u5nPUmS3LVfq9u21gKQpuk3bvvb9u/eX7L1BA96B+THW15e5vPPPyeKImq1GtVqlXq9zsDAAK+88gqFQ...', ...]}
+[2021-07-07 13:33:44,510: INFO/MainProcess] Received task: screenshot.run[98ca286b-37b6-4a53-90d4-c3f739a3fa30]  
+[2021-07-07 13:33:49,749: WARNING/ForkPoolWorker-1] https://pdm.vivo.com：截图成功！！！
+[2021-07-07 13:33:50,146: WARNING/ForkPoolWorker-1] https://passport.vivo.com：截图成功！！！
+[2021-07-07 13:33:50,443: WARNING/ForkPoolWorker-1] https://carrier.vivo.com：截图成功！！！
+[2021-07-07 13:33:50,590: WARNING/ForkPoolWorker-1] https://opensource.vivo.com：截图成功！！！
+[2021-07-07 13:33:52,075: WARNING/ForkPoolWorker-1] https://as.vivo.com：截图成功！！！
+[2021-07-07 13:33:52,326: WARNING/ForkPoolWorker-1] https://afgateway.vivo.com：截图成功！！！
+[2021-07-07 13:33:53,334: WARNING/ForkPoolWorker-1] https://mail.vivo.com：截图成功！！！
+[2021-07-07 13:33:53,907: WARNING/ForkPoolWorker-1] https://survey.vivo.com:8443：截图成功！！！
+kill: 57716: No such process
+[2021-07-07 13:33:54,110: INFO/ForkPoolWorker-1] Task screenshot.run[98ca286b-37b6-4a53-90d4-c3f739a3fa30] succeeded in 9.599620704000017s: {'tool': 'screenshot', 'result': [{'http': 'https://pdm.vivo.com', 'screen_base64': 'iVBORw0KGgoAAAANSUhEUgAAASwAAACWCAYAAABkW7XSAAABLUlEQVR4nO3WMWoCARCG0W8h2iSkEGyF5Bi5jvfySOnsbewtRAghMYUbMPEAi/BeMzNM81fDFMCdGMY6r96qp2pffVSP1Xv1NU00gL8exvpSvVa7al0tqk31PU0sgFu/B+tQzapVtR3n5bj/nCIYwH/DVf/c5Wgdu3xW8+pUnSfIBQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABc+wE+Wg8r8dbKTQAAAABJRU5ErkJggg=='}, {'http': 'https://carrier.vivo.com', 'screen_base64': 'iVBORw0KGgoAAAANSUhEUgAAASwAAACWCAYAAABkW7XSAAATVElEQVR4nO3d2W9cVYLH8e+5S1W5vC8xTpzFTiBhQkiAABMSNUiZ7gGpGfE00kj002ie+68ZjdTz0q8tzcNo1AzqYQChCAKiB5JOQxKyOY7tBO9LrXc7Zx4qNkkwYbWTa34fKcRL+dalkvrm3FO3zjXOOYeISA54D3oHRES+KwVLRHJDwRKR3FCwRCQ3FCwRyQ0FS0RyQ8ESkdxQsEQkNxSsLcpaS5qma58nSUKWZQA457jzfGFrLd92/rBzjjiOcc5hrSVJknVv12g01u5nPUmS3LVfq9u21gKQpuk3bvvb9u/eX7L1BA96B+THW15e5vPPPyeKImq1GtVqlXq9zsDAAK+88gqFQ...', ...]}
+[2021-07-07 13:33:54,250: INFO/MainProcess] Received task: screenshot.run[480e981e-56e1-47f0-8b15-1fec693258c3]  
+[2021-07-07 13:33:57,682: WARNING/ForkPoolWorker-1] https://pdm.vivo.com：截图成功！！！
+[2021-07-07 13:33:58,277: WARNING/ForkPoolWorker-1] https://carrier.vivo.com：截图成功！！！
+[2021-07-07 13:33:58,636: WARNING/ForkPoolWorker-1] https://opensource.vivo.com：截图成功！！！
+[2021-07-07 13:33:58,682: WARNING/ForkPoolWorker-1] https://passport.vivo.com：截图成功！！！
+[2021-07-07 13:33:59,731: WARNING/ForkPoolWorker-1] https://as.vivo.com：截图成功！！！
+[2021-07-07 13:34:01,255: WARNING/ForkPoolWorker-1] https://survey.vivo.com:8443：截图成功！！！
+[2021-07-07 13:34:01,371: WARNING/ForkPoolWorker-1] https://afgateway.vivo.com：截图成功！！！
+[2021-07-07 13:34:01,832: WARNING/ForkPoolWorker-1] https://mail.vivo.com：截图成功！！！
+kill: 57765: No such process
+[2021-07-07 13:34:02,126: INFO/ForkPoolWorker-1] Task screenshot.run[480e981e-56e1-47f0-8b15-1fec693258c3] succeeded in 7.874770834999936s: {'tool': 'screenshot', 'result': [{'http': 'https://pdm.vivo.com', 'screen_base64': 'iVBORw0KGgoAAAANSUhEUgAAASwAAACWCAYAAABkW7XSAAABLUlEQVR4nO3WMWoCARCG0W8h2iSkEGyF5Bi5jvfySOnsbewtRAghMYUbMPEAi/BeMzNM81fDFMCdGMY6r96qp2pffVSP1Xv1NU00gL8exvpSvVa7al0tqk31PU0sgFu/B+tQzapVtR3n5bj/nCIYwH/DVf/c5Wgdu3xW8+pUnSfIBQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABc+wE+Wg8r8dbKTQAAAABJRU5ErkJggg=='}, {'http': 'https://carrier.vivo.com', 'screen_base64': 'iVBORw0KGgoAAAANSUhEUgAAASwAAACWCAYAAABkW7XSAAATVElEQVR4nO3d2W9cVYLH8e+5S1W5vC8xTpzFTiBhQkiAABMSNUiZ7gGpGfE00kj002ie+68ZjdTz0q8tzcNo1AzqYQChCAKiB5JOQxKyOY7tBO9LrXc7Zx4qNkkwYbWTa34fKcRL+dalkvrm3FO3zjXOOYeISA54D3oHRES+KwVLRHJDwRKR3FCwRCQ3FCwRyQ0FS0RyQ8ESkdxQsEQkNxSsLcpaS5qma58nSUKWZQA457jzfGFrLd92/rBzjjiOcc5hrSVJknVv12g01u5nPUmS3LVfq9u21gKQpuk3bvvb9u/eX7L1BA96B+THW15e5vPPPyeKImq1GtVqlXq9zsDAAK+88gqFQ...', ...]}
+[2021-07-07 13:34:02,301: INFO/MainProcess] Received task: screenshot.run[dc8dd0fc-d607-4c51-a424-1906b3befa7d]  
+[2021-07-07 13:34:05,730: WARNING/ForkPoolWorker-1] https://pdm.vivo.com：截图成功！！！
+[2021-07-07 13:34:06,295: WARNING/ForkPoolWorker-1] https://carrier.vivo.com：截图成功！！！
+[2021-07-07 13:34:06,445: WARNING/ForkPoolWorker-1] https://opensource.vivo.com：截图成功！！！
+[2021-07-07 13:34:06,554: WARNING/ForkPoolWorker-1] https://passport.vivo.com：截图成功！！！
+[2021-07-07 13:34:07,658: WARNING/ForkPoolWorker-1] https://as.vivo.com：截图成功！！！
+[2021-07-07 13:34:08,251: WARNING/ForkPoolWorker-1] https://afgateway.vivo.com：截图成功！！！
+[2021-07-07 13:34:08,948: WARNING/ForkPoolWorker-1] https://survey.vivo.com:8443：截图成功！！！
+[2021-07-07 13:34:09,371: WARNING/ForkPoolWorker-1] https://mail.vivo.com：截图成功！！！
+kill: 57817: No such process
+[2021-07-07 13:34:09,710: INFO/ForkPoolWorker-1] Task screenshot.run[dc8dd0fc-d607-4c51-a424-1906b3befa7d] succeeded in 7.40756423799985s: {'tool': 'screenshot', 'result': [{'http': 'https://pdm.vivo.com', 'screen_base64': 'iVBORw0KGgoAAAANSUhEUgAAASwAAACWCAYAAABkW7XSAAABLUlEQVR4nO3WMWoCARCG0W8h2iSkEGyF5Bi5jvfySOnsbewtRAghMYUbMPEAi/BeMzNM81fDFMCdGMY6r96qp2pffVSP1Xv1NU00gL8exvpSvVa7al0tqk31PU0sgFu/B+tQzapVtR3n5bj/nCIYwH/DVf/c5Wgdu3xW8+pUnSfIBQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABc+wE+Wg8r8dbKTQAAAABJRU5ErkJggg=='}, {'http': 'https://carrier.vivo.com', 'screen_base64': 'iVBORw0KGgoAAAANSUhEUgAAASwAAACWCAYAAABkW7XSAAATVElEQVR4nO3d2W9cVYLH8e+5S1W5vC8xTpzFTiBhQkiAABMSNUiZ7gGpGfE00kj002ie+68ZjdTz0q8tzcNo1AzqYQChCAKiB5JOQxKyOY7tBO9LrXc7Zx4qNkkwYbWTa34fKcRL+dalkvrm3FO3zjXOOYeISA54D3oHRES+KwVLRHJDwRKR3FCwRCQ3FCwRyQ0FS0RyQ8ESkdxQsEQkNxSsLcpaS5qma58nSUKWZQA457jzfGFrLd92/rBzjjiOcc5hrSVJknVv12g01u5nPUmS3LVfq9u21gKQpuk3bvvb9u/eX7L1BA96B+THW15e5vPPPyeKImq1GtVqlXq9zsDAAK+88gqFQ...', ...]}
+[2021-07-07 13:34:09,892: INFO/MainProcess] Received task: screenshot.run[279a8daa-2caf-4a09-b5ce-7536729208a4]  
+[2021-07-07 13:34:13,452: WARNING/ForkPoolWorker-1] https://pdm.vivo.com：截图成功！！！
+[2021-07-07 13:34:13,983: WARNING/ForkPoolWorker-1] https://carrier.vivo.com：截图成功！！！
+[2021-07-07 13:34:14,406: WARNING/ForkPoolWorker-1] https://opensource.vivo.com：截图成功！！！
+[2021-07-07 13:34:14,455: WARNING/ForkPoolWorker-1] https://passport.vivo.com：截图成功！！！
+[2021-07-07 13:34:15,009: WARNING/ForkPoolWorker-1] https://as.vivo.com：截图成功！！！
+[2021-07-07 13:34:16,942: WARNING/ForkPoolWorker-1] https://afgateway.vivo.com：截图成功！！！
+[2021-07-07 13:34:16,953: WARNING/ForkPoolWorker-1] https://survey.vivo.com:8443：截图成功！！！
+[2021-07-07 13:34:18,037: WARNING/ForkPoolWorker-1] https://mail.vivo.com：截图成功！！！
+kill: 57866: No such process
+[2021-07-07 13:34:18,259: INFO/ForkPoolWorker-1] Task screenshot.run[279a8daa-2caf-4a09-b5ce-7536729208a4] succeeded in 8.36536600699992s: {'tool': 'screenshot', 'result': [{'http': 'https://pdm.vivo.com', 'screen_base64': 'iVBORw0KGgoAAAANSUhEUgAAASwAAACWCAYAAABkW7XSAAABLUlEQVR4nO3WMWoCARCG0W8h2iSkEGyF5Bi5jvfySOnsbewtRAghMYUbMPEAi/BeMzNM81fDFMCdGMY6r96qp2pffVSP1Xv1NU00gL8exvpSvVa7al0tqk31PU0sgFu/B+tQzapVtR3n5bj/nCIYwH/DVf/c5Wgdu3xW8+pUnSfIBQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABc+wE+Wg8r8dbKTQAAAABJRU5ErkJggg=='}, {'http': 'https://carrier.vivo.com', 'screen_base64': 'iVBORw0KGgoAAAANSUhEUgAAASwAAACWCAYAAABkW7XSAAATVElEQVR4nO3d2W9cVYLH8e+5S1W5vC8xTpzFTiBhQkiAABMSNUiZ7gGpGfE00kj002ie+68ZjdTz0q8tzcNo1AzqYQChCAKiB5JOQxKyOY7tBO9LrXc7Zx4qNkkwYbWTa34fKcRL+dalkvrm3FO3zjXOOYeISA54D3oHRES+KwVLRHJDwRKR3FCwRCQ3FCwRyQ0FS0RyQ8ESkdxQsEQkNxSsLcpaS5qma58nSUKWZQA457jzfGFrLd92/rBzjjiOcc5hrSVJknVv12g01u5nPUmS3LVfq9u21gKQpuk3bvvb9u/eX7L1BA96B+THW15e5vPPPyeKImq1GtVqlXq9zsDAAK+88gqFQ...', ...]}
+[2021-07-07 13:34:18,404: INFO/MainProcess] Received task: screenshot.run[e191381b-69db-455c-96e6-6856ea578653]  
+[2021-07-07 13:34:21,841: WARNING/ForkPoolWorker-1] https://pdm.vivo.com：截图成功！！！
+[2021-07-07 13:34:22,419: WARNING/ForkPoolWorker-1] https://carrier.vivo.com：截图成功！！！
+[2021-07-07 13:34:22,592: WARNING/ForkPoolWorker-1] https://passport.vivo.com：截图成功！！！
+[2021-07-07 13:34:22,827: WARNING/ForkPoolWorker-1] https://opensource.vivo.com：截图成功！！！
+[2021-07-07 13:34:23,604: WARNING/ForkPoolWorker-1] https://as.vivo.com：截图成功！！！
+[2021-07-07 13:34:24,516: WARNING/ForkPoolWorker-1] https://afgateway.vivo.com：截图成功！！！
+[2021-07-07 13:34:25,334: WARNING/ForkPoolWorker-1] https://survey.vivo.com:8443：截图成功！！！
+[2021-07-07 13:34:26,498: WARNING/ForkPoolWorker-1] https://mail.vivo.com：截图成功！！！
+kill: 57915: No such process
+[2021-07-07 13:34:26,774: INFO/ForkPoolWorker-1] Task screenshot.run[e191381b-69db-455c-96e6-6856ea578653] succeeded in 8.368213819999937s: {'tool': 'screenshot', 'result': [{'http': 'https://pdm.vivo.com', 'screen_base64': 'iVBORw0KGgoAAAANSUhEUgAAASwAAACWCAYAAABkW7XSAAABLUlEQVR4nO3WMWoCARCG0W8h2iSkEGyF5Bi5jvfySOnsbewtRAghMYUbMPEAi/BeMzNM81fDFMCdGMY6r96qp2pffVSP1Xv1NU00gL8exvpSvVa7al0tqk31PU0sgFu/B+tQzapVtR3n5bj/nCIYwH/DVf/c5Wgdu3xW8+pUnSfIBQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABc+wE+Wg8r8dbKTQAAAABJRU5ErkJggg=='}, {'http': 'https://carrier.vivo.com', 'screen_base64': 'iVBORw0KGgoAAAANSUhEUgAAASwAAACWCAYAAABkW7XSAAATVElEQVR4nO3d2W9cVYLH8e+5S1W5vC8xTpzFTiBhQkiAABMSNUiZ7gGpGfE00kj002ie+68ZjdTz0q8tzcNo1AzqYQChCAKiB5JOQxKyOY7tBO9LrXc7Zx4qNkkwYbWTa34fKcRL+dalkvrm3FO3zjXOOYeISA54D3oHRES+KwVLRHJDwRKR3FCwRCQ3FCwRyQ0FS0RyQ8ESkdxQsEQkNxSsLcpaS5qma58nSUKWZQA457jzfGFrLd92/rBzjjiOcc5hrSVJknVv12g01u5nPUmS3LVfq9u21gKQpuk3bvvb9u/eX7L1BA96B+THW15e5vPPPyeKImq1GtVqlXq9zsDAAK+88gqFQ...', ...]}
+[2021-07-07 13:34:26,935: INFO/MainProcess] Received task: screenshot.run[0a8e41b7-47a5-4b1e-a470-08edc1a3aa76]  
+[2021-07-07 13:34:30,349: WARNING/ForkPoolWorker-1] https://pdm.vivo.com：截图成功！！！
+[2021-07-07 13:34:30,920: WARNING/ForkPoolWorker-1] https://carrier.vivo.com：截图成功！！！
+[2021-07-07 13:34:31,039: WARNING/ForkPoolWorker-1] https://passport.vivo.com：截图成功！！！
+[2021-07-07 13:34:31,153: WARNING/ForkPoolWorker-1] https://opensource.vivo.com：截图成功！！！
+[2021-07-07 13:34:32,259: WARNING/ForkPoolWorker-1] https://as.vivo.com：截图成功！！！
+[2021-07-07 13:34:32,862: WARNING/ForkPoolWorker-1] https://afgateway.vivo.com：截图成功！！！
+[2021-07-07 13:34:33,573: WARNING/ForkPoolWorker-1] https://survey.vivo.com:8443：截图成功！！！
+[2021-07-07 13:34:34,048: WARNING/ForkPoolWorker-1] https://mail.vivo.com：截图成功！！！
+kill: 57956: No such process
+[2021-07-07 13:34:34,277: INFO/ForkPoolWorker-1] Task screenshot.run[0a8e41b7-47a5-4b1e-a470-08edc1a3aa76] succeeded in 7.3407746569998835s: {'tool': 'screenshot', 'result': [{'http': 'https://pdm.vivo.com', 'screen_base64': 'iVBORw0KGgoAAAANSUhEUgAAASwAAACWCAYAAABkW7XSAAABLUlEQVR4nO3WMWoCARCG0W8h2iSkEGyF5Bi5jvfySOnsbewtRAghMYUbMPEAi/BeMzNM81fDFMCdGMY6r96qp2pffVSP1Xv1NU00gL8exvpSvVa7al0tqk31PU0sgFu/B+tQzapVtR3n5bj/nCIYwH/DVf/c5Wgdu3xW8+pUnSfIBQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABc+wE+Wg8r8dbKTQAAAABJRU5ErkJggg=='}, {'http': 'https://carrier.vivo.com', 'screen_base64': 'iVBORw0KGgoAAAANSUhEUgAAASwAAACWCAYAAABkW7XSAAATVElEQVR4nO3d2W9cVYLH8e+5S1W5vC8xTpzFTiBhQkiAABMSNUiZ7gGpGfE00kj002ie+68ZjdTz0q8tzcNo1AzqYQChCAKiB5JOQxKyOY7tBO9LrXc7Zx4qNkkwYbWTa34fKcRL+dalkvrm3FO3zjXOOYeISA54D3oHRES+KwVLRHJDwRKR3FCwRCQ3FCwRyQ0FS0RyQ8ESkdxQsEQkNxSsLcpaS5qma58nSUKWZQA457jzfGFrLd92/rBzjjiOcc5hrSVJknVv12g01u5nPUmS3LVfq9u21gKQpuk3bvvb9u/eX7L1BA96B+THW15e5vPPPyeKImq1GtVqlXq9zsDAAK+88gqFQ...', ...]}
+[2021-07-07 13:34:34,487: INFO/MainProcess] Received task: screenshot.run[21d9c59a-3859-43c3-9fee-6877b9c1e91f]  
+[2021-07-07 13:34:37,988: WARNING/ForkPoolWorker-1] https://pdm.vivo.com：截图成功！！！
+[2021-07-07 13:34:38,611: WARNING/ForkPoolWorker-1] https://carrier.vivo.com：截图成功！！！
+[2021-07-07 13:34:39,011: WARNING/ForkPoolWorker-1] https://opensource.vivo.com：截图成功！！！
+[2021-07-07 13:34:39,088: WARNING/ForkPoolWorker-1] https://passport.vivo.com：截图成功！！！
+[2021-07-07 13:34:40,261: WARNING/ForkPoolWorker-1] https://as.vivo.com：截图成功！！！
+[2021-07-07 13:34:41,503: WARNING/ForkPoolWorker-1] https://afgateway.vivo.com：截图成功！！！
+[2021-07-07 13:34:41,562: WARNING/ForkPoolWorker-1] https://survey.vivo.com:8443：截图成功！！！
+[2021-07-07 13:34:41,963: WARNING/ForkPoolWorker-1] https://mail.vivo.com：截图成功！！！
+kill: 58004: No such process
+[2021-07-07 13:34:42,324: INFO/ForkPoolWorker-1] Task screenshot.run[21d9c59a-3859-43c3-9fee-6877b9c1e91f] succeeded in 7.835435311000083s: {'tool': 'screenshot', 'result': [{'http': 'https://pdm.vivo.com', 'screen_base64': 'iVBORw0KGgoAAAANSUhEUgAAASwAAACWCAYAAABkW7XSAAABLUlEQVR4nO3WMWoCARCG0W8h2iSkEGyF5Bi5jvfySOnsbewtRAghMYUbMPEAi/BeMzNM81fDFMCdGMY6r96qp2pffVSP1Xv1NU00gL8exvpSvVa7al0tqk31PU0sgFu/B+tQzapVtR3n5bj/nCIYwH/DVf/c5Wgdu3xW8+pUnSfIBQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABc+wE+Wg8r8dbKTQAAAABJRU5ErkJggg=='}, {'http': 'https://carrier.vivo.com', 'screen_base64': 'iVBORw0KGgoAAAANSUhEUgAAASwAAACWCAYAAABkW7XSAAATVElEQVR4nO3d2W9cVYLH8e+5S1W5vC8xTpzFTiBhQkiAABMSNUiZ7gGpGfE00kj002ie+68ZjdTz0q8tzcNo1AzqYQChCAKiB5JOQxKyOY7tBO9LrXc7Zx4qNkkwYbWTa34fKcRL+dalkvrm3FO3zjXOOYeISA54D3oHRES+KwVLRHJDwRKR3FCwRCQ3FCwRyQ0FS0RyQ8ESkdxQsEQkNxSsLcpaS5qma58nSUKWZQA457jzfGFrLd92/rBzjjiOcc5hrSVJknVv12g01u5nPUmS3LVfq9u21gKQpuk3bvvb9u/eX7L1BA96B+THW15e5vPPPyeKImq1GtVqlXq9zsDAAK+88gqFQ...', ...]}
+[2021-07-07 13:34:42,640: INFO/MainProcess] Received task: screenshot.run[bbfc5179-7469-44ae-b1c1-611157e36018]  
+[2021-07-07 13:34:47,079: WARNING/ForkPoolWorker-1] https://pdm.vivo.com：截图成功！！！
+[2021-07-07 13:34:47,661: WARNING/ForkPoolWorker-1] https://carrier.vivo.com：截图成功！！！
+[2021-07-07 13:34:47,817: WARNING/ForkPoolWorker-1] https://opensource.vivo.com：截图成功！！！
+[2021-07-07 13:34:47,979: WARNING/ForkPoolWorker-1] https://passport.vivo.com：截图成功！！！
+[2021-07-07 13:34:49,335: WARNING/ForkPoolWorker-1] https://as.vivo.com：截图成功！！！
+[2021-07-07 13:34:50,812: WARNING/ForkPoolWorker-1] https://survey.vivo.com:8443：截图成功！！！
+[2021-07-07 13:34:50,865: WARNING/ForkPoolWorker-1] https://afgateway.vivo.com：截图成功！！！
+[2021-07-07 13:34:51,401: WARNING/ForkPoolWorker-1] https://mail.vivo.com：截图成功！！！
+kill: 58046: No such process
+[2021-07-07 13:34:51,767: INFO/ForkPoolWorker-1] Task screenshot.run[bbfc5179-7469-44ae-b1c1-611157e36018] succeeded in 9.12524406600005s: {'tool': 'screenshot', 'result': [{'http': 'https://pdm.vivo.com', 'screen_base64': 'iVBORw0KGgoAAAANSUhEUgAAASwAAACWCAYAAABkW7XSAAABLUlEQVR4nO3WMWoCARCG0W8h2iSkEGyF5Bi5jvfySOnsbewtRAghMYUbMPEAi/BeMzNM81fDFMCdGMY6r96qp2pffVSP1Xv1NU00gL8exvpSvVa7al0tqk31PU0sgFu/B+tQzapVtR3n5bj/nCIYwH/DVf/c5Wgdu3xW8+pUnSfIBQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABc+wE+Wg8r8dbKTQAAAABJRU5ErkJggg=='}, {'http': 'https://carrier.vivo.com', 'screen_base64': 'iVBORw0KGgoAAAANSUhEUgAAASwAAACWCAYAAABkW7XSAAATVElEQVR4nO3d2W9cVYLH8e+5S1W5vC8xTpzFTiBhQkiAABMSNUiZ7gGpGfE00kj002ie+68ZjdTz0q8tzcNo1AzqYQChCAKiB5JOQxKyOY7tBO9LrXc7Zx4qNkkwYbWTa34fKcRL+dalkvrm3FO3zjXOOYeISA54D3oHRES+KwVLRHJDwRKR3FCwRCQ3FCwRyQ0FS0RyQ8ESkdxQsEQkNxSsLcpaS5qma58nSUKWZQA457jzfGFrLd92/rBzjjiOcc5hrSVJknVv12g01u5nPUmS3LVfq9u21gKQpuk3bvvb9u/eX7L1BA96B+THW15e5vPPPyeKImq1GtVqlXq9zsDAAK+88gqFQ...', ...]}
+[2021-07-07 13:34:52,097: INFO/MainProcess] Received task: screenshot.run[3bdf488f-012c-48db-81d9-39e2800d2a60]  
+[2021-07-07 13:34:56,588: WARNING/ForkPoolWorker-1] https://pdm.vivo.com：截图成功！！！
+[2021-07-07 13:34:57,148: WARNING/ForkPoolWorker-1] https://carrier.vivo.com：截图成功！！！
+[2021-07-07 13:34:57,533: WARNING/ForkPoolWorker-1] https://passport.vivo.com：截图成功！！！
+[2021-07-07 13:34:57,558: WARNING/ForkPoolWorker-1] https://opensource.vivo.com：截图成功！！！
+[2021-07-07 13:34:58,104: WARNING/ForkPoolWorker-1] https://as.vivo.com：截图成功！！！
+[2021-07-07 13:35:00,264: WARNING/ForkPoolWorker-1] https://survey.vivo.com:8443：截图成功！！！
+[2021-07-07 13:35:00,305: WARNING/ForkPoolWorker-1] https://afgateway.vivo.com：截图成功！！！
+[2021-07-07 13:35:01,611: WARNING/ForkPoolWorker-1] https://mail.vivo.com：截图成功！！！
+kill: 58095: No such process
+[2021-07-07 13:35:01,849: INFO/ForkPoolWorker-1] Task screenshot.run[3bdf488f-012c-48db-81d9-39e2800d2a60] succeeded in 9.749178095000161s: {'tool': 'screenshot', 'result': [{'http': 'https://pdm.vivo.com', 'screen_base64': 'iVBORw0KGgoAAAANSUhEUgAAASwAAACWCAYAAABkW7XSAAABLUlEQVR4nO3WMWoCARCG0W8h2iSkEGyF5Bi5jvfySOnsbewtRAghMYUbMPEAi/BeMzNM81fDFMCdGMY6r96qp2pffVSP1Xv1NU00gL8exvpSvVa7al0tqk31PU0sgFu/B+tQzapVtR3n5bj/nCIYwH/DVf/c5Wgdu3xW8+pUnSfIBQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABc+wE+Wg8r8dbKTQAAAABJRU5ErkJggg=='}, {'http': 'https://carrier.vivo.com', 'screen_base64': 'iVBORw0KGgoAAAANSUhEUgAAASwAAACWCAYAAABkW7XSAAATVElEQVR4nO3d2W9cVYLH8e+5S1W5vC8xTpzFTiBhQkiAABMSNUiZ7gGpGfE00kj002ie+68ZjdTz0q8tzcNo1AzqYQChCAKiB5JOQxKyOY7tBO9LrXc7Zx4qNkkwYbWTa34fKcRL+dalkvrm3FO3zjXOOYeISA54D3oHRES+KwVLRHJDwRKR3FCwRCQ3FCwRyQ0FS0RyQ8ESkdxQsEQkNxSsLcpaS5qma58nSUKWZQA457jzfGFrLd92/rBzjjiOcc5hrSVJknVv12g01u5nPUmS3LVfq9u21gKQpuk3bvvb9u/eX7L1BA96B+THW15e5vPPPyeKImq1GtVqlXq9zsDAAK+88gqFQ...', ...]}
+[2021-07-07 13:35:02,164: INFO/MainProcess] Received task: screenshot.run[a0e619f3-322b-47bc-8d27-9bf7ab93500e]  
+[2021-07-07 13:35:06,635: WARNING/ForkPoolWorker-1] https://pdm.vivo.com：截图成功！！！
+[2021-07-07 13:35:07,446: WARNING/ForkPoolWorker-1] https://carrier.vivo.com：截图成功！！！
+[2021-07-07 13:35:07,735: WARNING/ForkPoolWorker-1] https://opensource.vivo.com：截图成功！！！
+[2021-07-07 13:35:08,102: WARNING/ForkPoolWorker-1] https://passport.vivo.com：截图成功！！！
+[2021-07-07 13:35:09,218: WARNING/ForkPoolWorker-1] https://as.vivo.com：截图成功！！！
+[2021-07-07 13:35:10,389: WARNING/ForkPoolWorker-1] https://afgateway.vivo.com：截图成功！！！
+[2021-07-07 13:35:11,290: WARNING/ForkPoolWorker-1] https://survey.vivo.com:8443：截图成功！！！
+[2021-07-07 13:35:11,633: WARNING/ForkPoolWorker-1] https://mail.vivo.com：截图成功！！！
+kill: 58146: No such process
+[2021-07-07 13:35:11,904: INFO/ForkPoolWorker-1] Task screenshot.run[a0e619f3-322b-47bc-8d27-9bf7ab93500e] succeeded in 9.739164687000084s: {'tool': 'screenshot', 'result': [{'http': 'https://pdm.vivo.com', 'screen_base64': 'iVBORw0KGgoAAAANSUhEUgAAASwAAACWCAYAAABkW7XSAAABLUlEQVR4nO3WMWoCARCG0W8h2iSkEGyF5Bi5jvfySOnsbewtRAghMYUbMPEAi/BeMzNM81fDFMCdGMY6r96qp2pffVSP1Xv1NU00gL8exvpSvVa7al0tqk31PU0sgFu/B+tQzapVtR3n5bj/nCIYwH/DVf/c5Wgdu3xW8+pUnSfIBQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABc+wE+Wg8r8dbKTQAAAABJRU5ErkJggg=='}, {'http': 'https://carrier.vivo.com', 'screen_base64': 'iVBORw0KGgoAAAANSUhEUgAAASwAAACWCAYAAABkW7XSAAATVElEQVR4nO3d2W9cVYLH8e+5S1W5vC8xTpzFTiBhQkiAABMSNUiZ7gGpGfE00kj002ie+68ZjdTz0q8tzcNo1AzqYQChCAKiB5JOQxKyOY7tBO9LrXc7Zx4qNkkwYbWTa34fKcRL+dalkvrm3FO3zjXOOYeISA54D3oHRES+KwVLRHJDwRKR3FCwRCQ3FCwRyQ0FS0RyQ8ESkdxQsEQkNxSsLcpaS5qma58nSUKWZQA457jzfGFrLd92/rBzjjiOcc5hrSVJknVv12g01u5nPUmS3LVfq9u21gKQpuk3bvvb9u/eX7L1BA96B+THW15e5vPPPyeKImq1GtVqlXq9zsDAAK+88gqFQ...', ...]}
+[2021-07-07 13:35:12,134: INFO/MainProcess] Received task: screenshot.run[eeaa3582-79d6-4e4e-a8b0-9557d7be22a9]  
+[2021-07-07 13:35:15,623: WARNING/ForkPoolWorker-1] https://pdm.vivo.com：截图成功！！！
+[2021-07-07 13:35:16,499: WARNING/ForkPoolWorker-1] https://carrier.vivo.com：截图成功！！！
+[2021-07-07 13:35:17,068: WARNING/ForkPoolWorker-1] https://opensource.vivo.com：截图成功！！！
+[2021-07-07 13:35:17,403: WARNING/ForkPoolWorker-1] https://passport.vivo.com：截图成功！！！
+[2021-07-07 13:35:18,350: WARNING/ForkPoolWorker-1] https://as.vivo.com：截图成功！！！
+[2021-07-07 13:35:19,200: WARNING/ForkPoolWorker-1] https://afgateway.vivo.com：截图成功！！！
+[2021-07-07 13:35:20,612: WARNING/ForkPoolWorker-1] https://survey.vivo.com:8443：截图成功！！！
+[2021-07-07 13:35:20,725: WARNING/ForkPoolWorker-1] https://mail.vivo.com：截图成功！！！
+kill: 58181: No such process
+[2021-07-07 13:35:21,143: INFO/ForkPoolWorker-1] Task screenshot.run[eeaa3582-79d6-4e4e-a8b0-9557d7be22a9] succeeded in 9.007320262000121s: {'tool': 'screenshot', 'result': [{'http': 'https://pdm.vivo.com', 'screen_base64': 'iVBORw0KGgoAAAANSUhEUgAAASwAAACWCAYAAABkW7XSAAABLUlEQVR4nO3WMWoCARCG0W8h2iSkEGyF5Bi5jvfySOnsbewtRAghMYUbMPEAi/BeMzNM81fDFMCdGMY6r96qp2pffVSP1Xv1NU00gL8exvpSvVa7al0tqk31PU0sgFu/B+tQzapVtR3n5bj/nCIYwH/DVf/c5Wgdu3xW8+pUnSfIBQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABc+wE+Wg8r8dbKTQAAAABJRU5ErkJggg=='}, {'http': 'https://carrier.vivo.com', 'screen_base64': 'iVBORw0KGgoAAAANSUhEUgAAASwAAACWCAYAAABkW7XSAAATVElEQVR4nO3d2W9cVYLH8e+5S1W5vC8xTpzFTiBhQkiAABMSNUiZ7gGpGfE00kj002ie+68ZjdTz0q8tzcNo1AzqYQChCAKiB5JOQxKyOY7tBO9LrXc7Zx4qNkkwYbWTa34fKcRL+dalkvrm3FO3zjXOOYeISA54D3oHRES+KwVLRHJDwRKR3FCwRCQ3FCwRyQ0FS0RyQ8ESkdxQsEQkNxSsLcpaS5qma58nSUKWZQA457jzfGFrLd92/rBzjjiOcc5hrSVJknVv12g01u5nPUmS3LVfq9u21gKQpuk3bvvb9u/eX7L1BA96B+THW15e5vPPPyeKImq1GtVqlXq9zsDAAK+88gqFQ...', ...]}
+[2021-07-07 13:35:21,494: INFO/MainProcess] Received task: screenshot.run[d652aa98-7052-4608-a7be-7fdbd8c3fcfc]  
+[2021-07-07 13:35:25,976: WARNING/ForkPoolWorker-1] https://pdm.vivo.com：截图成功！！！
+[2021-07-07 13:35:26,637: WARNING/ForkPoolWorker-1] https://carrier.vivo.com：截图成功！！！
+[2021-07-07 13:35:26,770: WARNING/ForkPoolWorker-1] https://opensource.vivo.com：截图成功！！！
+[2021-07-07 13:35:27,600: WARNING/ForkPoolWorker-1] https://passport.vivo.com：截图成功！！！
+[2021-07-07 13:35:28,507: WARNING/ForkPoolWorker-1] https://as.vivo.com：截图成功！！！
+[2021-07-07 13:35:29,572: WARNING/ForkPoolWorker-1] https://afgateway.vivo.com：截图成功！！！
+[2021-07-07 13:35:30,358: WARNING/ForkPoolWorker-1] https://survey.vivo.com:8443：截图成功！！！
+[2021-07-07 13:35:30,813: WARNING/ForkPoolWorker-1] https://mail.vivo.com：截图成功！！！
+kill: 58223: No such process
+[2021-07-07 13:35:31,183: INFO/ForkPoolWorker-1] Task screenshot.run[d652aa98-7052-4608-a7be-7fdbd8c3fcfc] succeeded in 9.68790051200017s: {'tool': 'screenshot', 'result': [{'http': 'https://pdm.vivo.com', 'screen_base64': 'iVBORw0KGgoAAAANSUhEUgAAASwAAACWCAYAAABkW7XSAAABLUlEQVR4nO3WMWoCARCG0W8h2iSkEGyF5Bi5jvfySOnsbewtRAghMYUbMPEAi/BeMzNM81fDFMCdGMY6r96qp2pffVSP1Xv1NU00gL8exvpSvVa7al0tqk31PU0sgFu/B+tQzapVtR3n5bj/nCIYwH/DVf/c5Wgdu3xW8+pUnSfIBQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABc+wE+Wg8r8dbKTQAAAABJRU5ErkJggg=='}, {'http': 'https://carrier.vivo.com', 'screen_base64': 'iVBORw0KGgoAAAANSUhEUgAAASwAAACWCAYAAABkW7XSAAATVElEQVR4nO3d2W9cVYLH8e+5S1W5vC8xTpzFTiBhQkiAABMSNUiZ7gGpGfE00kj002ie+68ZjdTz0q8tzcNo1AzqYQChCAKiB5JOQxKyOY7tBO9LrXc7Zx4qNkkwYbWTa34fKcRL+dalkvrm3FO3zjXOOYeISA54D3oHRES+KwVLRHJDwRKR3FCwRCQ3FCwRyQ0FS0RyQ8ESkdxQsEQkNxSsLcpaS5qma58nSUKWZQA457jzfGFrLd92/rBzjjiOcc5hrSVJknVv12g01u5nPUmS3LVfq9u21gKQpuk3bvvb9u/eX7L1BA96B+THW15e5vPPPyeKImq1GtVqlXq9zsDAAK+88gqFQ...', ...]}
+[2021-07-07 13:35:31,600: INFO/MainProcess] Received task: screenshot.run[54c5008a-6821-4fe8-b9d9-7d1c8a8bdb7c]  
+[2021-07-07 13:35:36,069: WARNING/ForkPoolWorker-1] https://pdm.vivo.com：截图成功！！！
+[2021-07-07 13:35:36,741: WARNING/ForkPoolWorker-1] https://carrier.vivo.com：截图成功！！！
+[2021-07-07 13:35:36,959: WARNING/ForkPoolWorker-1] https://opensource.vivo.com：截图成功！！！
+[2021-07-07 13:35:37,234: WARNING/ForkPoolWorker-1] https://as.vivo.com：截图成功！！！
+[2021-07-07 13:35:37,318: WARNING/ForkPoolWorker-1] https://passport.vivo.com：截图成功！！！
+[2021-07-07 13:35:38,788: WARNING/ForkPoolWorker-1] https://afgateway.vivo.com：截图成功！！！
+[2021-07-07 13:35:39,490: WARNING/ForkPoolWorker-1] https://survey.vivo.com:8443：截图成功！！！
+[2021-07-07 13:35:39,849: WARNING/ForkPoolWorker-1] https://mail.vivo.com：截图成功！！！
+kill: 58259: No such process
+[2021-07-07 13:35:40,121: INFO/ForkPoolWorker-1] Task screenshot.run[54c5008a-6821-4fe8-b9d9-7d1c8a8bdb7c] succeeded in 8.519060711000066s: {'tool': 'screenshot', 'result': [{'http': 'https://pdm.vivo.com', 'screen_base64': 'iVBORw0KGgoAAAANSUhEUgAAASwAAACWCAYAAABkW7XSAAABLUlEQVR4nO3WMWoCARCG0W8h2iSkEGyF5Bi5jvfySOnsbewtRAghMYUbMPEAi/BeMzNM81fDFMCdGMY6r96qp2pffVSP1Xv1NU00gL8exvpSvVa7al0tqk31PU0sgFu/B+tQzapVtR3n5bj/nCIYwH/DVf/c5Wgdu3xW8+pUnSfIBQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABc+wE+Wg8r8dbKTQAAAABJRU5ErkJggg=='}, {'http': 'https://carrier.vivo.com', 'screen_base64': 'iVBORw0KGgoAAAANSUhEUgAAASwAAACWCAYAAABkW7XSAAATVElEQVR4nO3d2W9cVYLH8e+5S1W5vC8xTpzFTiBhQkiAABMSNUiZ7gGpGfE00kj002ie+68ZjdTz0q8tzcNo1AzqYQChCAKiB5JOQxKyOY7tBO9LrXc7Zx4qNkkwYbWTa34fKcRL+dalkvrm3FO3zjXOOYeISA54D3oHRES+KwVLRHJDwRKR3FCwRCQ3FCwRyQ0FS0RyQ8ESkdxQsEQkNxSsLcpaS5qma58nSUKWZQA457jzfGFrLd92/rBzjjiOcc5hrSVJknVv12g01u5nPUmS3LVfq9u21gKQpuk3bvvb9u/eX7L1BA96B+THW15e5vPPPyeKImq1GtVqlXq9zsDAAK+88gqFQ...', ...]}
+[2021-07-07 13:35:40,348: INFO/MainProcess] Received task: screenshot.run[e3c79e68-941c-429c-b6f6-320934f651f2]  
+[2021-07-07 13:35:43,891: WARNING/ForkPoolWorker-1] https://pdm.vivo.com：截图成功！！！
+[2021-07-07 13:35:44,672: WARNING/ForkPoolWorker-1] https://carrier.vivo.com：截图成功！！！
+[2021-07-07 13:35:45,110: WARNING/ForkPoolWorker-1] https://opensource.vivo.com：截图成功！！！
+[2021-07-07 13:35:46,003: WARNING/ForkPoolWorker-1] https://as.vivo.com：截图成功！！！
+[2021-07-07 13:35:46,445: WARNING/ForkPoolWorker-1] https://passport.vivo.com：截图成功！！！
+[2021-07-07 13:35:47,508: WARNING/ForkPoolWorker-1] https://afgateway.vivo.com：截图成功！！！
+[2021-07-07 13:35:48,750: WARNING/ForkPoolWorker-1] https://survey.vivo.com:8443：截图成功！！！
+[2021-07-07 13:35:49,072: WARNING/ForkPoolWorker-1] https://mail.vivo.com：截图成功！！！
+kill: 58312: No such process
+[2021-07-07 13:35:49,489: INFO/ForkPoolWorker-1] Task screenshot.run[e3c79e68-941c-429c-b6f6-320934f651f2] succeeded in 9.139883431000044s: {'tool': 'screenshot', 'result': [{'http': 'https://pdm.vivo.com', 'screen_base64': 'iVBORw0KGgoAAAANSUhEUgAAASwAAACWCAYAAABkW7XSAAABLUlEQVR4nO3WMWoCARCG0W8h2iSkEGyF5Bi5jvfySOnsbewtRAghMYUbMPEAi/BeMzNM81fDFMCdGMY6r96qp2pffVSP1Xv1NU00gL8exvpSvVa7al0tqk31PU0sgFu/B+tQzapVtR3n5bj/nCIYwH/DVf/c5Wgdu3xW8+pUnSfIBQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABc+wE+Wg8r8dbKTQAAAABJRU5ErkJggg=='}, {'http': 'https://carrier.vivo.com', 'screen_base64': 'iVBORw0KGgoAAAANSUhEUgAAASwAAACWCAYAAABkW7XSAAATVElEQVR4nO3d2W9cVYLH8e+5S1W5vC8xTpzFTiBhQkiAABMSNUiZ7gGpGfE00kj002ie+68ZjdTz0q8tzcNo1AzqYQChCAKiB5JOQxKyOY7tBO9LrXc7Zx4qNkkwYbWTa34fKcRL+dalkvrm3FO3zjXOOYeISA54D3oHRES+KwVLRHJDwRKR3FCwRCQ3FCwRyQ0FS0RyQ8ESkdxQsEQkNxSsLcpaS5qma58nSUKWZQA457jzfGFrLd92/rBzjjiOcc5hrSVJknVv12g01u5nPUmS3LVfq9u21gKQpuk3bvvb9u/eX7L1BA96B+THW15e5vPPPyeKImq1GtVqlXq9zsDAAK+88gqFQ...', ...]}
+[2021-07-07 13:35:49,755: INFO/MainProcess] Received task: screenshot.run[05407d87-8a8e-4bc8-a344-4cee8427e691]  
+[2021-07-07 13:35:53,865: WARNING/ForkPoolWorker-1] https://pdm.vivo.com：截图成功！！！
+[2021-07-07 13:35:54,407: WARNING/ForkPoolWorker-1] https://carrier.vivo.com：截图成功！！！
+[2021-07-07 13:35:54,876: WARNING/ForkPoolWorker-1] https://opensource.vivo.com：截图成功！！！
+[2021-07-07 13:35:55,728: WARNING/ForkPoolWorker-1] https://as.vivo.com：截图成功！！！
+[2021-07-07 13:35:55,745: WARNING/ForkPoolWorker-1] https://passport.vivo.com：截图成功！！！
+[2021-07-07 13:35:57,395: WARNING/ForkPoolWorker-1] https://afgateway.vivo.com：截图成功！！！
+[2021-07-07 13:35:58,460: WARNING/ForkPoolWorker-1] https://survey.vivo.com:8443：截图成功！！！
+[2021-07-07 13:35:58,902: WARNING/ForkPoolWorker-1] https://mail.vivo.com：截图成功！！！
+kill: 58369: No such process
+[2021-07-07 13:35:59,329: INFO/ForkPoolWorker-1] Task screenshot.run[05407d87-8a8e-4bc8-a344-4cee8427e691] succeeded in 9.573018494000053s: {'tool': 'screenshot', 'result': [{'http': 'https://pdm.vivo.com', 'screen_base64': 'iVBORw0KGgoAAAANSUhEUgAAASwAAACWCAYAAABkW7XSAAABLUlEQVR4nO3WMWoCARCG0W8h2iSkEGyF5Bi5jvfySOnsbewtRAghMYUbMPEAi/BeMzNM81fDFMCdGMY6r96qp2pffVSP1Xv1NU00gL8exvpSvVa7al0tqk31PU0sgFu/B+tQzapVtR3n5bj/nCIYwH/DVf/c5Wgdu3xW8+pUnSfIBQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABc+wE+Wg8r8dbKTQAAAABJRU5ErkJggg=='}, {'http': 'https://carrier.vivo.com', 'screen_base64': 'iVBORw0KGgoAAAANSUhEUgAAASwAAACWCAYAAABkW7XSAAATVElEQVR4nO3d2W9cVYLH8e+5S1W5vC8xTpzFTiBhQkiAABMSNUiZ7gGpGfE00kj002ie+68ZjdTz0q8tzcNo1AzqYQChCAKiB5JOQxKyOY7tBO9LrXc7Zx4qNkkwYbWTa34fKcRL+dalkvrm3FO3zjXOOYeISA54D3oHRES+KwVLRHJDwRKR3FCwRCQ3FCwRyQ0FS0RyQ8ESkdxQsEQkNxSsLcpaS5qma58nSUKWZQA457jzfGFrLd92/rBzjjiOcc5hrSVJknVv12g01u5nPUmS3LVfq9u21gKQpuk3bvvb9u/eX7L1BA96B+THW15e5vPPPyeKImq1GtVqlXq9zsDAAK+88gqFQ...', ...]}
+[2021-07-07 13:35:59,647: INFO/MainProcess] Received task: screenshot.run[97828726-0e81-40b5-a8df-0de275300a9d]  
+[2021-07-07 13:36:04,147: WARNING/ForkPoolWorker-1] https://pdm.vivo.com：截图成功！！！
+[2021-07-07 13:36:04,925: WARNING/ForkPoolWorker-1] https://carrier.vivo.com：截图成功！！！
+[2021-07-07 13:36:05,321: WARNING/ForkPoolWorker-1] https://opensource.vivo.com：截图成功！！！
+[2021-07-07 13:36:05,831: WARNING/ForkPoolWorker-1] https://passport.vivo.com：截图成功！！！
+[2021-07-07 13:36:06,784: WARNING/ForkPoolWorker-1] https://as.vivo.com：截图成功！！！
+[2021-07-07 13:36:07,846: WARNING/ForkPoolWorker-1] https://afgateway.vivo.com：截图成功！！！
+[2021-07-07 13:36:08,197: WARNING/ForkPoolWorker-1] https://survey.vivo.com:8443：截图成功！！！
+[2021-07-07 13:36:09,142: WARNING/ForkPoolWorker-1] https://mail.vivo.com：截图成功！！！
+kill: 58436: No such process
+[2021-07-07 13:36:09,572: INFO/ForkPoolWorker-1] Task screenshot.run[97828726-0e81-40b5-a8df-0de275300a9d] succeeded in 9.924360108999963s: {'tool': 'screenshot', 'result': [{'http': 'https://pdm.vivo.com', 'screen_base64': 'iVBORw0KGgoAAAANSUhEUgAAASwAAACWCAYAAABkW7XSAAABLUlEQVR4nO3WMWoCARCG0W8h2iSkEGyF5Bi5jvfySOnsbewtRAghMYUbMPEAi/BeMzNM81fDFMCdGMY6r96qp2pffVSP1Xv1NU00gL8exvpSvVa7al0tqk31PU0sgFu/B+tQzapVtR3n5bj/nCIYwH/DVf/c5Wgdu3xW8+pUnSfIBQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABc+wE+Wg8r8dbKTQAAAABJRU5ErkJggg=='}, {'http': 'https://carrier.vivo.com', 'screen_base64': 'iVBORw0KGgoAAAANSUhEUgAAASwAAACWCAYAAABkW7XSAAATVElEQVR4nO3d2W9cVYLH8e+5S1W5vC8xTpzFTiBhQkiAABMSNUiZ7gGpGfE00kj002ie+68ZjdTz0q8tzcNo1AzqYQChCAKiB5JOQxKyOY7tBO9LrXc7Zx4qNkkwYbWTa34fKcRL+dalkvrm3FO3zjXOOYeISA54D3oHRES+KwVLRHJDwRKR3FCwRCQ3FCwRyQ0FS0RyQ8ESkdxQsEQkNxSsLcpaS5qma58nSUKWZQA457jzfGFrLd92/rBzjjiOcc5hrSVJknVv12g01u5nPUmS3LVfq9u21gKQpuk3bvvb9u/eX7L1BA96B+THW15e5vPPPyeKImq1GtVqlXq9zsDAAK+88gqFQ...', ...]}
+[2021-07-07 13:36:09,810: INFO/MainProcess] Received task: screenshot.run[5838ea83-4bc4-407e-a807-f0dede37038e]  
+[2021-07-07 13:36:13,293: WARNING/ForkPoolWorker-1] https://pdm.vivo.com：截图成功！！！
+[2021-07-07 13:36:13,958: WARNING/ForkPoolWorker-1] https://carrier.vivo.com：截图成功！！！
+[2021-07-07 13:36:14,372: WARNING/ForkPoolWorker-1] https://opensource.vivo.com：截图成功！！！
+[2021-07-07 13:36:14,960: WARNING/ForkPoolWorker-1] https://passport.vivo.com：截图成功！！！
+[2021-07-07 13:36:15,742: WARNING/ForkPoolWorker-1] https://as.vivo.com：截图成功！！！
+[2021-07-07 13:36:16,869: WARNING/ForkPoolWorker-1] https://afgateway.vivo.com：截图成功！！！
+[2021-07-07 13:36:17,923: WARNING/ForkPoolWorker-1] https://survey.vivo.com:8443：截图成功！！！
+[2021-07-07 13:36:18,205: WARNING/ForkPoolWorker-1] https://mail.vivo.com：截图成功！！！
+kill: 58481: No such process
+[2021-07-07 13:36:18,700: INFO/ForkPoolWorker-1] Task screenshot.run[5838ea83-4bc4-407e-a807-f0dede37038e] succeeded in 8.888570163000168s: {'tool': 'screenshot', 'result': [{'http': 'https://pdm.vivo.com', 'screen_base64': 'iVBORw0KGgoAAAANSUhEUgAAASwAAACWCAYAAABkW7XSAAABLUlEQVR4nO3WMWoCARCG0W8h2iSkEGyF5Bi5jvfySOnsbewtRAghMYUbMPEAi/BeMzNM81fDFMCdGMY6r96qp2pffVSP1Xv1NU00gL8exvpSvVa7al0tqk31PU0sgFu/B+tQzapVtR3n5bj/nCIYwH/DVf/c5Wgdu3xW8+pUnSfIBQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABc+wE+Wg8r8dbKTQAAAABJRU5ErkJggg=='}, {'http': 'https://carrier.vivo.com', 'screen_base64': 'iVBORw0KGgoAAAANSUhEUgAAASwAAACWCAYAAABkW7XSAAATVElEQVR4nO3d2W9cVYLH8e+5S1W5vC8xTpzFTiBhQkiAABMSNUiZ7gGpGfE00kj002ie+68ZjdTz0q8tzcNo1AzqYQChCAKiB5JOQxKyOY7tBO9LrXc7Zx4qNkkwYbWTa34fKcRL+dalkvrm3FO3zjXOOYeISA54D3oHRES+KwVLRHJDwRKR3FCwRCQ3FCwRyQ0FS0RyQ8ESkdxQsEQkNxSsLcpaS5qma58nSUKWZQA457jzfGFrLd92/rBzjjiOcc5hrSVJknVv12g01u5nPUmS3LVfq9u21gKQpuk3bvvb9u/eX7L1BA96B+THW15e5vPPPyeKImq1GtVqlXq9zsDAAK+88gqFQ...', ...]}
+[2021-07-07 13:36:19,162: INFO/MainProcess] Received task: screenshot.run[50678908-6cae-4b3d-9b84-2e6db2689eb7]  
+[2021-07-07 13:36:22,973: WARNING/ForkPoolWorker-1] https://pdm.vivo.com：截图成功！！！
+[2021-07-07 13:36:23,655: WARNING/ForkPoolWorker-1] https://carrier.vivo.com：截图成功！！！
+[2021-07-07 13:36:24,279: WARNING/ForkPoolWorker-1] https://opensource.vivo.com：截图成功！！！
+[2021-07-07 13:36:25,126: WARNING/ForkPoolWorker-1] https://passport.vivo.com：截图成功！！！
+[2021-07-07 13:36:25,149: WARNING/ForkPoolWorker-1] https://as.vivo.com：截图成功！！！
+[2021-07-07 13:36:26,538: WARNING/ForkPoolWorker-1] https://afgateway.vivo.com：截图成功！！！
+[2021-07-07 13:36:26,863: WARNING/ForkPoolWorker-1] https://survey.vivo.com:8443：截图成功！！！
+[2021-07-07 13:36:27,849: WARNING/ForkPoolWorker-1] https://mail.vivo.com：截图成功！！！
+kill: 58537: No such process
+[2021-07-07 13:36:28,207: INFO/ForkPoolWorker-1] Task screenshot.run[50678908-6cae-4b3d-9b84-2e6db2689eb7] succeeded in 9.043067435000012s: {'tool': 'screenshot', 'result': [{'http': 'https://pdm.vivo.com', 'screen_base64': 'iVBORw0KGgoAAAANSUhEUgAAASwAAACWCAYAAABkW7XSAAABLUlEQVR4nO3WMWoCARCG0W8h2iSkEGyF5Bi5jvfySOnsbewtRAghMYUbMPEAi/BeMzNM81fDFMCdGMY6r96qp2pffVSP1Xv1NU00gL8exvpSvVa7al0tqk31PU0sgFu/B+tQzapVtR3n5bj/nCIYwH/DVf/c5Wgdu3xW8+pUnSfIBQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABc+wE+Wg8r8dbKTQAAAABJRU5ErkJggg=='}, {'http': 'https://carrier.vivo.com', 'screen_base64': 'iVBORw0KGgoAAAANSUhEUgAAASwAAACWCAYAAABkW7XSAAATVElEQVR4nO3d2W9cVYLH8e+5S1W5vC8xTpzFTiBhQkiAABMSNUiZ7gGpGfE00kj002ie+68ZjdTz0q8tzcNo1AzqYQChCAKiB5JOQxKyOY7tBO9LrXc7Zx4qNkkwYbWTa34fKcRL+dalkvrm3FO3zjXOOYeISA54D3oHRES+KwVLRHJDwRKR3FCwRCQ3FCwRyQ0FS0RyQ8ESkdxQsEQkNxSsLcpaS5qma58nSUKWZQA457jzfGFrLd92/rBzjjiOcc5hrSVJknVv12g01u5nPUmS3LVfq9u21gKQpuk3bvvb9u/eX7L1BA96B+THW15e5vPPPyeKImq1GtVqlXq9zsDAAK+88gqFQ...', ...]}
+[2021-07-07 13:36:28,545: INFO/MainProcess] Received task: screenshot.run[d07593dc-a862-439f-865b-4fccb3976216]  
+[2021-07-07 13:36:32,161: WARNING/ForkPoolWorker-1] https://pdm.vivo.com：截图成功！！！
+[2021-07-07 13:36:32,747: WARNING/ForkPoolWorker-1] https://carrier.vivo.com：截图成功！！！
+[2021-07-07 13:36:33,198: WARNING/ForkPoolWorker-1] https://opensource.vivo.com：截图成功！！！
+[2021-07-07 13:36:33,912: WARNING/ForkPoolWorker-1] https://passport.vivo.com：截图成功！！！
+[2021-07-07 13:36:34,653: WARNING/ForkPoolWorker-1] https://as.vivo.com：截图成功！！！
+[2021-07-07 13:36:35,975: WARNING/ForkPoolWorker-1] https://survey.vivo.com:8443：截图成功！！！
+[2021-07-07 13:36:36,003: WARNING/ForkPoolWorker-1] https://afgateway.vivo.com：截图成功！！！
+[2021-07-07 13:36:36,903: WARNING/ForkPoolWorker-1] https://mail.vivo.com：截图成功！！！
+kill: 58593: No such process
+[2021-07-07 13:36:37,249: INFO/ForkPoolWorker-1] Task screenshot.run[d07593dc-a862-439f-865b-4fccb3976216] succeeded in 8.702586137000026s: {'tool': 'screenshot', 'result': [{'http': 'https://pdm.vivo.com', 'screen_base64': 'iVBORw0KGgoAAAANSUhEUgAAASwAAACWCAYAAABkW7XSAAABLUlEQVR4nO3WMWoCARCG0W8h2iSkEGyF5Bi5jvfySOnsbewtRAghMYUbMPEAi/BeMzNM81fDFMCdGMY6r96qp2pffVSP1Xv1NU00gL8exvpSvVa7al0tqk31PU0sgFu/B+tQzapVtR3n5bj/nCIYwH/DVf/c5Wgdu3xW8+pUnSfIBQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABc+wE+Wg8r8dbKTQAAAABJRU5ErkJggg=='}, {'http': 'https://carrier.vivo.com', 'screen_base64': 'iVBORw0KGgoAAAANSUhEUgAAASwAAACWCAYAAABkW7XSAAATVElEQVR4nO3d2W9cVYLH8e+5S1W5vC8xTpzFTiBhQkiAABMSNUiZ7gGpGfE00kj002ie+68ZjdTz0q8tzcNo1AzqYQChCAKiB5JOQxKyOY7tBO9LrXc7Zx4qNkkwYbWTa34fKcRL+dalkvrm3FO3zjXOOYeISA54D3oHRES+KwVLRHJDwRKR3FCwRCQ3FCwRyQ0FS0RyQ8ESkdxQsEQkNxSsLcpaS5qma58nSUKWZQA457jzfGFrLd92/rBzjjiOcc5hrSVJknVv12g01u5nPUmS3LVfq9u21gKQpuk3bvvb9u/eX7L1BA96B+THW15e5vPPPyeKImq1GtVqlXq9zsDAAK+88gqFQ...', ...]}
+[2021-07-07 13:36:37,592: INFO/MainProcess] Received task: screenshot.run[5150a116-c3e1-4edb-b124-1da8e8983a9e]  
+[2021-07-07 13:36:41,176: WARNING/ForkPoolWorker-1] https://pdm.vivo.com：截图成功！！！
+[2021-07-07 13:36:41,982: WARNING/ForkPoolWorker-1] https://carrier.vivo.com：截图成功！！！
+[2021-07-07 13:36:42,282: WARNING/ForkPoolWorker-1] https://opensource.vivo.com：截图成功！！！
+[2021-07-07 13:36:42,374: WARNING/ForkPoolWorker-1] https://passport.vivo.com：截图成功！！！
+[2021-07-07 13:36:43,212: WARNING/ForkPoolWorker-1] https://as.vivo.com：截图成功！！！
+[2021-07-07 13:36:43,750: WARNING/ForkPoolWorker-1] https://afgateway.vivo.com：截图成功！！！
+[2021-07-07 13:36:44,793: WARNING/ForkPoolWorker-1] https://survey.vivo.com:8443：截图成功！！！
+[2021-07-07 13:36:45,224: WARNING/ForkPoolWorker-1] https://mail.vivo.com：截图成功！！！
+kill: 58642: No such process
+[2021-07-07 13:36:45,635: INFO/ForkPoolWorker-1] Task screenshot.run[5150a116-c3e1-4edb-b124-1da8e8983a9e] succeeded in 8.041995903000043s: {'tool': 'screenshot', 'result': [{'http': 'https://pdm.vivo.com', 'screen_base64': 'iVBORw0KGgoAAAANSUhEUgAAASwAAACWCAYAAABkW7XSAAABLUlEQVR4nO3WMWoCARCG0W8h2iSkEGyF5Bi5jvfySOnsbewtRAghMYUbMPEAi/BeMzNM81fDFMCdGMY6r96qp2pffVSP1Xv1NU00gL8exvpSvVa7al0tqk31PU0sgFu/B+tQzapVtR3n5bj/nCIYwH/DVf/c5Wgdu3xW8+pUnSfIBQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABc+wE+Wg8r8dbKTQAAAABJRU5ErkJggg=='}, {'http': 'https://carrier.vivo.com', 'screen_base64': 'iVBORw0KGgoAAAANSUhEUgAAASwAAACWCAYAAABkW7XSAAATVElEQVR4nO3d2W9cVYLH8e+5S1W5vC8xTpzFTiBhQkiAABMSNUiZ7gGpGfE00kj002ie+68ZjdTz0q8tzcNo1AzqYQChCAKiB5JOQxKyOY7tBO9LrXc7Zx4qNkkwYbWTa34fKcRL+dalkvrm3FO3zjXOOYeISA54D3oHRES+KwVLRHJDwRKR3FCwRCQ3FCwRyQ0FS0RyQ8ESkdxQsEQkNxSsLcpaS5qma58nSUKWZQA457jzfGFrLd92/rBzjjiOcc5hrSVJknVv12g01u5nPUmS3LVfq9u21gKQpuk3bvvb9u/eX7L1BA96B+THW15e5vPPPyeKImq1GtVqlXq9zsDAAK+88gqFQ...', ...]}
+[2021-07-07 13:36:45,954: INFO/MainProcess] Received task: screenshot.run[5ef1c15f-e8e0-43e4-a6ee-e6f8281c1c0a]  
+[2021-07-07 13:36:49,506: WARNING/ForkPoolWorker-1] https://pdm.vivo.com：截图成功！！！
+[2021-07-07 13:36:50,240: WARNING/ForkPoolWorker-1] https://carrier.vivo.com：截图成功！！！
+[2021-07-07 13:36:50,639: WARNING/ForkPoolWorker-1] https://opensource.vivo.com：截图成功！！！
+[2021-07-07 13:36:51,430: WARNING/ForkPoolWorker-1] https://passport.vivo.com：截图成功！！！
+[2021-07-07 13:36:52,223: WARNING/ForkPoolWorker-1] https://as.vivo.com：截图成功！！！
+[2021-07-07 13:36:53,032: WARNING/ForkPoolWorker-1] https://afgateway.vivo.com：截图成功！！！
+[2021-07-07 13:36:54,149: WARNING/ForkPoolWorker-1] https://survey.vivo.com:8443：截图成功！！！
+[2021-07-07 13:36:54,385: WARNING/ForkPoolWorker-1] https://mail.vivo.com：截图成功！！！
+kill: 58686: No such process
+[2021-07-07 13:36:54,744: INFO/ForkPoolWorker-1] Task screenshot.run[5ef1c15f-e8e0-43e4-a6ee-e6f8281c1c0a] succeeded in 8.78881342800014s: {'tool': 'screenshot', 'result': [{'http': 'https://pdm.vivo.com', 'screen_base64': 'iVBORw0KGgoAAAANSUhEUgAAASwAAACWCAYAAABkW7XSAAABLUlEQVR4nO3WMWoCARCG0W8h2iSkEGyF5Bi5jvfySOnsbewtRAghMYUbMPEAi/BeMzNM81fDFMCdGMY6r96qp2pffVSP1Xv1NU00gL8exvpSvVa7al0tqk31PU0sgFu/B+tQzapVtR3n5bj/nCIYwH/DVf/c5Wgdu3xW8+pUnSfIBQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABc+wE+Wg8r8dbKTQAAAABJRU5ErkJggg=='}, {'http': 'https://carrier.vivo.com', 'screen_base64': 'iVBORw0KGgoAAAANSUhEUgAAASwAAACWCAYAAABkW7XSAAATVElEQVR4nO3d2W9cVYLH8e+5S1W5vC8xTpzFTiBhQkiAABMSNUiZ7gGpGfE00kj002ie+68ZjdTz0q8tzcNo1AzqYQChCAKiB5JOQxKyOY7tBO9LrXc7Zx4qNkkwYbWTa34fKcRL+dalkvrm3FO3zjXOOYeISA54D3oHRES+KwVLRHJDwRKR3FCwRCQ3FCwRyQ0FS0RyQ8ESkdxQsEQkNxSsLcpaS5qma58nSUKWZQA457jzfGFrLd92/rBzjjiOcc5hrSVJknVv12g01u5nPUmS3LVfq9u21gKQpuk3bvvb9u/eX7L1BA96B+THW15e5vPPPyeKImq1GtVqlXq9zsDAAK+88gqFQ...', ...]}
+[2021-07-07 13:36:55,007: INFO/MainProcess] Received task: screenshot.run[f8b739e5-8eb9-4f12-a0f0-40b94e1e5692]  
+[2021-07-07 13:36:58,516: WARNING/ForkPoolWorker-1] https://pdm.vivo.com：截图成功！！！
+[2021-07-07 13:36:59,138: WARNING/ForkPoolWorker-1] https://carrier.vivo.com：截图成功！！！
+[2021-07-07 13:36:59,467: WARNING/ForkPoolWorker-1] https://opensource.vivo.com：截图成功！！！
+[2021-07-07 13:36:59,855: WARNING/ForkPoolWorker-1] https://passport.vivo.com：截图成功！！！
+[2021-07-07 13:37:00,444: WARNING/ForkPoolWorker-1] https://as.vivo.com：截图成功！！！
+[2021-07-07 13:37:01,129: WARNING/ForkPoolWorker-1] https://afgateway.vivo.com：截图成功！！！
+[2021-07-07 13:37:02,077: WARNING/ForkPoolWorker-1] https://survey.vivo.com:8443：截图成功！！！
+[2021-07-07 13:37:02,561: WARNING/ForkPoolWorker-1] https://mail.vivo.com：截图成功！！！
+kill: 58735: No such process
+[2021-07-07 13:37:02,961: INFO/ForkPoolWorker-1] Task screenshot.run[f8b739e5-8eb9-4f12-a0f0-40b94e1e5692] succeeded in 7.951902620999817s: {'tool': 'screenshot', 'result': [{'http': 'https://pdm.vivo.com', 'screen_base64': 'iVBORw0KGgoAAAANSUhEUgAAASwAAACWCAYAAABkW7XSAAABLUlEQVR4nO3WMWoCARCG0W8h2iSkEGyF5Bi5jvfySOnsbewtRAghMYUbMPEAi/BeMzNM81fDFMCdGMY6r96qp2pffVSP1Xv1NU00gL8exvpSvVa7al0tqk31PU0sgFu/B+tQzapVtR3n5bj/nCIYwH/DVf/c5Wgdu3xW8+pUnSfIBQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABc+wE+Wg8r8dbKTQAAAABJRU5ErkJggg=='}, {'http': 'https://carrier.vivo.com', 'screen_base64': 'iVBORw0KGgoAAAANSUhEUgAAASwAAACWCAYAAABkW7XSAAATVElEQVR4nO3d2W9cVYLH8e+5S1W5vC8xTpzFTiBhQkiAABMSNUiZ7gGpGfE00kj002ie+68ZjdTz0q8tzcNo1AzqYQChCAKiB5JOQxKyOY7tBO9LrXc7Zx4qNkkwYbWTa34fKcRL+dalkvrm3FO3zjXOOYeISA54D3oHRES+KwVLRHJDwRKR3FCwRCQ3FCwRyQ0FS0RyQ8ESkdxQsEQkNxSsLcpaS5qma58nSUKWZQA457jzfGFrLd92/rBzjjiOcc5hrSVJknVv12g01u5nPUmS3LVfq9u21gKQpuk3bvvb9u/eX7L1BA96B+THW15e5vPPPyeKImq1GtVqlXq9zsDAAK+88gqFQ...', ...]}
+[2021-07-07 13:37:03,206: INFO/MainProcess] Received task: screenshot.run[1ddfed30-d723-4ff6-9bea-322c6a4a797a]  
+[2021-07-07 13:37:06,678: WARNING/ForkPoolWorker-1] https://pdm.vivo.com：截图成功！！！
+[2021-07-07 13:37:07,321: WARNING/ForkPoolWorker-1] https://carrier.vivo.com：截图成功！！！
+[2021-07-07 13:37:07,621: WARNING/ForkPoolWorker-1] https://opensource.vivo.com：截图成功！！！
+[2021-07-07 13:37:08,030: WARNING/ForkPoolWorker-1] https://passport.vivo.com：截图成功！！！
+[2021-07-07 13:37:08,787: WARNING/ForkPoolWorker-1] https://as.vivo.com：截图成功！！！
+[2021-07-07 13:37:09,296: WARNING/ForkPoolWorker-1] https://afgateway.vivo.com：截图成功！！！
+[2021-07-07 13:37:10,153: WARNING/ForkPoolWorker-1] https://survey.vivo.com:8443：截图成功！！！
+[2021-07-07 13:37:10,449: WARNING/ForkPoolWorker-1] https://mail.vivo.com：截图成功！！！
+kill: 58786: No such process
+[2021-07-07 13:37:10,896: INFO/ForkPoolWorker-1] Task screenshot.run[1ddfed30-d723-4ff6-9bea-322c6a4a797a] succeeded in 7.688724113000035s: {'tool': 'screenshot', 'result': [{'http': 'https://pdm.vivo.com', 'screen_base64': 'iVBORw0KGgoAAAANSUhEUgAAASwAAACWCAYAAABkW7XSAAABLUlEQVR4nO3WMWoCARCG0W8h2iSkEGyF5Bi5jvfySOnsbewtRAghMYUbMPEAi/BeMzNM81fDFMCdGMY6r96qp2pffVSP1Xv1NU00gL8exvpSvVa7al0tqk31PU0sgFu/B+tQzapVtR3n5bj/nCIYwH/DVf/c5Wgdu3xW8+pUnSfIBQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABc+wE+Wg8r8dbKTQAAAABJRU5ErkJggg=='}, {'http': 'https://carrier.vivo.com', 'screen_base64': 'iVBORw0KGgoAAAANSUhEUgAAASwAAACWCAYAAABkW7XSAAATVElEQVR4nO3d2W9cVYLH8e+5S1W5vC8xTpzFTiBhQkiAABMSNUiZ7gGpGfE00kj002ie+68ZjdTz0q8tzcNo1AzqYQChCAKiB5JOQxKyOY7tBO9LrXc7Zx4qNkkwYbWTa34fKcRL+dalkvrm3FO3zjXOOYeISA54D3oHRES+KwVLRHJDwRKR3FCwRCQ3FCwRyQ0FS0RyQ8ESkdxQsEQkNxSsLcpaS5qma58nSUKWZQA457jzfGFrLd92/rBzjjiOcc5hrSVJknVv12g01u5nPUmS3LVfq9u21gKQpuk3bvvb9u/eX7L1BA96B+THW15e5vPPPyeKImq1GtVqlXq9zsDAAK+88gqFQ...', ...]}
+[2021-07-07 13:37:11,243: INFO/MainProcess] Received task: screenshot.run[dfe7d811-8f13-4e18-bbe1-6207f80f5979]  
+[2021-07-07 13:37:14,691: WARNING/ForkPoolWorker-1] https://pdm.vivo.com：截图成功！！！
+[2021-07-07 13:37:15,275: WARNING/ForkPoolWorker-1] https://carrier.vivo.com：截图成功！！！
+[2021-07-07 13:37:15,623: WARNING/ForkPoolWorker-1] https://opensource.vivo.com：截图成功！！！
+[2021-07-07 13:37:16,466: WARNING/ForkPoolWorker-1] https://passport.vivo.com：截图成功！！！
+[2021-07-07 13:37:17,181: WARNING/ForkPoolWorker-1] https://as.vivo.com：截图成功！！！
+[2021-07-07 13:37:18,210: WARNING/ForkPoolWorker-1] https://afgateway.vivo.com：截图成功！！！
+[2021-07-07 13:37:19,120: WARNING/ForkPoolWorker-1] https://survey.vivo.com:8443：截图成功！！！
+[2021-07-07 13:37:19,372: WARNING/ForkPoolWorker-1] https://mail.vivo.com：截图成功！！！
+kill: 58838: No such process
+[2021-07-07 13:37:19,756: INFO/ForkPoolWorker-1] Task screenshot.run[dfe7d811-8f13-4e18-bbe1-6207f80f5979] succeeded in 8.511557726000092s: {'tool': 'screenshot', 'result': [{'http': 'https://pdm.vivo.com', 'screen_base64': 'iVBORw0KGgoAAAANSUhEUgAAASwAAACWCAYAAABkW7XSAAABLUlEQVR4nO3WMWoCARCG0W8h2iSkEGyF5Bi5jvfySOnsbewtRAghMYUbMPEAi/BeMzNM81fDFMCdGMY6r96qp2pffVSP1Xv1NU00gL8exvpSvVa7al0tqk31PU0sgFu/B+tQzapVtR3n5bj/nCIYwH/DVf/c5Wgdu3xW8+pUnSfIBQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABc+wE+Wg8r8dbKTQAAAABJRU5ErkJggg=='}, {'http': 'https://carrier.vivo.com', 'screen_base64': 'iVBORw0KGgoAAAANSUhEUgAAASwAAACWCAYAAABkW7XSAAATVElEQVR4nO3d2W9cVYLH8e+5S1W5vC8xTpzFTiBhQkiAABMSNUiZ7gGpGfE00kj002ie+68ZjdTz0q8tzcNo1AzqYQChCAKiB5JOQxKyOY7tBO9LrXc7Zx4qNkkwYbWTa34fKcRL+dalkvrm3FO3zjXOOYeISA54D3oHRES+KwVLRHJDwRKR3FCwRCQ3FCwRyQ0FS0RyQ8ESkdxQsEQkNxSsLcpaS5qma58nSUKWZQA457jzfGFrLd92/rBzjjiOcc5hrSVJknVv12g01u5nPUmS3LVfq9u21gKQpuk3bvvb9u/eX7L1BA96B+THW15e5vPPPyeKImq1GtVqlXq9zsDAAK+88gqFQ...', ...]}
+[2021-07-07 13:37:20,073: INFO/MainProcess] Received task: screenshot.run[752d9204-b769-488e-842c-433cb3a9f1df]  
+[2021-07-07 13:37:23,569: WARNING/ForkPoolWorker-1] https://pdm.vivo.com：截图成功！！！
+[2021-07-07 13:37:24,264: WARNING/ForkPoolWorker-1] https://carrier.vivo.com：截图成功！！！
+[2021-07-07 13:37:24,552: WARNING/ForkPoolWorker-1] https://opensource.vivo.com：截图成功！！！
+[2021-07-07 13:37:24,790: WARNING/ForkPoolWorker-1] https://passport.vivo.com：截图成功！！！
+[2021-07-07 13:37:26,638: WARNING/ForkPoolWorker-1] https://as.vivo.com：截图成功！！！
+[2021-07-07 13:37:26,895: WARNING/ForkPoolWorker-1] https://afgateway.vivo.com：截图成功！！！
+[2021-07-07 13:37:27,054: WARNING/ForkPoolWorker-1] https://survey.vivo.com:8443：截图成功！！！
+[2021-07-07 13:37:27,546: WARNING/ForkPoolWorker-1] https://mail.vivo.com：截图成功！！！
+kill: 58887: No such process
+[2021-07-07 13:37:27,936: INFO/ForkPoolWorker-1] Task screenshot.run[752d9204-b769-488e-842c-433cb3a9f1df] succeeded in 7.862292410000009s: {'tool': 'screenshot', 'result': [{'http': 'https://pdm.vivo.com', 'screen_base64': 'iVBORw0KGgoAAAANSUhEUgAAASwAAACWCAYAAABkW7XSAAABLUlEQVR4nO3WMWoCARCG0W8h2iSkEGyF5Bi5jvfySOnsbewtRAghMYUbMPEAi/BeMzNM81fDFMCdGMY6r96qp2pffVSP1Xv1NU00gL8exvpSvVa7al0tqk31PU0sgFu/B+tQzapVtR3n5bj/nCIYwH/DVf/c5Wgdu3xW8+pUnSfIBQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABc+wE+Wg8r8dbKTQAAAABJRU5ErkJggg=='}, {'http': 'https://carrier.vivo.com', 'screen_base64': 'iVBORw0KGgoAAAANSUhEUgAAASwAAACWCAYAAABkW7XSAAATVElEQVR4nO3d2W9cVYLH8e+5S1W5vC8xTpzFTiBhQkiAABMSNUiZ7gGpGfE00kj002ie+68ZjdTz0q8tzcNo1AzqYQChCAKiB5JOQxKyOY7tBO9LrXc7Zx4qNkkwYbWTa34fKcRL+dalkvrm3FO3zjXOOYeISA54D3oHRES+KwVLRHJDwRKR3FCwRCQ3FCwRyQ0FS0RyQ8ESkdxQsEQkNxSsLcpaS5qma58nSUKWZQA457jzfGFrLd92/rBzjjiOcc5hrSVJknVv12g01u5nPUmS3LVfq9u21gKQpuk3bvvb9u/eX7L1BA96B+THW15e5vPPPyeKImq1GtVqlXq9zsDAAK+88gqFQ...', ...]}
+[2021-07-07 13:37:28,268: INFO/MainProcess] Received task: screenshot.run[8f10cfac-6029-404c-a504-aad4c6d9ed7c]  
+[2021-07-07 13:37:31,781: WARNING/ForkPoolWorker-1] https://pdm.vivo.com：截图成功！！！
+[2021-07-07 13:37:32,529: WARNING/ForkPoolWorker-1] https://carrier.vivo.com：截图成功！！！
+[2021-07-07 13:37:32,777: WARNING/ForkPoolWorker-1] https://opensource.vivo.com：截图成功！！！
+[2021-07-07 13:37:33,284: WARNING/ForkPoolWorker-1] https://passport.vivo.com：截图成功！！！
+[2021-07-07 13:37:33,996: WARNING/ForkPoolWorker-1] https://as.vivo.com：截图成功！！！
+[2021-07-07 13:37:35,344: WARNING/ForkPoolWorker-1] https://survey.vivo.com:8443：截图成功！！！
+[2021-07-07 13:37:35,351: WARNING/ForkPoolWorker-1] https://afgateway.vivo.com：截图成功！！！
+[2021-07-07 13:37:36,649: WARNING/ForkPoolWorker-1] https://mail.vivo.com：截图成功！！！
+kill: 58942: No such process
+[2021-07-07 13:37:37,032: INFO/ForkPoolWorker-1] Task screenshot.run[8f10cfac-6029-404c-a504-aad4c6d9ed7c] succeeded in 8.762512547000142s: {'tool': 'screenshot', 'result': [{'http': 'https://pdm.vivo.com', 'screen_base64': 'iVBORw0KGgoAAAANSUhEUgAAASwAAACWCAYAAABkW7XSAAABLUlEQVR4nO3WMWoCARCG0W8h2iSkEGyF5Bi5jvfySOnsbewtRAghMYUbMPEAi/BeMzNM81fDFMCdGMY6r96qp2pffVSP1Xv1NU00gL8exvpSvVa7al0tqk31PU0sgFu/B+tQzapVtR3n5bj/nCIYwH/DVf/c5Wgdu3xW8+pUnSfIBQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABc+wE+Wg8r8dbKTQAAAABJRU5ErkJggg=='}, {'http': 'https://carrier.vivo.com', 'screen_base64': 'iVBORw0KGgoAAAANSUhEUgAAASwAAACWCAYAAABkW7XSAAATVElEQVR4nO3d2W9cVYLH8e+5S1W5vC8xTpzFTiBhQkiAABMSNUiZ7gGpGfE00kj002ie+68ZjdTz0q8tzcNo1AzqYQChCAKiB5JOQxKyOY7tBO9LrXc7Zx4qNkkwYbWTa34fKcRL+dalkvrm3FO3zjXOOYeISA54D3oHRES+KwVLRHJDwRKR3FCwRCQ3FCwRyQ0FS0RyQ8ESkdxQsEQkNxSsLcpaS5qma58nSUKWZQA457jzfGFrLd92/rBzjjiOcc5hrSVJknVv12g01u5nPUmS3LVfq9u21gKQpuk3bvvb9u/eX7L1BA96B+THW15e5vPPPyeKImq1GtVqlXq9zsDAAK+88gqFQ...', ...]}
+[2021-07-07 13:37:37,323: INFO/MainProcess] Received task: screenshot.run[86ec1116-8fa3-4f6d-96ea-89f78e251bf4]  
+[2021-07-07 13:37:40,779: WARNING/ForkPoolWorker-1] https://pdm.vivo.com：截图成功！！！
+[2021-07-07 13:37:41,483: WARNING/ForkPoolWorker-1] https://carrier.vivo.com：截图成功！！！
+[2021-07-07 13:37:41,877: WARNING/ForkPoolWorker-1] https://opensource.vivo.com：截图成功！！！
+[2021-07-07 13:37:42,254: WARNING/ForkPoolWorker-1] https://passport.vivo.com：截图成功！！！
+[2021-07-07 13:37:42,961: WARNING/ForkPoolWorker-1] https://as.vivo.com：截图成功！！！
+[2021-07-07 13:37:44,304: WARNING/ForkPoolWorker-1] https://afgateway.vivo.com：截图成功！！！
+[2021-07-07 13:37:44,427: WARNING/ForkPoolWorker-1] https://survey.vivo.com:8443：截图成功！！！
+[2021-07-07 13:37:44,725: WARNING/ForkPoolWorker-1] https://mail.vivo.com：截图成功！！！
+kill: 58983: No such process
+[2021-07-07 13:37:45,194: INFO/ForkPoolWorker-1] Task screenshot.run[86ec1116-8fa3-4f6d-96ea-89f78e251bf4] succeeded in 7.86894677500004s: {'tool': 'screenshot', 'result': [{'http': 'https://pdm.vivo.com', 'screen_base64': 'iVBORw0KGgoAAAANSUhEUgAAASwAAACWCAYAAABkW7XSAAABLUlEQVR4nO3WMWoCARCG0W8h2iSkEGyF5Bi5jvfySOnsbewtRAghMYUbMPEAi/BeMzNM81fDFMCdGMY6r96qp2pffVSP1Xv1NU00gL8exvpSvVa7al0tqk31PU0sgFu/B+tQzapVtR3n5bj/nCIYwH/DVf/c5Wgdu3xW8+pUnSfIBQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABc+wE+Wg8r8dbKTQAAAABJRU5ErkJggg=='}, {'http': 'https://carrier.vivo.com', 'screen_base64': 'iVBORw0KGgoAAAANSUhEUgAAASwAAACWCAYAAABkW7XSAAATVElEQVR4nO3d2W9cVYLH8e+5S1W5vC8xTpzFTiBhQkiAABMSNUiZ7gGpGfE00kj002ie+68ZjdTz0q8tzcNo1AzqYQChCAKiB5JOQxKyOY7tBO9LrXc7Zx4qNkkwYbWTa34fKcRL+dalkvrm3FO3zjXOOYeISA54D3oHRES+KwVLRHJDwRKR3FCwRCQ3FCwRyQ0FS0RyQ8ESkdxQsEQkNxSsLcpaS5qma58nSUKWZQA457jzfGFrLd92/rBzjjiOcc5hrSVJknVv12g01u5nPUmS3LVfq9u21gKQpuk3bvvb9u/eX7L1BA96B+THW15e5vPPPyeKImq1GtVqlXq9zsDAAK+88gqFQ...', ...]}
+[2021-07-07 13:37:45,475: INFO/MainProcess] Received task: screenshot.run[1e3d14ae-f879-4e5c-8639-1278e15ba302]  
+[2021-07-07 13:37:48,966: WARNING/ForkPoolWorker-1] https://pdm.vivo.com：截图成功！！！
+[2021-07-07 13:37:49,785: WARNING/ForkPoolWorker-1] https://carrier.vivo.com：截图成功！！！
+[2021-07-07 13:37:50,061: WARNING/ForkPoolWorker-1] https://opensource.vivo.com：截图成功！！！
+[2021-07-07 13:37:50,555: WARNING/ForkPoolWorker-1] https://passport.vivo.com：截图成功！！！
+[2021-07-07 13:37:51,750: WARNING/ForkPoolWorker-1] https://as.vivo.com：截图成功！！！
+[2021-07-07 13:37:52,695: WARNING/ForkPoolWorker-1] https://afgateway.vivo.com：截图成功！！！
+[2021-07-07 13:37:52,717: WARNING/ForkPoolWorker-1] https://survey.vivo.com:8443：截图成功！！！
+[2021-07-07 13:37:53,213: WARNING/ForkPoolWorker-1] https://mail.vivo.com：截图成功！！！
+kill: 59033: No such process
+[2021-07-07 13:37:53,639: INFO/ForkPoolWorker-1] Task screenshot.run[1e3d14ae-f879-4e5c-8639-1278e15ba302] succeeded in 8.161776607000093s: {'tool': 'screenshot', 'result': [{'http': 'https://pdm.vivo.com', 'screen_base64': 'iVBORw0KGgoAAAANSUhEUgAAASwAAACWCAYAAABkW7XSAAABLUlEQVR4nO3WMWoCARCG0W8h2iSkEGyF5Bi5jvfySOnsbewtRAghMYUbMPEAi/BeMzNM81fDFMCdGMY6r96qp2pffVSP1Xv1NU00gL8exvpSvVa7al0tqk31PU0sgFu/B+tQzapVtR3n5bj/nCIYwH/DVf/c5Wgdu3xW8+pUnSfIBQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABc+wE+Wg8r8dbKTQAAAABJRU5ErkJggg=='}, {'http': 'https://carrier.vivo.com', 'screen_base64': 'iVBORw0KGgoAAAANSUhEUgAAASwAAACWCAYAAABkW7XSAAATVElEQVR4nO3d2W9cVYLH8e+5S1W5vC8xTpzFTiBhQkiAABMSNUiZ7gGpGfE00kj002ie+68ZjdTz0q8tzcNo1AzqYQChCAKiB5JOQxKyOY7tBO9LrXc7Zx4qNkkwYbWTa34fKcRL+dalkvrm3FO3zjXOOYeISA54D3oHRES+KwVLRHJDwRKR3FCwRCQ3FCwRyQ0FS0RyQ8ESkdxQsEQkNxSsLcpaS5qma58nSUKWZQA457jzfGFrLd92/rBzjjiOcc5hrSVJknVv12g01u5nPUmS3LVfq9u21gKQpuk3bvvb9u/eX7L1BA96B+THW15e5vPPPyeKImq1GtVqlXq9zsDAAK+88gqFQ...', ...]}
+[2021-07-07 13:37:53,881: INFO/MainProcess] Received task: screenshot.run[380596a8-1fc4-4b24-b209-ee5445d1738e]  
+[2021-07-07 13:37:57,394: WARNING/ForkPoolWorker-1] https://pdm.vivo.com：截图成功！！！
+[2021-07-07 13:37:58,042: WARNING/ForkPoolWorker-1] https://carrier.vivo.com：截图成功！！！
+[2021-07-07 13:37:58,402: WARNING/ForkPoolWorker-1] https://opensource.vivo.com：截图成功！！！
+[2021-07-07 13:37:58,690: WARNING/ForkPoolWorker-1] https://passport.vivo.com：截图成功！！！
+[2021-07-07 13:37:59,510: WARNING/ForkPoolWorker-1] https://as.vivo.com：截图成功！！！
+[2021-07-07 13:37:59,918: WARNING/ForkPoolWorker-1] https://afgateway.vivo.com：截图成功！！！
+[2021-07-07 13:38:00,951: WARNING/ForkPoolWorker-1] https://survey.vivo.com:8443：截图成功！！！
+[2021-07-07 13:38:01,259: WARNING/ForkPoolWorker-1] https://mail.vivo.com：截图成功！！！
+kill: 59076: No such process
+[2021-07-07 13:38:01,694: INFO/ForkPoolWorker-1] Task screenshot.run[380596a8-1fc4-4b24-b209-ee5445d1738e] succeeded in 7.810605733000102s: {'tool': 'screenshot', 'result': [{'http': 'https://pdm.vivo.com', 'screen_base64': 'iVBORw0KGgoAAAANSUhEUgAAASwAAACWCAYAAABkW7XSAAABLUlEQVR4nO3WMWoCARCG0W8h2iSkEGyF5Bi5jvfySOnsbewtRAghMYUbMPEAi/BeMzNM81fDFMCdGMY6r96qp2pffVSP1Xv1NU00gL8exvpSvVa7al0tqk31PU0sgFu/B+tQzapVtR3n5bj/nCIYwH/DVf/c5Wgdu3xW8+pUnSfIBQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABc+wE+Wg8r8dbKTQAAAABJRU5ErkJggg=='}, {'http': 'https://carrier.vivo.com', 'screen_base64': 'iVBORw0KGgoAAAANSUhEUgAAASwAAACWCAYAAABkW7XSAAATVElEQVR4nO3d2W9cVYLH8e+5S1W5vC8xTpzFTiBhQkiAABMSNUiZ7gGpGfE00kj002ie+68ZjdTz0q8tzcNo1AzqYQChCAKiB5JOQxKyOY7tBO9LrXc7Zx4qNkkwYbWTa34fKcRL+dalkvrm3FO3zjXOOYeISA54D3oHRES+KwVLRHJDwRKR3FCwRCQ3FCwRyQ0FS0RyQ8ESkdxQsEQkNxSsLcpaS5qma58nSUKWZQA457jzfGFrLd92/rBzjjiOcc5hrSVJknVv12g01u5nPUmS3LVfq9u21gKQpuk3bvvb9u/eX7L1BA96B+THW15e5vPPPyeKImq1GtVqlXq9zsDAAK+88gqFQ...', ...]}
+[2021-07-07 13:38:02,017: INFO/MainProcess] Received task: screenshot.run[eb3d61fc-3604-4360-b4ac-b8858813d234]  
+[2021-07-07 13:38:05,525: WARNING/ForkPoolWorker-1] https://pdm.vivo.com：截图成功！！！
+[2021-07-07 13:38:06,157: WARNING/ForkPoolWorker-1] https://carrier.vivo.com：截图成功！！！
+[2021-07-07 13:38:06,532: WARNING/ForkPoolWorker-1] https://opensource.vivo.com：截图成功！！！
+[2021-07-07 13:38:06,966: WARNING/ForkPoolWorker-1] https://passport.vivo.com：截图成功！！！
+[2021-07-07 13:38:07,911: WARNING/ForkPoolWorker-1] https://as.vivo.com：截图成功！！！
+[2021-07-07 13:38:09,073: WARNING/ForkPoolWorker-1] https://survey.vivo.com:8443：截图成功！！！
+[2021-07-07 13:38:09,154: WARNING/ForkPoolWorker-1] https://afgateway.vivo.com：截图成功！！！
+[2021-07-07 13:38:10,319: WARNING/ForkPoolWorker-1] https://mail.vivo.com：截图成功！！！
+kill: 59134: No such process
+[2021-07-07 13:38:10,869: INFO/ForkPoolWorker-1] Task screenshot.run[eb3d61fc-3604-4360-b4ac-b8858813d234] succeeded in 8.850671809999994s: {'tool': 'screenshot', 'result': [{'http': 'https://pdm.vivo.com', 'screen_base64': 'iVBORw0KGgoAAAANSUhEUgAAASwAAACWCAYAAABkW7XSAAABLUlEQVR4nO3WMWoCARCG0W8h2iSkEGyF5Bi5jvfySOnsbewtRAghMYUbMPEAi/BeMzNM81fDFMCdGMY6r96qp2pffVSP1Xv1NU00gL8exvpSvVa7al0tqk31PU0sgFu/B+tQzapVtR3n5bj/nCIYwH/DVf/c5Wgdu3xW8+pUnSfIBQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABc+wE+Wg8r8dbKTQAAAABJRU5ErkJggg=='}, {'http': 'https://carrier.vivo.com', 'screen_base64': 'iVBORw0KGgoAAAANSUhEUgAAASwAAACWCAYAAABkW7XSAAATVElEQVR4nO3d2W9cVYLH8e+5S1W5vC8xTpzFTiBhQkiAABMSNUiZ7gGpGfE00kj002ie+68ZjdTz0q8tzcNo1AzqYQChCAKiB5JOQxKyOY7tBO9LrXc7Zx4qNkkwYbWTa34fKcRL+dalkvrm3FO3zjXOOYeISA54D3oHRES+KwVLRHJDwRKR3FCwRCQ3FCwRyQ0FS0RyQ8ESkdxQsEQkNxSsLcpaS5qma58nSUKWZQA457jzfGFrLd92/rBzjjiOcc5hrSVJknVv12g01u5nPUmS3LVfq9u21gKQpuk3bvvb9u/eX7L1BA96B+THW15e5vPPPyeKImq1GtVqlXq9zsDAAK+88gqFQ...', ...]}
+[2021-07-07 13:38:11,245: INFO/MainProcess] Received task: screenshot.run[9268d4a2-47cf-4265-9aaa-1074f4fcf616]  
+[2021-07-07 13:38:15,845: WARNING/ForkPoolWorker-1] https://pdm.vivo.com：截图成功！！！
+[2021-07-07 13:38:16,466: WARNING/ForkPoolWorker-1] https://carrier.vivo.com：截图成功！！！
+[2021-07-07 13:38:16,859: WARNING/ForkPoolWorker-1] https://opensource.vivo.com：截图成功！！！
+[2021-07-07 13:38:17,544: WARNING/ForkPoolWorker-1] https://passport.vivo.com：截图成功！！！
+[2021-07-07 13:38:18,333: WARNING/ForkPoolWorker-1] https://as.vivo.com：截图成功！！！
+[2021-07-07 13:38:19,811: WARNING/ForkPoolWorker-1] https://afgateway.vivo.com：截图成功！！！
+[2021-07-07 13:38:20,467: WARNING/ForkPoolWorker-1] https://survey.vivo.com:8443：截图成功！！！
+[2021-07-07 13:38:20,749: WARNING/ForkPoolWorker-1] https://mail.vivo.com：截图成功！！！
+kill: 59193: No such process
+[2021-07-07 13:38:21,301: INFO/ForkPoolWorker-1] Task screenshot.run[9268d4a2-47cf-4265-9aaa-1074f4fcf616] succeeded in 10.054097558999956s: {'tool': 'screenshot', 'result': [{'http': 'https://pdm.vivo.com', 'screen_base64': 'iVBORw0KGgoAAAANSUhEUgAAASwAAACWCAYAAABkW7XSAAABLUlEQVR4nO3WMWoCARCG0W8h2iSkEGyF5Bi5jvfySOnsbewtRAghMYUbMPEAi/BeMzNM81fDFMCdGMY6r96qp2pffVSP1Xv1NU00gL8exvpSvVa7al0tqk31PU0sgFu/B+tQzapVtR3n5bj/nCIYwH/DVf/c5Wgdu3xW8+pUnSfIBQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABc+wE+Wg8r8dbKTQAAAABJRU5ErkJggg=='}, {'http': 'https://carrier.vivo.com', 'screen_base64': 'iVBORw0KGgoAAAANSUhEUgAAASwAAACWCAYAAABkW7XSAAATVElEQVR4nO3d2W9cVYLH8e+5S1W5vC8xTpzFTiBhQkiAABMSNUiZ7gGpGfE00kj002ie+68ZjdTz0q8tzcNo1AzqYQChCAKiB5JOQxKyOY7tBO9LrXc7Zx4qNkkwYbWTa34fKcRL+dalkvrm3FO3zjXOOYeISA54D3oHRES+KwVLRHJDwRKR3FCwRCQ3FCwRyQ0FS0RyQ8ESkdxQsEQkNxSsLcpaS5qma58nSUKWZQA457jzfGFrLd92/rBzjjiOcc5hrSVJknVv12g01u5nPUmS3LVfq9u21gKQpuk3bvvb9u/eX7L1BA96B+THW15e5vPPPyeKImq1GtVqlXq9zsDAAK+88gqFQ...', ...]}
+[2021-07-07 13:38:21,747: INFO/MainProcess] Received task: screenshot.run[fe0d991f-d828-4dc0-a9fc-9195d853c2f3]  
+[2021-07-07 13:38:26,406: WARNING/ForkPoolWorker-1] https://pdm.vivo.com：截图成功！！！
+[2021-07-07 13:38:26,863: WARNING/ForkPoolWorker-1] https://carrier.vivo.com：截图成功！！！
+[2021-07-07 13:38:27,240: WARNING/ForkPoolWorker-1] https://opensource.vivo.com：截图成功！！！
+[2021-07-07 13:38:27,824: WARNING/ForkPoolWorker-1] https://passport.vivo.com：截图成功！！！
+[2021-07-07 13:38:28,637: WARNING/ForkPoolWorker-1] https://as.vivo.com：截图成功！！！
+[2021-07-07 13:38:30,038: WARNING/ForkPoolWorker-1] https://afgateway.vivo.com：截图成功！！！
+[2021-07-07 13:38:30,815: WARNING/ForkPoolWorker-1] https://survey.vivo.com:8443：截图成功！！！
+[2021-07-07 13:38:31,267: WARNING/ForkPoolWorker-1] https://mail.vivo.com：截图成功！！！
+kill: 59251: No such process
+[2021-07-07 13:38:31,917: INFO/ForkPoolWorker-1] Task screenshot.run[fe0d991f-d828-4dc0-a9fc-9195d853c2f3] succeeded in 10.167839445000027s: {'tool': 'screenshot', 'result': [{'http': 'https://pdm.vivo.com', 'screen_base64': 'iVBORw0KGgoAAAANSUhEUgAAASwAAACWCAYAAABkW7XSAAABLUlEQVR4nO3WMWoCARCG0W8h2iSkEGyF5Bi5jvfySOnsbewtRAghMYUbMPEAi/BeMzNM81fDFMCdGMY6r96qp2pffVSP1Xv1NU00gL8exvpSvVa7al0tqk31PU0sgFu/B+tQzapVtR3n5bj/nCIYwH/DVf/c5Wgdu3xW8+pUnSfIBQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABc+wE+Wg8r8dbKTQAAAABJRU5ErkJggg=='}, {'http': 'https://carrier.vivo.com', 'screen_base64': 'iVBORw0KGgoAAAANSUhEUgAAASwAAACWCAYAAABkW7XSAAATVElEQVR4nO3d2W9cVYLH8e+5S1W5vC8xTpzFTiBhQkiAABMSNUiZ7gGpGfE00kj002ie+68ZjdTz0q8tzcNo1AzqYQChCAKiB5JOQxKyOY7tBO9LrXc7Zx4qNkkwYbWTa34fKcRL+dalkvrm3FO3zjXOOYeISA54D3oHRES+KwVLRHJDwRKR3FCwRCQ3FCwRyQ0FS0RyQ8ESkdxQsEQkNxSsLcpaS5qma58nSUKWZQA457jzfGFrLd92/rBzjjiOcc5hrSVJknVv12g01u5nPUmS3LVfq9u21gKQpuk3bvvb9u/eX7L1BA96B+THW15e5vPPPyeKImq1GtVqlXq9zsDAAK+88gqFQ...', ...]}
+[2021-07-07 13:38:32,527: INFO/MainProcess] Received task: screenshot.run[b2c899ec-4be6-49fa-b002-081a82d184b6]  
+[2021-07-07 13:38:36,179: WARNING/ForkPoolWorker-1] https://pdm.vivo.com：截图成功！！！
+[2021-07-07 13:38:36,752: WARNING/ForkPoolWorker-1] https://carrier.vivo.com：截图成功！！！
+[2021-07-07 13:38:37,043: WARNING/ForkPoolWorker-1] https://opensource.vivo.com：截图成功！！！
+[2021-07-07 13:38:37,389: WARNING/ForkPoolWorker-1] https://passport.vivo.com：截图成功！！！
+[2021-07-07 13:38:38,237: WARNING/ForkPoolWorker-1] https://as.vivo.com：截图成功！！！
+[2021-07-07 13:38:38,725: WARNING/ForkPoolWorker-1] https://afgateway.vivo.com：截图成功！！！
+[2021-07-07 13:38:39,750: WARNING/ForkPoolWorker-1] https://survey.vivo.com:8443：截图成功！！！
+[2021-07-07 13:38:40,838: WARNING/ForkPoolWorker-1] https://mail.vivo.com：截图成功！！！
+kill: 59321: No such process
+[2021-07-07 13:38:41,192: INFO/ForkPoolWorker-1] Task screenshot.run[b2c899ec-4be6-49fa-b002-081a82d184b6] succeeded in 8.664132811999934s: {'tool': 'screenshot', 'result': [{'http': 'https://pdm.vivo.com', 'screen_base64': 'iVBORw0KGgoAAAANSUhEUgAAASwAAACWCAYAAABkW7XSAAABLUlEQVR4nO3WMWoCARCG0W8h2iSkEGyF5Bi5jvfySOnsbewtRAghMYUbMPEAi/BeMzNM81fDFMCdGMY6r96qp2pffVSP1Xv1NU00gL8exvpSvVa7al0tqk31PU0sgFu/B+tQzapVtR3n5bj/nCIYwH/DVf/c5Wgdu3xW8+pUnSfIBQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABc+wE+Wg8r8dbKTQAAAABJRU5ErkJggg=='}, {'http': 'https://carrier.vivo.com', 'screen_base64': 'iVBORw0KGgoAAAANSUhEUgAAASwAAACWCAYAAABkW7XSAAATVElEQVR4nO3d2W9cVYLH8e+5S1W5vC8xTpzFTiBhQkiAABMSNUiZ7gGpGfE00kj002ie+68ZjdTz0q8tzcNo1AzqYQChCAKiB5JOQxKyOY7tBO9LrXc7Zx4qNkkwYbWTa34fKcRL+dalkvrm3FO3zjXOOYeISA54D3oHRES+KwVLRHJDwRKR3FCwRCQ3FCwRyQ0FS0RyQ8ESkdxQsEQkNxSsLcpaS5qma58nSUKWZQA457jzfGFrLd92/rBzjjiOcc5hrSVJknVv12g01u5nPUmS3LVfq9u21gKQpuk3bvvb9u/eX7L1BA96B+THW15e5vPPPyeKImq1GtVqlXq9zsDAAK+88gqFQ...', ...]}
+[2021-07-07 13:39:16,291: INFO/MainProcess] Received task: screenshot.run[2080782f-dd6c-4564-9be5-55ceb9f5001a]  
+[2021-07-07 13:39:20,056: WARNING/ForkPoolWorker-1] https://pdm.vivo.com：截图成功！！！
+[2021-07-07 13:39:20,070: WARNING/ForkPoolWorker-1] https://survey.vivo.com:8443：截图成功！！！
+[2021-07-07 13:39:20,078: WARNING/ForkPoolWorker-1] https://issue.dev.vivo.com：截图成功！！！
+[2021-07-07 13:39:22,166: WARNING/ForkPoolWorker-1] https://es.vivo.com：截图成功！！！
+[2021-07-07 13:39:22,326: WARNING/ForkPoolWorker-1] https://as.vivo.com：截图成功！！！
+[2021-07-07 13:39:23,593: WARNING/ForkPoolWorker-1] https://afgateway.vivo.com：截图成功！！！
+[2021-07-07 13:39:24,386: INFO/MainProcess] Received task: screenshot.run[8877d5cb-4dc9-4c06-9eee-0ef4919c8b83]  
+[2021-07-07 13:39:24,498: WARNING/ForkPoolWorker-1] https://carrier.vivo.com：截图成功！！！
+[2021-07-07 13:39:24,536: WARNING/ForkPoolWorker-1] https://opensource.vivo.com：截图成功！！！
+[2021-07-07 13:39:26,134: WARNING/ForkPoolWorker-1] https://browserproxy.vivo.com：截图成功！！！
+[2021-07-07 13:39:27,174: WARNING/ForkPoolWorker-1] https://passport.vivo.com：截图成功！！！
+[2021-07-07 13:39:27,876: WARNING/ForkPoolWorker-1] https://mail.vivo.com：截图成功！！！
+[2021-07-07 13:39:28,136: WARNING/ForkPoolWorker-1] https://mailtest.vivo.com：截图成功！！！
+[2021-07-07 13:39:28,443: WARNING/ForkPoolWorker-1] http://zs.vivo.com:8089：截图成功！！！
+[2021-07-07 13:39:29,699: WARNING/ForkPoolWorker-1] http://survey.vivo.com:8089：截图成功！！！
+[2021-07-07 13:39:30,590: WARNING/ForkPoolWorker-1] http://survey.vivo.com:9080：截图成功！！！
+kill: 59482: No such process
+[2021-07-07 13:39:30,970: INFO/ForkPoolWorker-1] Task screenshot.run[2080782f-dd6c-4564-9be5-55ceb9f5001a] succeeded in 14.650296286999946s: {'tool': 'screenshot', 'result': [{'http': 'https://pdm.vivo.com', 'screen_base64': 'iVBORw0KGgoAAAANSUhEUgAAASwAAACWCAYAAABkW7XSAAABLUlEQVR4nO3WMWoCARCG0W8h2iSkEGyF5Bi5jvfySOnsbewtRAghMYUbMPEAi/BeMzNM81fDFMCdGMY6r96qp2pffVSP1Xv1NU00gL8exvpSvVa7al0tqk31PU0sgFu/B+tQzapVtR3n5bj/nCIYwH/DVf/c5Wgdu3xW8+pUnSfIBQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABc+wE+Wg8r8dbKTQAAAABJRU5ErkJggg=='}, {'http': 'https://carrier.vivo.com', 'screen_base64': 'iVBORw0KGgoAAAANSUhEUgAAASwAAACWCAYAAABkW7XSAAATVElEQVR4nO3d2W9cVYLH8e+5S1W5vC8xTpzFTiBhQkiAABMSNUiZ7gGpGfE00kj002ie+68ZjdTz0q8tzcNo1AzqYQChCAKiB5JOQxKyOY7tBO9LrXc7Zx4qNkkwYbWTa34fKcRL+dalkvrm3FO3zjXOOYeISA54D3oHRES+KwVLRHJDwRKR3FCwRCQ3FCwRyQ0FS0RyQ8ESkdxQsEQkNxSsLcpaS5qma58nSUKWZQA457jzfGFrLd92/rBzjjiOcc5hrSVJknVv12g01u5nPUmS3LVfq9u21gKQpuk3bvvb9u/eX7L1BA96B+THW15e5vPPPyeKImq1GtVqlXq9zsDAAK+88gqFQ...', ...]}
+[2021-07-07 13:39:35,390: WARNING/ForkPoolWorker-1] https://survey.vivo.com:8443：截图成功！！！
+[2021-07-07 13:39:35,393: WARNING/ForkPoolWorker-1] https://issue.dev.vivo.com：截图成功！！！
+[2021-07-07 13:39:35,394: WARNING/ForkPoolWorker-1] https://pdm.vivo.com：截图成功！！！
+[2021-07-07 13:39:35,757: WARNING/ForkPoolWorker-1] https://as.vivo.com：截图成功！！！
+[2021-07-07 13:39:37,202: WARNING/ForkPoolWorker-1] https://es.vivo.com：截图成功！！！
+[2021-07-07 13:39:38,971: WARNING/ForkPoolWorker-1] https://afgateway.vivo.com：截图成功！！！
+[2021-07-07 13:39:39,753: WARNING/ForkPoolWorker-1] https://carrier.vivo.com：截图成功！！！
+[2021-07-07 13:39:40,497: WARNING/ForkPoolWorker-1] https://opensource.vivo.com：截图成功！！！
+[2021-07-07 13:39:41,494: WARNING/ForkPoolWorker-1] https://browserproxy.vivo.com：截图成功！！！
+[2021-07-07 13:39:41,819: WARNING/ForkPoolWorker-1] https://passport.vivo.com：截图成功！！！
+[2021-07-07 13:39:43,433: WARNING/ForkPoolWorker-1] https://mailtest.vivo.com：截图成功！！！
+[2021-07-07 13:39:44,417: WARNING/ForkPoolWorker-1] http://zs.vivo.com:8089：截图成功！！！
+[2021-07-07 13:39:44,439: WARNING/ForkPoolWorker-1] https://mail.vivo.com：截图成功！！！
+[2021-07-07 13:39:45,380: WARNING/ForkPoolWorker-1] http://survey.vivo.com:9080：截图成功！！！
+[2021-07-07 13:39:45,450: WARNING/ForkPoolWorker-1] http://survey.vivo.com:8089：截图成功！！！
+kill: 59561: No such process
+[2021-07-07 13:39:46,076: INFO/ForkPoolWorker-1] Task screenshot.run[8877d5cb-4dc9-4c06-9eee-0ef4919c8b83] succeeded in 15.103705708000007s: {'tool': 'screenshot', 'result': [{'http': 'https://pdm.vivo.com', 'screen_base64': 'iVBORw0KGgoAAAANSUhEUgAAASwAAACWCAYAAABkW7XSAAABLUlEQVR4nO3WMWoCARCG0W8h2iSkEGyF5Bi5jvfySOnsbewtRAghMYUbMPEAi/BeMzNM81fDFMCdGMY6r96qp2pffVSP1Xv1NU00gL8exvpSvVa7al0tqk31PU0sgFu/B+tQzapVtR3n5bj/nCIYwH/DVf/c5Wgdu3xW8+pUnSfIBQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABc+wE+Wg8r8dbKTQAAAABJRU5ErkJggg=='}, {'http': 'https://carrier.vivo.com', 'screen_base64': 'iVBORw0KGgoAAAANSUhEUgAAASwAAACWCAYAAABkW7XSAAATVElEQVR4nO3d2W9cVYLH8e+5S1W5vC8xTpzFTiBhQkiAABMSNUiZ7gGpGfE00kj002ie+68ZjdTz0q8tzcNo1AzqYQChCAKiB5JOQxKyOY7tBO9LrXc7Zx4qNkkwYbWTa34fKcRL+dalkvrm3FO3zjXOOYeISA54D3oHRES+KwVLRHJDwRKR3FCwRCQ3FCwRyQ0FS0RyQ8ESkdxQsEQkNxSsLcpaS5qma58nSUKWZQA457jzfGFrLd92/rBzjjiOcc5hrSVJknVv12g01u5nPUmS3LVfq9u21gKQpuk3bvvb9u/eX7L1BA96B+THW15e5vPPPyeKImq1GtVqlXq9zsDAAK+88gqFQ...', ...]}
+/Library/Python/3.8/site-packages/celery/backends/amqp.py:65: CPendingDeprecationWarning: 
+    The AMQP result backend is scheduled for deprecation in     version 4.0 and removal in version v5.0.     Please use RPC backend or a persistent backend.
+
+  deprecated.warn(
+[2021-07-07 13:45:39,835: INFO/MainProcess] Connected to amqp://hhsrc:**@127.0.0.1:5672/hhsrc_broker
+[2021-07-07 13:45:39,874: INFO/MainProcess] mingle: searching for neighbors
+[2021-07-07 13:45:40,934: INFO/MainProcess] mingle: all alone
+[2021-07-07 13:45:40,979: INFO/MainProcess] celery@screenshot_1625636738.205457 ready.
+[2021-07-07 13:45:46,179: INFO/MainProcess] Events of group {task} enabled by remote.
+/Library/Python/3.8/site-packages/celery/backends/amqp.py:65: CPendingDeprecationWarning: 
+    The AMQP result backend is scheduled for deprecation in     version 4.0 and removal in version v5.0.     Please use RPC backend or a persistent backend.
+
+  deprecated.warn(
+[2021-07-07 14:49:56,597: INFO/MainProcess] Connected to amqp://hhsrc:**@127.0.0.1:5672/hhsrc_broker
+[2021-07-07 14:49:56,645: INFO/MainProcess] mingle: searching for neighbors
+[2021-07-07 14:49:57,846: INFO/MainProcess] mingle: all alone
+[2021-07-07 14:49:57,998: INFO/MainProcess] celery@screenshot_1625640593.557887 ready.
+[2021-07-07 14:50:02,419: INFO/MainProcess] Events of group {task} enabled by remote.

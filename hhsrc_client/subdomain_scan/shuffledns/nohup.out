@@ -1,0 +1,205 @@
+/Library/Python/3.8/site-packages/celery/backends/amqp.py:65: CPendingDeprecationWarning: 
+    The AMQP result backend is scheduled for deprecation in     version 4.0 and removal in version v5.0.     Please use RPC backend or a persistent backend.
+
+  deprecated.warn(
+[2021-07-07 13:12:28,370: INFO/MainProcess] Connected to amqp://hhsrc:**@127.0.0.1:5672/hhsrc_broker
+[2021-07-07 13:12:28,400: INFO/MainProcess] mingle: searching for neighbors
+[2021-07-07 13:12:29,485: INFO/MainProcess] mingle: all alone
+[2021-07-07 13:12:29,537: INFO/MainProcess] celery@shuffledns_1625634746.952616 ready.
+[2021-07-07 13:12:34,292: INFO/MainProcess] Events of group {task} enabled by remote.
+/Library/Python/3.8/site-packages/celery/backends/amqp.py:65: CPendingDeprecationWarning: 
+    The AMQP result backend is scheduled for deprecation in     version 4.0 and removal in version v5.0.     Please use RPC backend or a persistent backend.
+
+  deprecated.warn(
+[2021-07-07 13:14:00,198: INFO/MainProcess] Connected to amqp://hhsrc:**@127.0.0.1:5672/hhsrc_broker
+[2021-07-07 13:14:00,218: INFO/MainProcess] mingle: searching for neighbors
+[2021-07-07 13:14:01,299: INFO/MainProcess] mingle: all alone
+[2021-07-07 13:14:01,347: INFO/MainProcess] celery@shuffledns_1625634839.3340428 ready.
+[2021-07-07 13:14:06,252: INFO/MainProcess] Events of group {task} enabled by remote.
+/Library/Python/3.8/site-packages/celery/backends/amqp.py:65: CPendingDeprecationWarning: 
+    The AMQP result backend is scheduled for deprecation in     version 4.0 and removal in version v5.0.     Please use RPC backend or a persistent backend.
+
+  deprecated.warn(
+[2021-07-07 13:14:40,052: INFO/MainProcess] Connected to amqp://hhsrc:**@127.0.0.1:5672/hhsrc_broker
+[2021-07-07 13:14:40,104: INFO/MainProcess] mingle: searching for neighbors
+[2021-07-07 13:14:41,216: INFO/MainProcess] mingle: all alone
+[2021-07-07 13:14:41,302: INFO/MainProcess] celery@shuffledns_1625634878.303571 ready.
+[2021-07-07 13:14:46,013: INFO/MainProcess] Events of group {task} enabled by remote.
+[2021-07-07 13:17:51,181: INFO/MainProcess] Received task: shuffledns.run[a3794851-14b2-4f16-8f15-1b58282a69f9]  
+
+       __        ________        __       
+  ___ / /  __ __/ _/ _/ /__  ___/ /__ ___
+ (_-</ _ \/ // / _/ _/ / -_)/ _  / _ \(_-<
+/___/_//_/\_,_/_//_//_/\__/ \_,_/_//_/___/ v1								
+
+		projectdiscovery.io
+
+[[33mWRN[0m] Use with caution. You are responsible for your actions
+[[33mWRN[0m] Developers assume no liability and are not responsible for any misuse or damage.
+[[34mINF[0m] Started generating bruteforce permutation
+[[34mINF[0m] Generating permutations took 4.205515ms
+[[34mINF[0m] Creating temporary massdns output file: /var/folders/3y/3j88lyhx59vg42x7p4qxxp2r0000gn/T/shuffledns912967089/c3ijhvucie6tionpdhbg
+[[34mINF[0m] Executing massdns on vivo.com
+[[34mINF[0m] Massdns execution took 19.895704332s
+[[34mINF[0m] Started parsing massdns output
+[[34mINF[0m] Massdns output parsing compeleted
+[[34mINF[0m] Started removing wildcards records
+[[34mINF[0m] Wildcard removal completed
+[[34mINF[0m] Finished enumeration, started writing output
+iot.vivo.com
+developer.vivo.com
+survey.vivo.com
+bs.vivo.com
+bss.vivo.com
+shop.vivo.com
+g.vivo.com
+faq.vivo.com
+security.vivo.com
+sctrack.email.vivo.com
+www.vivo.com
+video.vivo.com
+pl.vivo.com
+pay1.vivo.com
+www.shop.vivo.com
+as.vivo.com
+vs.vivo.com
+homepage.vivo.com
+pre.vivo.com
+pop.vivo.com
+mailtest.vivo.com
+d.vivo.com
+autodiscover.vivo.com
+ss.vivo.com
+ai.vivo.com
+passport.vivo.com
+pay.vivo.com
+zhaopin.vivo.com
+hr.vivo.com
+push.vivo.com
+pdm.vivo.com
+findphone.vivo.com
+vms.vivo.com
+opensource.vivo.com
+wifi.vivo.com
+ua.vivo.com
+map.vivo.com
+tech.vivo.com
+smtp.vivo.com
+webmail.vivo.com
+mail.vivo.com
+b.vivo.com
+www.ru.vivo.com
+identity.vivo.com
+imap.vivo.com
+ru.vivo.com
+cloud.vivo.com
+mshop.vivo.com
+carrier.vivo.com
+ro.vivo.com
+pc.vivo.com
+tr.vivo.com
+es.vivo.com
+zs.vivo.com
+bbs.vivo.com
+[[34mINF[0m] Finished resolving. Hack the Planet!
+/Library/Python/3.8/site-packages/celery/backends/amqp.py:65: CPendingDeprecationWarning: 
+    The AMQP result backend is scheduled for deprecation in     version 4.0 and removal in version v5.0.     Please use RPC backend or a persistent backend.
+
+  deprecated.warn(
+[2021-07-07 13:18:23,228: INFO/ForkPoolWorker-1] Task shuffledns.run[a3794851-14b2-4f16-8f15-1b58282a69f9] succeeded in 32.04433206799999s: {'tool': 'shuffledns', 'result': ['iot.vivo.com', 'developer.vivo.com', 'survey.vivo.com', 'bs.vivo.com', 'bss.vivo.com', 'shop.vivo.com', 'g.vivo.com', 'faq.vivo.com', 'security.vivo.com', 'sctrack.email.vivo.com', 'www.vivo.com', 'video.vivo.com', 'pl.vivo.com', 'pay1.vivo.com', 'www.shop.vivo.com', 'as.vivo.com', 'vs.vivo.com', 'homepage.vivo.com', 'pre.vivo.com', 'pop.vivo.com', 'mailtest.vivo.com', 'd.vivo.com', 'autodiscover.vivo.com', 'ss.vivo.com', 'ai.vivo.com', 'passport.vivo.com', 'pay.vivo.com', 'zhaopin.vivo.com', 'hr.vivo.com', 'push.vivo.com', 'pdm.vivo.com', 'findphone.vivo.com', 'vms.vivo.com', 'opensource.vivo.com', 'wifi.vivo.com', 'ua.vivo.com', 'map.vivo.com', 'tech.vivo.com', 'smtp.vivo.com', 'webmail.vivo.com', 'mail.vivo.com', 'b.vivo.com', 'www.ru.vivo.com', 'identity.vivo.com', 'imap.vivo.com', 'ru.vivo.com', 'cloud.vivo.com', 'mshop.vivo.com', 'carrier.vivo.com', 'ro.vivo.com', 'pc.vivo.com', 'tr.vivo.com', 'es.vivo.com', 'zs.vivo.com', 'bbs.vivo.com']}
+[2021-07-07 13:22:16,053: INFO/MainProcess] Received task: shuffledns.run[78d68dbb-5a85-4a79-8fbb-82a88da0f37a]  
+
+       __        ________        __       
+  ___ / /  __ __/ _/ _/ /__  ___/ /__ ___
+ (_-</ _ \/ // / _/ _/ / -_)/ _  / _ \(_-<
+/___/_//_/\_,_/_//_//_/\__/ \_,_/_//_/___/ v1								
+
+		projectdiscovery.io
+
+[[33mWRN[0m] Use with caution. You are responsible for your actions
+[[33mWRN[0m] Developers assume no liability and are not responsible for any misuse or damage.
+[[34mINF[0m] Started generating bruteforce permutation
+[[34mINF[0m] Generating permutations took 2.321659ms
+[[34mINF[0m] Creating temporary massdns output file: /var/folders/3y/3j88lyhx59vg42x7p4qxxp2r0000gn/T/shuffledns719887238/c3ijk26cie6tkusu0rkg
+[[34mINF[0m] Executing massdns on vivo.com
+[[34mINF[0m] Massdns execution took 21.870122381s
+[[34mINF[0m] Started parsing massdns output
+[[34mINF[0m] Massdns output parsing compeleted
+[[34mINF[0m] Started removing wildcards records
+[[34mINF[0m] Wildcard removal completed
+[[34mINF[0m] Finished enumeration, started writing output
+faq.vivo.com
+map.vivo.com
+pay.vivo.com
+pl.vivo.com
+video.vivo.com
+autodiscover.vivo.com
+sctrack.email.vivo.com
+wifi.vivo.com
+mail.vivo.com
+webmail.vivo.com
+identity.vivo.com
+iot.vivo.com
+vms.vivo.com
+ss.vivo.com
+tech.vivo.com
+www.ru.vivo.com
+www.vivo.com
+push.vivo.com
+ua.vivo.com
+pay1.vivo.com
+www.shop.vivo.com
+pc.vivo.com
+carrier.vivo.com
+zs.vivo.com
+es.vivo.com
+ro.vivo.com
+tr.vivo.com
+pre.vivo.com
+shop.vivo.com
+as.vivo.com
+vs.vivo.com
+pdm.vivo.com
+d.vivo.com
+developer.vivo.com
+homepage.vivo.com
+findphone.vivo.com
+g.vivo.com
+b.vivo.com
+cloud.vivo.com
+mshop.vivo.com
+smtp.vivo.com
+zhaopin.vivo.com
+hr.vivo.com
+mailtest.vivo.com
+bs.vivo.com
+bss.vivo.com
+pop.vivo.com
+imap.vivo.com
+opensource.vivo.com
+passport.vivo.com
+ru.vivo.com
+security.vivo.com
+survey.vivo.com
+bbs.vivo.com
+ai.vivo.com
+[[34mINF[0m] Finished resolving. Hack the Planet!
+[2021-07-07 13:22:49,077: INFO/ForkPoolWorker-1] Task shuffledns.run[78d68dbb-5a85-4a79-8fbb-82a88da0f37a] succeeded in 33.022262071s: {'tool': 'shuffledns', 'result': ['faq.vivo.com', 'map.vivo.com', 'pay.vivo.com', 'pl.vivo.com', 'video.vivo.com', 'autodiscover.vivo.com', 'sctrack.email.vivo.com', 'wifi.vivo.com', 'mail.vivo.com', 'webmail.vivo.com', 'identity.vivo.com', 'iot.vivo.com', 'vms.vivo.com', 'ss.vivo.com', 'tech.vivo.com', 'www.ru.vivo.com', 'www.vivo.com', 'push.vivo.com', 'ua.vivo.com', 'pay1.vivo.com', 'www.shop.vivo.com', 'pc.vivo.com', 'carrier.vivo.com', 'zs.vivo.com', 'es.vivo.com', 'ro.vivo.com', 'tr.vivo.com', 'pre.vivo.com', 'shop.vivo.com', 'as.vivo.com', 'vs.vivo.com', 'pdm.vivo.com', 'd.vivo.com', 'developer.vivo.com', 'homepage.vivo.com', 'findphone.vivo.com', 'g.vivo.com', 'b.vivo.com', 'cloud.vivo.com', 'mshop.vivo.com', 'smtp.vivo.com', 'zhaopin.vivo.com', 'hr.vivo.com', 'mailtest.vivo.com', 'bs.vivo.com', 'bss.vivo.com', 'pop.vivo.com', 'imap.vivo.com', 'opensource.vivo.com', 'passport.vivo.com', 'ru.vivo.com', 'security.vivo.com', 'survey.vivo.com', 'bbs.vivo.com', 'ai.vivo.com']}
+/Library/Python/3.8/site-packages/celery/backends/amqp.py:65: CPendingDeprecationWarning: 
+    The AMQP result backend is scheduled for deprecation in     version 4.0 and removal in version v5.0.     Please use RPC backend or a persistent backend.
+
+  deprecated.warn(
+[2021-07-07 13:45:39,624: INFO/MainProcess] Connected to amqp://hhsrc:**@127.0.0.1:5672/hhsrc_broker
+[2021-07-07 13:45:39,669: INFO/MainProcess] mingle: searching for neighbors
+[2021-07-07 13:45:40,769: INFO/MainProcess] mingle: all alone
+[2021-07-07 13:45:40,827: INFO/MainProcess] celery@shuffledns_1625636738.185874 ready.
+[2021-07-07 13:45:46,179: INFO/MainProcess] Events of group {task} enabled by remote.
+/Library/Python/3.8/site-packages/celery/backends/amqp.py:65: CPendingDeprecationWarning: 
+    The AMQP result backend is scheduled for deprecation in     version 4.0 and removal in version v5.0.     Please use RPC backend or a persistent backend.
+
+  deprecated.warn(
+[2021-07-07 14:49:56,553: INFO/MainProcess] Connected to amqp://hhsrc:**@127.0.0.1:5672/hhsrc_broker
+[2021-07-07 14:49:56,638: INFO/MainProcess] mingle: searching for neighbors
+[2021-07-07 14:49:57,841: INFO/MainProcess] mingle: all alone
+[2021-07-07 14:49:57,962: INFO/MainProcess] celery@shuffledns_1625640593.535748 ready.
+[2021-07-07 14:50:02,420: INFO/MainProcess] Events of group {task} enabled by remote.

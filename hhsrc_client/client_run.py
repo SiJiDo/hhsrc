@@ -26,23 +26,27 @@ def run():
     #启动naabu的celery
     if(cfg.get("WORKER_CONFIG", "port_naabu") == 'True'):
         os.chdir("{}/port_scan/naabu".format(FILEPATH))
-        os.system("nohup celery -A naabu worker -l info -Q naabu -n naabu_{} -c 1 &".format(time()))
+        os.system("nohup celery -A naabu worker -l info -Q naabu -n naabu_{} -c {} &".format(time(),cfg.get("WORKER_CONFIG", "port_naabu_count") ))
     #启动httpx的celery
     if(cfg.get("WORKER_CONFIG", "http_httpx") == 'True'):
         os.chdir("{}/url_scan/httpx".format(FILEPATH))
         os.system("nohup celery -A httpx worker -l info -Q httpx -n httpx_{} -c 1 &".format(time()))
-    #启动screenshot的celery
+    # #启动screenshot的celery
     if(cfg.get("WORKER_CONFIG", "http_screenshot") == 'True'):
         os.chdir("{}/url_scan/screenshot".format(FILEPATH))
         os.system("nohup celery -A screenshot worker -l info -Q screenshot -n screenshot_{} -c 1 &".format(time()))
+    #启动JSFinder的celery
+    if(cfg.get("WORKER_CONFIG", "dirb_jsfinder") == 'True'):
+        os.chdir("{}/dirb_scan/jsfinder".format(FILEPATH))
+        os.system("nohup celery -A jsfinder worker -l info -Q jsfinder -n jsfinder_{} -c 1 &".format(time()))
     #启动fileleak的celery
     if(cfg.get("WORKER_CONFIG", "dirb_fileleak") == 'True'):
         os.chdir("{}/dirb_scan/fileleak".format(FILEPATH))
-        os.system("nohup celery -A fileleak worker -l info -Q fileleak -n fileleak_{} -c 1 &".format(time()))
+        os.system("nohup celery -A fileleak worker -l info -Q fileleak -n fileleak_{} -c {} &".format(time(),cfg.get("WORKER_CONFIG", "dirb_fileleak_count")))
     #启动nuclei的celery
     if(cfg.get("WORKER_CONFIG", "dirb_nuclei") == 'True'):
         os.chdir("{}/dirb_scan/nuclei".format(FILEPATH))
-        os.system("nohup celery -A nuclei worker -l info -Q nuclei -n nuclei_{} -c 1 &".format(time()))
+        os.system("nohup celery -A nuclei worker -l info -Q nuclei -n nuclei_{} -c {} &".format(time(),cfg.get("WORKER_CONFIG", "dirb_nuclei_count")))
 
 if __name__ == '__main__':
     run()

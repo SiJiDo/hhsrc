@@ -20,8 +20,8 @@ if 'DEBUG' in os.environ and os.environ['DEBUG'] == 'False':
     DEBUG = "False"
 else:
     DEBUG = "True"
-    broker = 'redis://127.0.0.1:6379/0'
-    backend = 'redis://127.0.0.1:6379/2'
+    broker = 'amqp://hhsrc:hhsrc@127.0.0.1:5672/hhsrc_broker'
+    backend = 'amqp://hhsrc:hhsrc@127.0.0.1:5672/hhsrc_backend'
 
 app = Celery('hhsrc.nuclei', broker=broker, backend=backend, )
 app.config_from_object('config')
@@ -41,9 +41,9 @@ def run(target):
     if sb['status'] == 0:  
         # 执行命令 ./nuclei -target target -t "nuclei-templates" -o 1.txt
         if DEBUG == 'True':
-            command = ['./nuclei_mac', '-target', target, '-no-color', '-silent','-timeout','2', '-t', 'nuclei-templates', '-header', 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:87.0) Gecko/20100101 Firefox/87.0']
+            command = ['./nuclei_mac', '-target', target, '-no-color', '-silent', '-config', 'config.yaml']
         else:
-            command = ['./nuclei', '-target', target, '-no-color', '-silent','-timeout','2', '-t', 'nuclei-templates', '-header', 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:87.0) Gecko/20100101 Firefox/87.0']
+            command = ['./nuclei', '-target', target, '-no-color', '-silent', '-config', 'config.yaml']
         sb = SubProcessSrc(command, cwd=work_dir, stdout=subprocess.PIPE).run()
         if sb['status'] == 0:
             for r in sb['result']:
@@ -60,7 +60,7 @@ def run(target):
                     urlres = urlparse(url)
                     dic['target'] = urlres.scheme + "://" + urlres.netloc
                     dic['vuln_level'] = line.split('] ')[-2].split('[')[-1]
-                    dic['vuln_info'] = line.split('[')[1].split(']')[0]
+                    dic['vuln_info'] = line.split('[')[2].split(']')[0]
                     dic['vuln_path'] = line.split('] ')[-1].split('\n')[0]
                     result.append(dic)
                 except Exception as e:

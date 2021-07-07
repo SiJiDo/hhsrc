@@ -129,6 +129,7 @@ class http(DB.Model):
     http_screen = DB.Column(LONGTEXT)   # http 页面截图
     http_dirb_status = DB.Column(DB.Boolean, default=False) #是否扫描目录
     http_vuln_status = DB.Column(DB.Boolean, default=False) #是否扫描漏洞
+    http_see = DB.Column(DB.Boolean, default=False) #是否已读
     http_time = DB.Column(DB.String(128))   #修改时间
     http_target = DB.Column(DB.Integer) #隶属于的目标
 
@@ -141,7 +142,7 @@ class vuln(DB.Model):
     vuln_name = DB.Column(DB.String(128)) #漏洞名
     vuln_info = DB.Column(DB.String(128)) #漏洞信息
     vuln_level = DB.Column(DB.String(128)) #漏洞级别
-    vuln_path = DB.Column(DB.String(128)) #漏洞路径
+    vuln_path = DB.Column(LONGTEXT) #漏洞路径
     vuln_http = DB.Column(DB.String(128)) #隶属于的http
     vuln_target = DB.Column(DB.Integer) #隶属于的目标
     vuln_time = DB.Column(DB.String(128)) # 修改时间

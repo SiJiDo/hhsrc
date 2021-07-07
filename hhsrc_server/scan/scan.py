@@ -1,14 +1,12 @@
 from flask import Flask
 from celery import Celery
 from scan.libs import scan_subdomain, scan_domaininfo, scan_port, scan_url, scan_dirb, scan_vuln
-from app.models import Target,scanmethod,blacklist,subdomain,port, commonconfig
+from app.models import subdomain
 from scan import utils
-from scan import corn
+from scan.conn import dbconn
 import time
 import configparser
-from multiprocessing import Process
 from app import DB
-from sqlalchemy import create_engine
 import pymysql
 import os
 
@@ -18,13 +16,7 @@ cfg.read('config.ini')
 # 通用子域名扫描
 def run(target_id = '0'):
     #初始化数据库连接
-    DB_HOST = cfg.get("DATABASE", "DB_HOST")
-    DB_USER = cfg.get("DATABASE", "DB_USER")
-    DB_PASSWD = cfg.get("DATABASE", "DB_PASSWD")
-    DB_DATABASE = cfg.get("DATABASE", "DB_DATABASE")
-    conn = pymysql.connect(host=DB_HOST, port=3306, user=DB_USER, password=DB_PASSWD, db=DB_DATABASE, charset='utf8')
-    cursor = conn.cursor()
-
+    conn, cursor = dbconn()
     sql = "SELECT * FROM hhsrc_commonconfig"
     cursor.execute(sql)
     max_count = cursor.fetchone()[2]
@@ -33,7 +25,6 @@ def run(target_id = '0'):
     #并发扫描目标个数应小于设置的格式
     if(scan_count >= max_count):
         return
-    
     #开始扫描
     sql = "SELECT * FROM hhsrc_target where target_status = 0"
     wait_scan_query = cursor.execute(sql)
@@ -43,8 +34,7 @@ def run(target_id = '0'):
 
     while(wait_scan_query > 0):
         #重新连接
-        conn = pymysql.connect(host=DB_HOST, port=3306, user=DB_USER, password=DB_PASSWD, db=DB_DATABASE, charset='utf8')
-        cursor = conn.cursor()
+        conn, cursor = dbconn()
 
         sql = "SELECT * FROM hhsrc_target where target_status = 0 order by target_level desc"
         cursor.execute(sql)
@@ -86,12 +76,9 @@ def run(target_id = '0'):
             print(str(target_query[1]) + "扫描结束")
         except Exception as e:
             print(e)
-            os.system("redis-cli -a {} -n 2 ltrim transcode 0 196".format(cfg.get("DATABASE", "REDIS_PASSWORD")))
-            # os.system("rabbitmqctl stop_app &&  rabbitmqctl reset && rabbitmqctl rabbitmqctl start_app && rabbitmqctl add_user hhsrc {} && rabbitmqctl add_vhost hhsrc && rabbitmqctl set_user_tags hhsrc administrator && rabbitmqctl set_permissions -p hhsrc hhsrc \".*\" \".*\" \".*\"".format(cfg.get("DATABASE","RABBITMQ_PASSWORD")))
-
+            
         #再次连接
-        conn = pymysql.connect(host=DB_HOST, port=3306, user=DB_USER, password=DB_PASSWD, db=DB_DATABASE, charset='utf8')
-        cursor = conn.cursor()
+        conn, cursor = dbconn()
 
         sql='UPDATE hhsrc_target SET target_status = %s where id=%s'
         cursor.execute(sql,(2,target_query[0]))

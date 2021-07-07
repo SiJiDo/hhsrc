@@ -15,7 +15,6 @@ RUN apt-get install -y vim python3 python3-pip nmap redis erlang-nox rabbitmq-se
 RUN chmod +x /tmp/init.sh
 
 EXPOSE 5000
-EXPOSE 6379
 EXPOSE 5672
 EXPOSE 5555
 CMD ["/tmp/init.sh"]

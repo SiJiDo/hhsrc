@@ -1,7 +1,6 @@
 from celery.result import AsyncResult
 from celery import Celery
-from flask import Flask
-import time 
+from scan.conn import dbconn
 import configparser
 
 cfg = configparser.ConfigParser()
@@ -9,10 +8,15 @@ cfg.read('config.ini')
 
 #获取domaininfo信息
 def domaininfo(domain_target):
-    #不知道为什么在scan中调用会出错，这里直接把celery加进来防止出错
-    app = Flask(__name__)
-    task = Celery(app.name, broker=cfg.get("CELERY_CONFIG", "CELERY_BROKER_URL"), backend=cfg.get("CELERY_CONFIG", "CELERY_RESULT_BACKEND"))
-    task.conf.update(app.config)
+    conn,cursor = dbconn()
+    task = Celery(broker=cfg.get("CELERY_CONFIG", "CELERY_BROKER_URL"), backend=cfg.get("CELERY_CONFIG", "CELERY_RESULT_BACKEND"))
+    task.conf.update(
+        CELERY_TASK_SERIALIZER = 'json',
+        CELERY_RESULT_SERIALIZER = 'json',
+        CELERY_ACCEPT_CONTENT=['json'],
+        CELERY_TIMEZONE = 'Asia/Shanghai',
+        CELERY_ENABLE_UTC = False,
+    )
 
     #发送celery,进行3次容错判断
     flag = False

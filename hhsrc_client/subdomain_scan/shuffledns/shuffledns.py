@@ -15,8 +15,8 @@ if 'DEBUG' in os.environ and os.environ['DEBUG'] == 'False':
     DEBUG = "False"
 else:
     DEBUG = "True"
-    broker = 'redis://127.0.0.1:6379/0'
-    backend = 'redis://127.0.0.1:6379/2'
+    broker = 'amqp://hhsrc:hhsrc@127.0.0.1:5672/hhsrc_broker'
+    backend = 'amqp://hhsrc:hhsrc@127.0.0.1:5672/hhsrc_backend'
 
 app = Celery('hhsrc.massdns', broker=broker, backend=backend, )
 app.config_from_object('config')
