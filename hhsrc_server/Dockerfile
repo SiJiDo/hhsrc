@@ -8,7 +8,7 @@ ADD ./docker_config/db.sql /tmp/
 COPY . /app/
 
 RUN apt-get clean && apt-get update
-RUN apt-get install -y vim python3 python3-pip nmap redis erlang-nox rabbitmq-server mariadb-server language-pack-zh-hans fontconfig --fix-missing\
+RUN apt-get install -y vim python3 python3-pip nmap erlang-nox mariadb-server language-pack-zh-hans fontconfig --fix-missing\
     && cd /app \
     && pip3 install -i https://pypi.douban.com/simple/ -r requirements.txt
 

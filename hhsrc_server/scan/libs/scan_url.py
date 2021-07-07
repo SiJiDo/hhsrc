@@ -91,7 +91,7 @@ def run(target_id):
 
     #截图，注意数据太多会失败
     sql = "SELECT * FROM hhsrc_http WHERE http_target=%s AND http_screen=%s AND http_status!=%s AND http_status!=%s LIMIT 100"
-    screen_count = cursor.execute(sql,(target_id,'None','302','301'))
+    screen_count = cursor.execute(sql,(target_id,'No','302','301'))
     http_query_all = cursor.fetchall()
     while(screen_count > 0):
         http_list = []
@@ -107,7 +107,7 @@ def run(target_id):
                     print(e)
                 finally:
                     break
-        screen_count = cursor.execute(sql,(target_id,'None','302','301'))
+        screen_count = cursor.execute(sql,(target_id,'No','302','301'))
         http_query_all = cursor.fetchall()
     cursor.close()
     conn.close()
@@ -132,7 +132,7 @@ def save_result(subdomain_query, target_id, http_result, cursor, conn):
                 result['title'],
                 result['status-code'],
                 result['content-length'],
-                "None",
+                "No",
                 time.strftime('%Y-%m-%d  %H:%M:%S', time.localtime(time.time())), 
                 target_id,
                 False,
@@ -167,7 +167,7 @@ def save_result_port(port_query, target_id, http_result, cursor, conn):
                 result['title'],
                 result['status-code'],
                 result['content-length'],
-                "None",
+                "No",
                 time.strftime('%Y-%m-%d  %H:%M:%S', time.localtime(time.time())), 
                 target_id,
                 False,
@@ -188,6 +188,7 @@ def save_result_port(port_query, target_id, http_result, cursor, conn):
 def save_result_screenshot(http_result, cursor, conn):  
     for result in http_result:
         print("开始存储截图:" + result['http'])
+        print(result)
         try:
             sql='UPDATE hhsrc_http SET http_screen=%s WHERE http_name=%s'
             result = cursor.execute(sql,(result['screen_base64'],result['http'].split("://")[1])) 

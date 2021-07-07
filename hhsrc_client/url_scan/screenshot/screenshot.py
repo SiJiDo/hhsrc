@@ -24,13 +24,12 @@ else:
 app = Celery('hhsrc.screenshot', broker=broker, backend=backend, )
 app.config_from_object('config')
 
-result = []
-
 #使用多线程
 class screenshot(Thread):
-    def __init__(self, target_queue):
+    def __init__(self, target_queue, result):
         Thread.__init__(self)
         self.queue = target_queue
+        self.result = result
 
     def screen(self, target):
         if(DEBUG == 'True'):
@@ -73,6 +72,7 @@ class screenshot(Thread):
 
     def run(self):
         queue = self.queue
+        result = self.result
         while not queue.empty():
             try:
                 info = {}
@@ -88,6 +88,7 @@ class screenshot(Thread):
 
 @app.task
 def run(target_list):
+    result = []
     thread_count = 5
     target_queue = queue.Queue()
     for target in target_list:
@@ -96,7 +97,7 @@ def run(target_list):
     # 使用多线程
     threads = []
     for i in range(0, thread_count):
-        thread = screenshot(target_queue)
+        thread = screenshot(target_queue, result)
         thread.start()
         threads.append(thread)
 
