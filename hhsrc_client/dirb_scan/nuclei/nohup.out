@@ -222,3 +222,29 @@ Already up to date.
 [2021-07-07 15:04:20,646: INFO/ForkPoolWorker-2] Task nuclei.run[a84e771e-1c39-44a2-918d-12122049a96b] succeeded in 36.03899058100001s: {'tool': 'nuclei', 'result': []}
 [2021-07-07 15:04:20,656: INFO/MainProcess] Received task: nuclei.run[fcdec1b5-6653-4dd0-9ac5-8af260241bef]  
 [2021-07-07 15:04:20,657: WARNING/ForkPoolWorker-2] -------------------调用nuclei组件:http://zs.vivo.com:8089--------------------
+[2021-07-07 15:06:20,673: INFO/MainProcess] Terminating fcdec1b5-6653-4dd0-9ac5-8af260241bef (Signals.SIGTERM)
+[2021-07-07 15:06:20,692: INFO/MainProcess] Received task: nuclei.run[a7839f49-e210-4445-9381-38871709455e]  
+/Library/Python/3.8/site-packages/celery/backends/amqp.py:65: CPendingDeprecationWarning: 
+    The AMQP result backend is scheduled for deprecation in     version 4.0 and removal in version v5.0.     Please use RPC backend or a persistent backend.
+
+  deprecated.warn(
+[2021-07-07 15:06:20,697: WARNING/ForkPoolWorker-1] -------------------调用nuclei组件:http://survey.vivo.com:9080--------------------
+[2021-07-07 15:06:20,710: INFO/ForkPoolWorker-2] Task nuclei.run[fcdec1b5-6653-4dd0-9ac5-8af260241bef] succeeded in 120.04990482100004s: {'tool': 'nuclei', 'result': []}
+fatal: unable to access 'https://github.com/projectdiscovery/nuclei-templates.git/': Error in the HTTP2 framing layer
+Already up to date.
+[2021-07-07 15:08:20,686: INFO/MainProcess] Terminating a7839f49-e210-4445-9381-38871709455e (Signals.SIGTERM)
+[2021-07-07 15:08:20,697: INFO/MainProcess] Received task: nuclei.run[5422f897-2c80-4c6f-9a4e-fa50d1760a77]  
+[2021-07-07 15:08:20,780: INFO/ForkPoolWorker-1] Task nuclei.run[a7839f49-e210-4445-9381-38871709455e] succeeded in 120.08006384400005s: {'tool': 'nuclei', 'result': []}
+[2021-07-07 15:08:20,782: WARNING/ForkPoolWorker-2] -------------------调用nuclei组件:http://survey.vivo.com:8089--------------------
+[2021-07-07 15:10:20,696: INFO/MainProcess] Terminating 5422f897-2c80-4c6f-9a4e-fa50d1760a77 (Signals.SIGTERM)
+[2021-07-07 15:10:20,836: INFO/ForkPoolWorker-2] Task nuclei.run[5422f897-2c80-4c6f-9a4e-fa50d1760a77] succeeded in 120.05022191099988s: {'tool': 'nuclei', 'result': []}
+fatal: unable to access 'https://github.com/projectdiscovery/nuclei-templates.git/': LibreSSL SSL_connect: SSL_ERROR_SYSCALL in connection to github.com:443 
+/Library/Python/3.8/site-packages/celery/backends/amqp.py:65: CPendingDeprecationWarning: 
+    The AMQP result backend is scheduled for deprecation in     version 4.0 and removal in version v5.0.     Please use RPC backend or a persistent backend.
+
+  deprecated.warn(
+[2021-07-07 18:54:35,370: INFO/MainProcess] Connected to amqp://hhsrc:**@127.0.0.1:5672/hhsrc_broker
+[2021-07-07 18:54:35,401: INFO/MainProcess] mingle: searching for neighbors
+[2021-07-07 18:54:36,455: INFO/MainProcess] mingle: all alone
+[2021-07-07 18:54:36,499: INFO/MainProcess] celery@nuclei_1625655273.573596 ready.
+[2021-07-07 18:54:47,412: INFO/MainProcess] Events of group {task} enabled by remote.

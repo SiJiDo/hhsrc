@@ -107,3 +107,12 @@ worker: Cold shutdown (MainProcess)
 [2021-07-07 14:49:57,826: INFO/MainProcess] mingle: all alone
 [2021-07-07 14:49:57,951: INFO/MainProcess] celery@domaininfo_1625640593.540131 ready.
 [2021-07-07 14:50:02,420: INFO/MainProcess] Events of group {task} enabled by remote.
+/Library/Python/3.8/site-packages/celery/backends/amqp.py:65: CPendingDeprecationWarning: 
+    The AMQP result backend is scheduled for deprecation in     version 4.0 and removal in version v5.0.     Please use RPC backend or a persistent backend.
+
+  deprecated.warn(
+[2021-07-07 18:54:35,338: INFO/MainProcess] Connected to amqp://hhsrc:**@127.0.0.1:5672/hhsrc_broker
+[2021-07-07 18:54:35,367: INFO/MainProcess] mingle: searching for neighbors
+[2021-07-07 18:54:36,427: INFO/MainProcess] mingle: all alone
+[2021-07-07 18:54:36,484: INFO/MainProcess] celery@domaininfo_1625655273.514633 ready.
+[2021-07-07 18:54:47,413: INFO/MainProcess] Events of group {task} enabled by remote.

@@ -119,22 +119,28 @@ def save_result(subdomain_query, target_id, http_result, cursor, conn):
         #title黑名单过滤
         if(utils.black_list_title_query(target_id, result['title'], cursor, conn)):
             continue
+        if('\'' in result['title']):
+            result['title'] = result['title'].replace("\'","\\\'")
         #入库
         print("开始subdomain的http入库:" + result['url'])
-        sql = "REPLACE INTO hhsrc_http (http_schema,http_name,http_title,http_status, http_length, http_screen, http_time, http_target, http_dirb_status, http_vuln_status ) VALUES('{}', '{}', '{}', '{}', '{}', '{}', '{}', '{}', {}, {});".format(
-            result['url'].split("://")[0],
-            result['url'].split("://")[1],
-            result['title'],
-            result['status-code'],
-            result['content-length'],
-            "None",
-            time.strftime('%Y-%m-%d  %H:%M:%S', time.localtime(time.time())), 
-            target_id,
-            False,
-            False,
-        )
-        cursor.execute(sql)
-        conn.commit()
+        sql = "SELECT * FROM hhsrc_http WHERE http_name=%s"
+        count_result = cursor.execute(sql,(result['url'].split("://")[1],))
+        if(count_result == 0):
+            sql = "REPLACE INTO hhsrc_http (http_schema,http_name,http_title,http_status, http_length, http_screen, http_time, http_target, http_dirb_status, http_vuln_status, http_see ) VALUES('{}', '{}', '{}', '{}', '{}', '{}', '{}', '{}', {}, {},{});".format(
+                result['url'].split("://")[0],
+                result['url'].split("://")[1],
+                result['title'],
+                result['status-code'],
+                result['content-length'],
+                "None",
+                time.strftime('%Y-%m-%d  %H:%M:%S', time.localtime(time.time())), 
+                target_id,
+                False,
+                False,
+                False,
+            )
+            cursor.execute(sql)
+            conn.commit()
     #标记该子域已扫描 
     for subdomain_info in subdomain_query:
         sql='UPDATE hhsrc_subdomain SET subdomain_http_status=%s WHERE id=%s'
@@ -148,20 +154,28 @@ def save_result_port(port_query, target_id, http_result, cursor, conn):
         #title黑名单过滤
         if(utils.black_list_title_query(target_id, result['title'], cursor, conn)):
             continue
+        if('\'' in result['title']):
+            result['title'] = result['title'].replace("\'","\\\'")
         #入库
         print("开始port的http入库:" + result['url'])
-        sql = "REPLACE INTO hhsrc_http (http_schema,http_name,http_title,http_status, http_length, http_screen, http_time, http_target) VALUES('{}', '{}', '{}', '{}', '{}', '{}', '{}', '{}');".format(
-            result['url'].split("://")[0],
-            result['url'].split("://")[1],
-            result['title'],
-            result['status-code'],
-            result['content-length'],
-            "None",
-            time.strftime('%Y-%m-%d  %H:%M:%S', time.localtime(time.time())), 
-            target_id,
-        )
-        cursor.execute(sql)
-        conn.commit()  
+        sql = "SELECT * FROM hhsrc_http WHERE http_name=%s"
+        count_result = cursor.execute(sql,(result['url'].split("://")[1],))
+        if(count_result == 0):
+            sql = "REPLACE INTO hhsrc_http (http_schema,http_name,http_title,http_status, http_length, http_screen, http_time, http_target, http_dirb_status, http_vuln_status, http_see) VALUES('{}', '{}', '{}', '{}', '{}', '{}', '{}', '{}',{},{},{});".format(
+                result['url'].split("://")[0],
+                result['url'].split("://")[1],
+                result['title'],
+                result['status-code'],
+                result['content-length'],
+                "None",
+                time.strftime('%Y-%m-%d  %H:%M:%S', time.localtime(time.time())), 
+                target_id,
+                False,
+                False,
+                False,
+            )
+            cursor.execute(sql)
+            conn.commit()  
 
     #标记该端口已扫描 
     for port_info in port_query:

@@ -37,13 +37,14 @@
             <tr>
                 <th>项目</th>
                 <th>url</th>
-                <th>标题</th>
-                <th>响应码</th>
-                <th>响应长度</th>
+                <th>title</th>
+                <th>status</th>
+                <th>length</th>
                 <th>截图</th>
-                <th>目录扫描数</th>
-                <th>漏洞扫描数</th>
+                <th>dir</th>
+                <th>vuln</th>
                 <th>更新时间</th>
+                <th>view</th>>
             </tr>
             {% for row in form.content %}
             <tr>
@@ -56,6 +57,11 @@
                 <td>{{row.dirb_count}}</td>
                 <td>{{row.vuln_count}}</td>
                 <td>{{row.http_time}}</td>
+                {% if row.http_see == False %}
+                <td><form method="post"><input type="hidden" name="view" value="0" /><input type="hidden" name="id" value={{row.id}} />{{form.form.submit(class_="btn btn-primary btn-sm")}}</form></td>
+                {% else %}
+                <td><form method="post"><input type="hidden" name="view" value="1" /><input type="hidden" name="id" value={{row.id}} />{{form.form.unsubmit(class_="btn btn-success btn-sm")}}</form></td>
+                {% endif %}
             </tr>
             {% endfor %}
         </table>
@@ -78,7 +84,7 @@
                         {% endif %}
                     {% endfor %}
                 {% else %}
-                    {% for i in range(1, form.total_page) %}
+                    {% for i in range(1, form.total_page + 1) %}
                     {% if i == form.page %}
                     <li><a href="?page={{i}}&search={{form.search}}"><b>{{i}}</b></a></li>
                     {% else %}
@@ -133,6 +139,20 @@
 
 {% block scripts %}
 <script>
-
+    function initPage() {
+        switch_value = $('#http_see')[0]
+        $('#http_see').bootstrapSwitch("size","small",{
+            state: switch_value,
+            onText: 'yes',
+            offText: 'no',
+        });
+    }
+    function HttpView(){
+        alert(123)
+        
+    }
+    function HttpUnView(){
+        alert(456)
+    }
 </script>
 {% endblock %}

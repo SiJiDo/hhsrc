@@ -4373,3 +4373,12 @@ Developers assume no liability and are not responsible for any misuse or damage.
 [2021-07-07 14:49:57,850: INFO/MainProcess] mingle: all alone
 [2021-07-07 14:49:57,985: INFO/MainProcess] celery@jsfinder_1625640593.566784 ready.
 [2021-07-07 14:50:02,419: INFO/MainProcess] Events of group {task} enabled by remote.
+/Library/Python/3.8/site-packages/celery/backends/amqp.py:65: CPendingDeprecationWarning: 
+    The AMQP result backend is scheduled for deprecation in     version 4.0 and removal in version v5.0.     Please use RPC backend or a persistent backend.
+
+  deprecated.warn(
+[2021-07-07 18:54:35,243: INFO/MainProcess] Connected to amqp://hhsrc:**@127.0.0.1:5672/hhsrc_broker
+[2021-07-07 18:54:35,289: INFO/MainProcess] mingle: searching for neighbors
+[2021-07-07 18:54:36,388: INFO/MainProcess] mingle: all alone
+[2021-07-07 18:54:36,443: INFO/MainProcess] celery@jsfinder_1625655273.5408971 ready.
+[2021-07-07 18:54:47,412: INFO/MainProcess] Events of group {task} enabled by remote.

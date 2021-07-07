@@ -203,3 +203,12 @@ ai.vivo.com
 [2021-07-07 14:49:57,841: INFO/MainProcess] mingle: all alone
 [2021-07-07 14:49:57,962: INFO/MainProcess] celery@shuffledns_1625640593.535748 ready.
 [2021-07-07 14:50:02,420: INFO/MainProcess] Events of group {task} enabled by remote.
+/Library/Python/3.8/site-packages/celery/backends/amqp.py:65: CPendingDeprecationWarning: 
+    The AMQP result backend is scheduled for deprecation in     version 4.0 and removal in version v5.0.     Please use RPC backend or a persistent backend.
+
+  deprecated.warn(
+[2021-07-07 18:54:35,220: INFO/MainProcess] Connected to amqp://hhsrc:**@127.0.0.1:5672/hhsrc_broker
+[2021-07-07 18:54:35,268: INFO/MainProcess] mingle: searching for neighbors
+[2021-07-07 18:54:36,358: INFO/MainProcess] mingle: all alone
+[2021-07-07 18:54:36,408: INFO/MainProcess] celery@shuffledns_1625655273.510924 ready.
+[2021-07-07 18:54:47,412: INFO/MainProcess] Events of group {task} enabled by remote.

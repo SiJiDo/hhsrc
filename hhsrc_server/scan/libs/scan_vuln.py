@@ -50,7 +50,7 @@ def run(target_id):
                     except Exception as e:
                         print(e)
                     scan_queue.remove(vuln)
-                if(nowtime > starttime + 120):
+                if(nowtime > starttime + 300):
                     set_scan(target, cursor, conn)
                     task.control.revoke(vuln_scan.id, terminate=True)
                     print(target[2] + "目标超时")

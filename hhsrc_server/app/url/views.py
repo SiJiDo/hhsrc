@@ -4,11 +4,22 @@ from flask_login import login_required, current_user
 from app import utils
 
 from app.models import Target,http, dirb, subdomain, vuln
+from app.url.forms import HttpForm
 from app import DB
 from . import url
 
 # 通用列表查询
-def url_list(DynamicModel, view):
+def url_list(DynamicModel,form, view):
+    #确定是否已浏览
+    if request.method == 'POST':
+        model = DynamicModel.query.filter(DynamicModel.id == request.form['id'],).first()
+        if(request.form['view'] == "0"):
+            model.http_see = True
+            DB.session.commit()
+        else:
+            model.http_see = False
+            DB.session.commit()
+    
     # 接收参数
     action = request.args.get('action')
     id = request.args.get('id')
@@ -46,6 +57,7 @@ def url_list(DynamicModel, view):
                     DynamicModel.http_length,
                     DynamicModel.http_screen,
                     DynamicModel.http_time,
+                    DynamicModel.http_see,
                     Target.target_name,
                 ).join(
                     Target,
@@ -57,7 +69,7 @@ def url_list(DynamicModel, view):
                     DynamicModel.http_status.like("%{}%".format(http_status)),
                     DynamicModel.http_time <= end_time, 
                     DynamicModel.http_time >= start_time,
-                ).order_by(DynamicModel.http_time.desc()).order_by(DynamicModel.id.desc()).paginate(page, length)
+                ).order_by(DynamicModel.http_see).order_by(DynamicModel.http_time.desc()).order_by(DynamicModel.id.desc()).paginate(page, length)
         search = search.replace("&&", "%26%26")
         total_count = DynamicModel.query.join(
             Target,
@@ -81,11 +93,12 @@ def url_list(DynamicModel, view):
             DynamicModel.http_length,
             DynamicModel.http_screen,
             DynamicModel.http_time,
+            DynamicModel.http_see,
             Target.target_name,
             ).join(
                 Target,
                 Target.id == DynamicModel.http_target
-            ).order_by(DynamicModel.http_time.desc()).order_by(DynamicModel.id.desc()).paginate(page, length)
+            ).order_by(DynamicModel.http_see).order_by(DynamicModel.http_time.desc()).order_by(DynamicModel.id.desc()).paginate(page, length)
         total_count = DynamicModel.query.count()
 
     content = []
@@ -96,8 +109,11 @@ def url_list(DynamicModel, view):
         i['dirb_count'] = dirb.query.filter(dirb.dir_http == str(i['id'])).count()
         i['vuln_count'] = vuln.query.filter(vuln.vuln_http == str(i['id'])).count()
 
+    
+
     dict = {'content': content, 'total_count': total_count,
-            'total_page': math.ceil(total_count / length), 'page': page, 'length': length, 'id': id,'search': search}
+            'total_page': math.ceil(total_count / length), 'page': page, 'length': length, 'id': id,'search': search,
+            'form':form}
     return render_template(view, form=dict, current_user=current_user)
 
 
@@ -185,4 +201,4 @@ def urlinfo():
 @url.route('/url', methods=['GET', 'POST'])
 @login_required
 def url():
-    return url_list(http, 'result/url.html')
+    return url_list(http,HttpForm(), 'result/url.html')

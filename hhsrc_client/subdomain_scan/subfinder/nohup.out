@@ -219,3 +219,362 @@ By using subfinder, you also agree to the terms of the APIs used.
 [2021-07-07 14:49:57,839: INFO/MainProcess] mingle: all alone
 [2021-07-07 14:49:57,972: INFO/MainProcess] celery@subfinder_1625640593.528352 ready.
 [2021-07-07 14:50:02,418: INFO/MainProcess] Events of group {task} enabled by remote.
+/Library/Python/3.8/site-packages/celery/backends/amqp.py:65: CPendingDeprecationWarning: 
+    The AMQP result backend is scheduled for deprecation in     version 4.0 and removal in version v5.0.     Please use RPC backend or a persistent backend.
+
+  deprecated.warn(
+[2021-07-07 18:54:35,116: INFO/MainProcess] Connected to amqp://hhsrc:**@127.0.0.1:5672/hhsrc_broker
+[2021-07-07 18:54:35,187: INFO/MainProcess] mingle: searching for neighbors
+[2021-07-07 18:54:36,292: INFO/MainProcess] mingle: all alone
+[2021-07-07 18:54:36,330: INFO/MainProcess] celery@subfinder_1625655273.503393 ready.
+[2021-07-07 18:54:47,412: INFO/MainProcess] Events of group {task} enabled by remote.
+[2021-07-07 19:46:09,708: INFO/MainProcess] Received task: subfinder.run[83a71d19-84a8-433a-8270-555b9d54e5b1]  
+[2021-07-07 19:46:09,711: INFO/MainProcess] Received task: subfinder.run[b4f903e5-0999-4014-bfc8-8b48384902d2]  
+
+        _     __ _         _
+____  _| |__ / _(_)_ _  __| |___ _ _
+(_-< || | '_ \  _| | ' \/ _  / -_) '_|
+/__/\_,_|_.__/_| |_|_||_\__,_\___|_| v2.4.7
+
+		projectdiscovery.io
+
+Use with caution. You are responsible for your actions
+Developers assume no liability and are not responsible for any misuse or damage.
+By using subfinder, you also agree to the terms of the APIs used.
+
+[[34mINF[0m] Enumerating subdomains for vivo.com
+{"host":"passport.vivo.com","source":"alienvault"}
+{"host":"16.vivo.com","source":"securitytrails"}
+{"host":"113.vivo.com","source":"securitytrails"}
+{"host":"ip2.vivo.com","source":"securitytrails"}
+{"host":"tr.vivo.com","source":"securitytrails"}
+{"host":"mta4.vivo.com","source":"securitytrails"}
+{"host":"ws1.vivo.com","source":"securitytrails"}
+{"host":"sdp.vivo.com","source":"alienvault"}
+{"host":"224.vivo.com","source":"securitytrails"}
+{"host":"auth.vivo.com","source":"securitytrails"}
+{"host":"jp.vivo.com","source":"securitytrails"}
+{"host":"mysql.vivo.com","source":"securitytrails"}
+{"host":"kernelapi.vivo.com","source":"securitytrails"}
+{"host":"docs.vivo.com","source":"securitytrails"}
+{"host":"tech.vivo.com","source":"certspotter"}
+{"host":"lib.vivo.com","source":"securitytrails"}
+{"host":"152.vivo.com","source":"securitytrails"}
+{"host":"phoenix.vivo.com","source":"securitytrails"}
+{"host":"careers.vivo.com","source":"securitytrails"}
+{"host":"ag.vivo.com","source":"securitytrails"}
+{"host":"zs.vivo.com","source":"dnsdumpster"}
+{"host":"75.vivo.com","source":"securitytrails"}
+{"host":"he.vivo.com","source":"securitytrails"}
+{"host":"232.vivo.com","source":"securitytrails"}
+{"host":"host20.vivo.com","source":"securitytrails"}
+{"host":"visionplus.vivo.com","source":"dnsdumpster"}
+{"host":"asia-exstatic.vivo.com","source":"alienvault"}
+{"host":"afgateway.vivo.com","source":"alienvault"}
+{"host":"affiliates.vivo.com","source":"securitytrails"}
+{"host":"sg-exstpay.vivo.com","source":"alienvault"}
+{"host":"248.vivo.com","source":"securitytrails"}
+{"host":"ns4.vivo.com","source":"securitytrails"}
+{"host":"151.vivo.com","source":"securitytrails"}
+{"host":"img.vivo.com","source":"securitytrails"}
+{"host":"www.portal.vivo.com","source":"alienvault"}
+{"host":"asia-ali-cname-www.vivo.com","source":"alienvault"}
+{"host":"w.vivo.com","source":"securitytrails"}
+{"host":"135.vivo.com","source":"securitytrails"}
+{"host":"46.vivo.com","source":"securitytrails"}
+{"host":"mx.vivo.com","source":"securitytrails"}
+{"host":"apollo.vivo.com","source":"securitytrails"}
+{"host":"db2.vivo.com","source":"securitytrails"}
+{"host":"slb-exvivoportal-web.vivo.com","source":"alienvault"}
+{"host":"internetgratis.vivo.com","source":"alienvault"}
+{"host":"host9.vivo.com","source":"securitytrails"}
+{"host":"188.vivo.com","source":"securitytrails"}
+{"host":"pluto.vivo.com","source":"securitytrails"}
+{"host":"197.vivo.com","source":"securitytrails"}
+{"host":"cacti.vivo.com","source":"securitytrails"}
+{"host":"82.vivo.com","source":"securitytrails"}
+{"host":"c1.vivo.com","source":"securitytrails"}
+{"host":"18.vivo.com","source":"securitytrails"}
+{"host":"static.vivo.com","source":"securitytrails"}
+{"host":"230.vivo.com","source":"securitytrails"}
+{"host":"ru-exstpay.vivo.com","source":"alienvault"}
+{"host":"193.vivo.com","source":"securitytrails"}
+{"host":"help.vivo.com","source":"securitytrails"}
+{"host":"sports.vivo.com","source":"securitytrails"}
+{"host":"163.vivo.com","source":"securitytrails"}
+{"host":"in-ali-cname-www.vivo.com","source":"alienvault"}
+{"host":"julioprueba.vivo.com","source":"securitytrails"}
+{"host":"cdn2.vivo.com","source":"securitytrails"}
+{"host":"host5.vivo.com","source":"securitytrails"}
+{"host":"mailgw.vivo.com","source":"securitytrails"}
+{"host":"expweb.vivo.com","source":"securitytrails"}
+{"host":"staging.vivo.com","source":"securitytrails"}
+{"host":"www.ru.vivo.com","source":"crtsh"}
+{"host":"mail10.vivo.com","source":"securitytrails"}
+{"host":"web.vivo.com","source":"securitytrails"}
+{"host":"hi.vivo.com","source":"securitytrails"}
+{"host":"204.vivo.com","source":"securitytrails"}
+{"host":"as.vivo.com","source":"dnsdumpster"}
+{"host":"137.vivo.com","source":"securitytrails"}
+{"host":"marketing.vivo.com","source":"securitytrails"}
+{"host":"62.vivo.com","source":"securitytrails"}
+{"host":"mta1.vivo.com","source":"securitytrails"}
+{"host":"ab.vivo.com","source":"securitytrails"}
+{"host":"www.pelis.vivo.com","source":"alienvault"}
+{"host":"hermes.vivo.com","source":"securitytrails"}
+{"host":"galleries.vivo.com","source":"securitytrails"}
+{"host":"k.vivo.com","source":"securitytrails"}
+{"host":"zabbix.vivo.com","source":"securitytrails"}
+{"host":"webcloud.vivo.com","source":"alienvault"}
+{"host":"da.vivo.com","source":"securitytrails"}
+{"host":"rdp.vivo.com","source":"securitytrails"}
+{"host":"adm.vivo.com","source":"securitytrails"}
+{"host":"faq.vivo.com","source":"alienvault"}
+{"host":"testing.vivo.com","source":"securitytrails"}
+{"host":"e3.vivo.com","source":"securitytrails"}
+{"host":"cloud.vivo.com","source":"alienvault"}
+{"host":"zap.vivo.com","source":"alienvault"}
+{"host":"cas.vivo.com","source":"securitytrails"}
+{"host":"180.vivo.com","source":"securitytrails"}
+{"host":"homepagestatic.vivo.com","source":"alienvault"}
+{"host":"141.vivo.com","source":"securitytrails"}
+{"host":"bb.vivo.com","source":"securitytrails"}
+{"host":"vps2.vivo.com","source":"securitytrails"}
+{"host":"106.vivo.com","source":"securitytrails"}
+{"host":"159.vivo.com","source":"securitytrails"}
+{"host":"in-exstatic-vivofs.vivo.com","source":"alienvault"}
+{"host":"portal.vivo.com","source":"alienvault"}
+{"host":"mta2.vivo.com","source":"securitytrails"}
+{"host":"186.vivo.com","source":"securitytrails"}
+{"host":"web2.vivo.com","source":"securitytrails"}
+{"host":"err.up.vivo.com","source":"alienvault"}
+{"host":"aws.vivo.com","source":"securitytrails"}
+{"host":"ds.vivo.com","source":"securitytrails"}
+{"host":"cf.vivo.com","source":"securitytrails"}
+{"host":"file.vivo.com","source":"securitytrails"}
+{"host":"sql.vivo.com","source":"securitytrails"}
+{"host":"lms.vivo.com","source":"securitytrails"}
+{"host":"174.vivo.com","source":"securitytrails"}
+{"host":"sd.vivo.com","source":"securitytrails"}
+{"host":"mx6.vivo.com","source":"securitytrails"}
+{"host":"lync.vivo.com","source":"securitytrails"}
+{"host":"uk.vivo.com","source":"securitytrails"}
+{"host":"findphone.vivo.com","source":"dnsdumpster"}
+{"host":"zhaopin.vivo.com","source":"dnsdumpster"}
+{"host":"360.vivo.com","source":"alienvault"}
+{"host":"training.vivo.com","source":"securitytrails"}
+{"host":"126.vivo.com","source":"securitytrails"}
+{"host":"assets.vivo.com","source":"securitytrails"}
+{"host":"news-abroad.vivo.com","source":"alienvault"}
+{"host":"go.vivo.com","source":"alienvault"}
+{"host":"195.vivo.com","source":"securitytrails"}
+{"host":"mx5.vivo.com","source":"securitytrails"}
+{"host":"ac.vivo.com","source":"securitytrails"}
+{"host":"mail01.vivo.com","source":"securitytrails"}
+{"host":"120.vivo.com","source":"securitytrails"}
+{"host":"168.vivo.com","source":"securitytrails"}
+{"host":"bs.vivo.com","source":"alienvault"}
+{"host":"v2.vivo.com","source":"securitytrails"}
+{"host":"31.vivo.com","source":"securitytrails"}
+{"host":"qwqee.vivo.com","source":"securitytrails"}
+{"host":"erp.vivo.com","source":"securitytrails"}
+{"host":"83.vivo.com","source":"securitytrails"}
+{"host":"ldap.vivo.com","source":"securitytrails"}
+{"host":"tv.vivo.com","source":"securitytrails"}
+{"host":"ru.vivo.com","source":"certspotter"}
+{"host":"www2.vivo.com","source":"sublist3r"}
+{"host":"mms.vivo.com","source":"alienvault"}
+{"host":"ftp2.vivo.com","source":"securitytrails"}
+{"host":"qwrer.vivo.com","source":"securitytrails"}
+{"host":"22.vivo.com","source":"securitytrails"}
+{"host":"zhushou.vivo.com","source":"alienvault"}
+{"host":"daleto.vivo.com","source":"alienvault"}
+{"host":"sbs.vivo.com","source":"securitytrails"}
+{"host":"sn.vivo.com","source":"securitytrails"}
+{"host":"ir.vivo.com","source":"securitytrails"}
+{"host":"251.vivo.com","source":"securitytrails"}
+{"host":"37.vivo.com","source":"securitytrails"}
+{"host":"webconf.vivo.com","source":"securitytrails"}
+{"host":"securemail.vivo.com","source":"securitytrails"}
+{"host":"243.vivo.com","source":"securitytrails"}
+{"host":"host2.vivo.com","source":"securitytrails"}
+{"host":"id-expweb.vivo.com","source":"securitytrails"}
+{"host":"ttyulecheng.vivo.com","source":"securitytrails"}
+{"host":"99.vivo.com","source":"securitytrails"}
+{"host":"231.vivo.com","source":"securitytrails"}
+{"host":"www.vivo.com","source":"riddler"}
+{"host":"issue.dev.vivo.com","source":"dnsdumpster"}
+{"host":"portalrecarga.vivo.com","source":"alienvault"}
+{"host":"helpdesk.vivo.com","source":"securitytrails"}
+{"host":"storage.vivo.com","source":"securitytrails"}
+{"host":"ns5.vivo.com","source":"securitytrails"}
+{"host":"236.vivo.com","source":"securitytrails"}
+{"host":"vn.vivo.com","source":"dnsdumpster"}
+{"host":"portaldeinformacoes.vivo.com","source":"alienvault"}
+{"host":"host17.vivo.com","source":"securitytrails"}
+{"host":"manage.vivo.com","source":"securitytrails"}
+{"host":"mailhost.vivo.com","source":"securitytrails"}
+{"host":"svn.vivo.com","source":"securitytrails"}
+{"host":"doc.vivo.com","source":"securitytrails"}
+{"host":"244.vivo.com","source":"securitytrails"}
+{"host":"host13.vivo.com","source":"securitytrails"}
+{"host":"176.vivo.com","source":"securitytrails"}
+{"host":"252.vivo.com","source":"securitytrails"}
+{"host":"88.vivo.com","source":"securitytrails"}
+{"host":"lb.vivo.com","source":"securitytrails"}
+{"host":"242.vivo.com","source":"securitytrails"}
+{"host":"asia-exstatic-vivofs.vivo.com","source":"alienvault"}
+{"host":"survey.vivo.com","source":"securitytrails"}
+{"host":"vivo.com","source":"certspotter"}
+{"host":"35.vivo.com","source":"securitytrails"}
+{"host":"254.vivo.com","source":"securitytrails"}
+{"host":"mx4.vivo.com","source":"securitytrails"}
+{"host":"235.vivo.com","source":"securitytrails"}
+{"host":"vps1.vivo.com","source":"securitytrails"}
+{"host":"portfolio.vivo.com","source":"securitytrails"}
+{"host":"36.vivo.com","source":"securitytrails"}
+{"host":"net.vivo.com","source":"securitytrails"}
+{"host":"139.vivo.com","source":"securitytrails"}
+{"host":"ns6.vivo.com","source":"securitytrails"}
+{"host":"lyncdiscover.vivo.com","source":"securitytrails"}
+{"host":"asia-news-abroad.vivo.com","source":"alienvault"}
+{"host":"vivo360.vivo.com","source":"alienvault"}
+{"host":"smtp2.vivo.com","source":"securitytrails"}
+{"host":"public.vivo.com","source":"securitytrails"}
+{"host":"tgrrre.vivo.com","source":"securitytrails"}
+{"host":"about.vivo.com","source":"securitytrails"}
+{"host":"sa.vivo.com","source":"securitytrails"}
+{"host":"domaincfg.vivo.com","source":"dnsdumpster"}
+{"host":"mx3.vivo.com","source":"securitytrails"}
+{"host":"contact.vivo.com","source":"securitytrails"}
+{"host":"102.vivo.com","source":"securitytrails"}
+{"host":"test1.vivo.com","source":"securitytrails"}
+{"host":"es.vivo.com","source":"alienvault"}
+{"host":"3g.vivo.com","source":"securitytrails"}
+{"host":"fw1.vivo.com","source":"securitytrails"}
+{"host":"87.vivo.com","source":"securitytrails"}
+{"host":"stat.vivo.com","source":"securitytrails"}
+{"host":"32.vivo.com","source":"securitytrails"}
+{"host":"101.vivo.com","source":"securitytrails"}
+{"host":"233.vivo.com","source":"securitytrails"}
+{"host":"n.vivo.com","source":"securitytrails"}
+{"host":"76.vivo.com","source":"securitytrails"}
+{"host":"hybrid.vivo.com","source":"alienvault"}
+{"host":"mx7.vivo.com","source":"securitytrails"}
+{"host":"90.vivo.com","source":"securitytrails"}
+{"host":"host18.vivo.com","source":"securitytrails"}
+{"host":"map.vivo.com","source":"securitytrails"}
+{"host":"homepage.vivo.com","source":"alienvault"}
+{"host":"server01.vivo.com","source":"securitytrails"}
+{"host":"gw2.vivo.com","source":"securitytrails"}
+{"host":"dsasa.vivo.com","source":"securitytrails"}
+{"host":"b2.vivo.com","source":"securitytrails"}
+{"host":"gis.vivo.com","source":"securitytrails"}
+{"host":"20.vivo.com","source":"securitytrails"}
+{"host":"p2pw9w4irnb.ohzzwfdhop.vivo.com","source":"riddler"}
+{"host":"in-ali-browserproxy-cname.vivo.com","source":"alienvault"}
+{"host":"ci.vivo.com","source":"securitytrails"}
+{"host":"it.vivo.com","source":"securitytrails"}
+{"host":"host21.vivo.com","source":"securitytrails"}
+{"host":"qh.vivo.com","source":"securitytrails"}
+{"host":"pc4.vivo.com","source":"securitytrails"}
+{"host":"gd.vivo.com","source":"securitytrails"}
+{"host":"vpn1.vivo.com","source":"securitytrails"}
+{"host":"tianma-prd-in.vivo.com","source":"certspotter"}
+{"host":"e.vivo.com","source":"alienvault"}
+{"host":"85.vivo.com","source":"securitytrails"}
+{"host":"cpanel.bk.fkip.vivo.com","source":"securitytrails"}
+{"host":"8.vivo.com","source":"securitytrails"}
+{"host":"bhwkju.vivo.com","source":"certspotter"}
+{"host":"shgj.vivo.com","source":"dnsdumpster"}
+{"host":"tools.vivo.com","source":"securitytrails"}
+{"host":"oilkjm.vivo.com","source":"securitytrails"}
+{"host":"web02.vivo.com","source":"securitytrails"}
+{"host":"17.vivo.com","source":"securitytrails"}
+{"host":"rds.vivo.com","source":"securitytrails"}
+{"host":"conference.vivo.com","source":"securitytrails"}
+{"host":"institutocem.static.vivo.com","source":"sublist3r"}
+{"host":"86.vivo.com","source":"securitytrails"}
+{"host":"207.vivo.com","source":"securitytrails"}
+{"host":"179.vivo.com","source":"securitytrails"}
+{"host":"dc.vivo.com","source":"securitytrails"}
+{"host":"af.vivo.com","source":"securitytrails"}
+{"host":"200.vivo.com","source":"securitytrails"}
+{"host":"member.vivo.com","source":"securitytrails"}
+{"host":"be.vivo.com","source":"securitytrails"}
+{"host":"security.vivo.com","source":"securitytrails"}
+{"host":"finance.vivo.com","source":"securitytrails"}
+{"host":"29.vivo.com","source":"securitytrails"}
+{"host":"medialive.vivo.com","source":"certspotter"}
+{"host":"global.vivo.com","source":"riddler"}
+{"host":"in-ali-nginxpool01-cname.vivo.com","source":"alienvault"}
+{"host":"posta.vivo.com","source":"securitytrails"}
+{"host":"core.vivo.com","source":"securitytrails"}
+{"host":"mshop.vivo.com","source":"dnsdumpster"}
+{"host":"icampusbrasil.vivo.com","source":"alienvault"}
+{"host":"mx8.vivo.com","source":"securitytrails"}
+{"host":"myaccount.vivo.com","source":"securitytrails"}
+{"host":"cd.vivo.com","source":"securitytrails"}
+{"host":"116.vivo.com","source":"securitytrails"}
+{"host":"228.vivo.com","source":"securitytrails"}
+{"host":"hr.vivo.com","source":"dnsdumpster"}
+{"host":"vsin.vivo.com","source":"alienvault"}
+{"host":"ww.vivo.com","source":"securitytrails"}
+{"host":"host14.vivo.com","source":"securitytrails"}
+{"host":"vps.vivo.com","source":"securitytrails"}
+{"host":"qa.vivo.com","source":"securitytrails"}
+{"host":"my.vivo.com","source":"securitytrails"}
+{"host":"chef.vivo.com","source":"securitytrails"}
+{"host":"in-exstpay.vivo.com","source":"alienvault"}
+{"host":"easyshare.vivo.com","source":"alienvault"}
+{"host":"sales.vivo.com","source":"securitytrails"}
+{"host":"3d.vivo.com","source":"securitytrails"}
+{"host":"cms.vivo.com","source":"securitytrails"}
+{"host":"browserproxy.vivo.com","source":"alienvault"}
+{"host":"aa.vivo.com","source":"securitytrails"}
+{"host":"s1.vivo.com","source":"securitytrails"}
+{"host":"uat.vivo.com","source":"securitytrails"}
+{"host":"mta3.vivo.com","source":"securitytrails"}
+{"host":"barracuda.vivo.com","source":"securitytrails"}
+{"host":"hosting.vivo.com","source":"securitytrails"}
+{"host":"sandbox.vivo.com","source":"securitytrails"}
+{"host":"shop.vivo.com","source":"riddler"}
+{"host":"199.vivo.com","source":"securitytrails"}
+{"host":"14.vivo.com","source":"securitytrails"}
+{"host":"pc6.vivo.com","source":"securitytrails"}
+{"host":"96.vivo.com","source":"securitytrails"}
+{"host":"browsercore.vivo.com","source":"alienvault"}
+{"host":"lo0.vivo.com","source":"securitytrails"}
+{"host":"home.vivo.com","source":"securitytrails"}
+{"host":"192.vivo.com","source":"securitytrails"}
+{"host":"34.vivo.com","source":"securitytrails"}
+{"host":"relay.vivo.com","source":"securitytrails"}
+{"host":"baijiale.vivo.com","source":"securitytrails"}
+{"host":"image.vivo.com","source":"securitytrails"}
+{"host":"vds.vivo.com","source":"riddler"}
+{"host":"browsercloud.vivo.com","source":"alienvault"}
+{"host":"ddivulga.vivo.com","source":"alienvault"}
+{"host":"vip.vivo.com","source":"securitytrails"}
+{"host":"dns1.vivo.com","source":"securitytrails"}
+{"host":"server1.vivo.com","source":"securitytrails"}
+{"host":"55.vivo.com","source":"securitytrails"}
+{"host":"69.vivo.com","source":"securitytrails"}
+[[34mINF[0m] Found 316 subdomains for vivo.com in 30 seconds 13 milliseconds
+/Library/Python/3.8/site-packages/celery/backends/amqp.py:65: CPendingDeprecationWarning: 
+    The AMQP result backend is scheduled for deprecation in     version 4.0 and removal in version v5.0.     Please use RPC backend or a persistent backend.
+
+  deprecated.warn(
+[2021-07-07 19:46:40,781: INFO/ForkPoolWorker-1] Task subfinder.run[83a71d19-84a8-433a-8270-555b9d54e5b1] succeeded in 31.066850984999746s: {'tool': 'subfinder', 'result': ['browserproxy.vivo.com', 'aa.vivo.com', 's1.vivo.com', 'uat.vivo.com', 'mta3.vivo.com', 'barracuda.vivo.com', 'hosting.vivo.com', 'sandbox.vivo.com', 'shop.vivo.com', '199.vivo.com', '14.vivo.com', 'pc6.vivo.com', 'browsercore.vivo.com', 'lo0.vivo.com', 'home.vivo.com', '192.vivo.com', '34.vivo.com', '96.vivo.com', 'vds.vivo.com', 'browsercloud.vivo.com', 'ddivulga.vivo.com', 'vip.vivo.com', 'dns1.vivo.com', 'relay.vivo.com', 'baijiale.vivo.com', 'image.vivo.com', 'server1.vivo.com', '55.vivo.com', '69.vivo.com', 'passport.vivo.com', '16.vivo.com', '113.vivo.com', 'ip2.vivo.com', 'sdp.vivo.com', '224.vivo.com', 'auth.vivo.com', 'jp.vivo.com', 'mysql.vivo.com', 'tr.vivo.com', 'mta4.vivo.com', 'ws1.vivo.com', 'kernelapi.vivo.com', 'tech.vivo.com', 'lib.vivo.com', '152.vivo.com', 'phoenix.vivo.com', 'careers.vivo.com', 'docs.vivo.com', 'zs.vivo.com', '75.vivo.com', 'he.vivo.com', '232.vivo.com', 'host20.vivo.com', 'ag.vivo.com', 'visionplus.vivo.com', 'asia-exstatic.vivo.com', 'af...', ...]}
+
+        _     __ _         _
+____  _| |__ / _(_)_ _  __| |___ _ _
+(_-< || | '_ \  _| | ' \/ _  / -_) '_|
+/__/\_,_|_.__/_| |_|_||_\__,_\___|_| v2.4.7
+
+		projectdiscovery.io
+
+Use with caution. You are responsible for your actions
+Developers assume no liability and are not responsible for any misuse or damage.
+By using subfinder, you also agree to the terms of the APIs used.
+
+[[34mINF[0m] Enumerating subdomains for vivo.com
