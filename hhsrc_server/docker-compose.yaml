@@ -1,14 +1,14 @@
 version: "2"
 services:
-  # hhsrc_server:
-  #   build: .
-  #   tty: true
-  #   environment:
-  #     DEBUG: 'False'
-  #   restart: always
-  #   ports:
-  #     - "5000:5000"
-  #     - "5555:5555"
+  hhsrc_server:
+    build: .
+    tty: true
+    environment:
+      DEBUG: 'False'
+    restart: always
+    ports:
+      - "5000:5000"
+      - "5555:5555"
   rabbitmq:
     image: rabbitmq:3.8.3-management
     container_name: rabbitmq
