@@ -9,6 +9,9 @@ services:
     ports:
       - "5000:5000"
       - "5555:5555"
+    networks:
+      - hhsrc_app
+    
   rabbitmq:
     image: rabbitmq:3.8.3-management
     container_name: rabbitmq
