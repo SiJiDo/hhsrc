@@ -29,31 +29,23 @@ def run(target_id):
     for domain_info in domain_query:
         
         #发送celery,进行3次容错判断
-        flag = False
-        count = 0
         all_result = []
-        while(flag == False and count < 3):
-            al_result = []
-            #subfinder扫描
-            subfinder_scan = task.send_task('subfinder.run', args=(domain_info[1],), queue='subfinder')
-            scan_queue = []
-            scan_queue.append(AsyncResult(subfinder_scan.id))
-            #获取结果
-            while True:
-                for sub in scan_queue:
-                    if sub.successful():
-                        subdomain_result = sub.result
-                        al_result += subdomain_result['result']
-                        if(al_result):
-                            count = 3
-                            flag = True
-                        else:
-                            count = count + 1
-                            flag = False
-                        scan_queue.remove(sub)
-                if not scan_queue:
-                    break
-            all_result = al_result
+        #subfinder扫描
+        subfinder_scan = task.send_task('subfinder.run', args=(domain_info[1],), queue='subfinder')
+        scan_queue = []
+        scan_queue.append(AsyncResult(subfinder_scan.id))
+        #获取结果
+        while True:
+            for sub in scan_queue:
+                if sub.successful():
+                    subdomain_result = sub.result
+                    try:
+                        all_result += subdomain_result['result']
+                    except Exception as e:
+                        print(e)
+                    scan_queue.remove(sub)
+            if not scan_queue:
+                break
 
         #amass扫描
         amass_scan = task.send_task('amass.run', args=(domain_info[1],), queue='amass')

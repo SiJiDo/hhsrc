@@ -32,30 +32,21 @@ def run(target_id):
     #根据子域名来获取http信息
     for subdomain_info in subdomain_query:
         subdomain_list.append(subdomain_info[1])
-    flag = False
-    count = 0
-    #httpx，进行3次容错判断
-    while(flag == False and count < 3 and subdomain_list):
-        httpx_scan = task.send_task('httpx.run', args=(subdomain_list,), queue='httpx')
-        scan_queue = []
-        scan_queue.append(AsyncResult(httpx_scan.id))
 
-        while True:
-            for h in scan_queue:
-                if h.successful():
-                    try:
-                        if(h.result['result']):
-                            save_result(subdomain_query, target_id, h.result['result'], cursor, conn)
-                            flag = True
-                            count = 3
-                        else:
-                            flag = False
-                            count = count + 1
-                    except Exception as e:
-                        print(e)
-                    scan_queue.remove(h)
-            if not scan_queue:
-                break
+    httpx_scan = task.send_task('httpx.run', args=(subdomain_list,), queue='httpx')
+    scan_queue = []
+    scan_queue.append(AsyncResult(httpx_scan.id))
+
+    while True:
+        for h in scan_queue:
+            if h.successful():
+                try:
+                    save_result(subdomain_query, target_id, h.result['result'], cursor, conn)
+                except Exception as e:
+                    print(e)
+                scan_queue.remove(h)
+        if not scan_queue:
+            break
 
     port_list = []
     #根据ip获取http信息，排除80,443端口
@@ -64,30 +55,21 @@ def run(target_id):
             continue
         port_list.append(port_info[1] + ':' + port_info[3])
     
-    flag = False
-    count = 0
     #httpx，进行3次容错判断
-    while(flag == False and count < 3 and subdomain_list):
-        httpx_scan = task.send_task('httpx.run', args=(port_list,), queue='httpx')
-        scan_queue = []
-        scan_queue.append(AsyncResult(httpx_scan.id))
+    httpx_scan = task.send_task('httpx.run', args=(port_list,), queue='httpx')
+    scan_queue = []
+    scan_queue.append(AsyncResult(httpx_scan.id))
 
-        while True:
-            for h in scan_queue:
-                if h.successful():
-                    try:
-                        if(h.result['result']):
-                            save_result_port(port_query, target_id, h.result['result'], cursor, conn)
-                            flag = True
-                            count = 3
-                        else:
-                            flag = False
-                            count = count + 1
-                    except Exception as e:
-                        print(e)
-                    scan_queue.remove(h)
-            if not scan_queue:
-                break
+    while True:
+        for h in scan_queue:
+            if h.successful():
+                try:
+                    save_result_port(port_query, target_id, h.result['result'], cursor, conn)
+                except Exception as e:
+                    print(e)
+                scan_queue.remove(h)
+        if not scan_queue:
+            break
 
     #截图，注意数据太多会失败
     sql = "SELECT * FROM hhsrc_http WHERE http_target=%s AND http_screen=%s AND http_status!=%s AND http_status!=%s LIMIT 100"
