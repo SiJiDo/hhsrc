@@ -57,7 +57,7 @@ def run(target):
                         dic["title"] = json.loads(line)['title']
                     except:
                         dic["url"] = json.loads(line)['url']
-                        dic["content-length"] = json.loads(line)['content-length']
+                        dic["content-length"] = ""
                         dic["status-code"] = json.loads(line)['status-code']
                         dic["title"] = ""
                     result.append(dic)
